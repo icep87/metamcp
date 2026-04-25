@@ -44,6 +44,7 @@ import {
   mapOverrideNameToOriginal,
 } from "./metamcp-middleware/tool-overrides.functional";
 import { parseToolName } from "./tool-name-parser";
+import { downstreamNotificationManager } from "./downstream-notification-manager";
 import { toolsSyncCache } from "./tools-sync-cache";
 import { sanitizeName } from "./utils";
 
@@ -130,10 +131,12 @@ export const createServer = async (
       capabilities: {
         prompts: {},
         resources: {},
-        tools: {},
+        tools: { listChanged: true },
       },
     },
   );
+
+  downstreamNotificationManager.register(namespaceUuid, sessionId, server);
 
   // Create the handler context
   const handlerContext: MetaMCPHandlerContext = {
@@ -873,6 +876,7 @@ export const createServer = async (
   );
 
   const cleanup = async () => {
+    downstreamNotificationManager.deregister(sessionId);
     // Cleanup is now handled by the pool
     await mcpServerPool.cleanupSession(sessionId);
   };
