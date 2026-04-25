@@ -110,11 +110,17 @@ export const configService = {
     const config = await configRepo.getConfig(
       ConfigKeyEnum.Enum.SESSION_LIFETIME,
     );
-    if (!config?.value) {
-      return null; // No session lifetime set - infinite sessions
+    if (config?.value) {
+      const lifetime = parseInt(config.value, 10);
+      return isNaN(lifetime) ? null : lifetime;
     }
-    const lifetime = parseInt(config.value, 10);
-    return isNaN(lifetime) ? null : lifetime;
+    // Fall back to SESSION_LIFETIME_MS environment variable
+    const envVal = process.env.SESSION_LIFETIME_MS;
+    if (envVal) {
+      const lifetime = parseInt(envVal, 10);
+      return isNaN(lifetime) ? null : lifetime;
+    }
+    return null; // No session lifetime set - infinite sessions
   },
 
   async setSessionLifetime(lifetime?: number | null): Promise<void> {
