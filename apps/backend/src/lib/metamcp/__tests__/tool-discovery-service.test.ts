@@ -12,7 +12,13 @@ vi.mock("../../trpc/tools.impl", () => ({
   toolsImplementations: { sync: vi.fn() },
 }));
 vi.mock("../mcp-server-pool", () => ({
-  mcpServerPool: { serverParamsCache: {}, getSession: vi.fn() },
+  mcpServerPool: {
+    serverParamsCache: {},
+    getSession: vi.fn(),
+    getServerUuids: vi.fn(() => []),
+    getServerParams: vi.fn(() => undefined),
+    excludeSessionFromExpiry: vi.fn(),
+  },
 }));
 vi.mock("../downstream-notification-manager", () => ({
   downstreamNotificationManager: { notifyNamespace: vi.fn() },

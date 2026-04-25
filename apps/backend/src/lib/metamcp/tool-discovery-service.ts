@@ -33,6 +33,8 @@ export class ToolDiscoveryService {
   private timer: NodeJS.Timeout | null = null;
   // Track upstream notification subscriptions: serverUuid -> unsubscribe fn
   private upstreamSubscriptions: Map<string, () => void> = new Map();
+  // Guard against concurrent refreshes for the same server UUID
+  private refreshing: Set<string> = new Set();
 
   /**
    * Start the periodic refresh loop and Postgres LISTEN.
@@ -52,6 +54,7 @@ export class ToolDiscoveryService {
     });
 
     // First refresh immediately, then on interval
+    mcpServerPool.excludeSessionFromExpiry(DISCOVERY_SESSION_ID);
     await this.refreshAll();
 
     this.timer = setInterval(async () => {
@@ -85,9 +88,7 @@ export class ToolDiscoveryService {
    * Refresh all upstream servers visible in the pool's params cache.
    */
   private async refreshAll(): Promise<void> {
-    const serverUuids = Object.keys(
-      (mcpServerPool as any).serverParamsCache as Record<string, unknown>,
-    );
+    const serverUuids = mcpServerPool.getServerUuids();
     logger.debug(
       `ToolDiscoveryService: refreshing ${serverUuids.length} servers`,
     );
@@ -100,7 +101,25 @@ export class ToolDiscoveryService {
    * Refresh a single server's tool list. Diffs, syncs DB, and notifies namespaces.
    */
   async refreshServer(serverUuid: string): Promise<void> {
-    const params = (mcpServerPool as any).serverParamsCache?.[serverUuid];
+    if (this.refreshing.has(serverUuid)) {
+      logger.debug(
+        `ToolDiscoveryService: refresh already in progress for ${serverUuid}, skipping`,
+      );
+      return;
+    }
+    this.refreshing.add(serverUuid);
+    try {
+      await this._refreshServer(serverUuid);
+    } finally {
+      this.refreshing.delete(serverUuid);
+    }
+  }
+
+  /**
+   * Internal implementation of refreshServer — called only after acquiring the in-flight guard.
+   */
+  private async _refreshServer(serverUuid: string): Promise<void> {
+    const params = mcpServerPool.getServerParams(serverUuid);
     if (!params) {
       logger.debug(
         `ToolDiscoveryService: no cached params for server ${serverUuid}, skipping`,
@@ -228,6 +247,11 @@ export class ToolDiscoveryService {
     transport.onmessage = handler;
 
     this.upstreamSubscriptions.set(serverUuid, () => {
+      if (transport.onmessage !== handler) {
+        logger.warn(
+          `ToolDiscoveryService: transport.onmessage was replaced for server ${params.name} — upstream list_changed subscription was lost`,
+        );
+      }
       if (transport.onmessage === handler) {
         transport.onmessage = originalOnMessage;
       }

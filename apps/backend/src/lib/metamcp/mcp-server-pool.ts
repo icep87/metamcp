@@ -38,6 +38,9 @@ export class McpServerPool {
   // Session cleanup timer
   private cleanupTimer: NodeJS.Timeout | null = null;
 
+  // Sessions excluded from expiry cleanup (e.g. internal service sessions)
+  private expiryExcludedSessions: Set<string> = new Set();
+
   // Background idle sessions by namespace: namespaceUuid -> any
   private backgroundIdleSessionsByNamespace: Map<string, any> = new Map();
 
@@ -675,6 +678,7 @@ export class McpServerPool {
       for (const [sessionId, timestamp] of Object.entries(
         this.sessionTimestamps,
       )) {
+        if (this.expiryExcludedSessions.has(sessionId)) continue;
         if (now - timestamp > sessionLifetime) {
           expiredSessionIds.push(sessionId);
         }
@@ -693,6 +697,27 @@ export class McpServerPool {
     } catch (error) {
       logger.error("Error during automatic session cleanup:", error);
     }
+  }
+
+  /**
+   * Exclude a session from automatic expiry cleanup (e.g. internal service sessions).
+   */
+  excludeSessionFromExpiry(sessionId: string): void {
+    this.expiryExcludedSessions.add(sessionId);
+  }
+
+  /**
+   * Get all server UUIDs that have cached parameters (used by ToolDiscoveryService).
+   */
+  getServerUuids(): string[] {
+    return Object.keys(this.serverParamsCache);
+  }
+
+  /**
+   * Get cached server parameters for a given UUID (used by ToolDiscoveryService).
+   */
+  getServerParams(serverUuid: string): ServerParameters | undefined {
+    return this.serverParamsCache[serverUuid];
   }
 
   /**
