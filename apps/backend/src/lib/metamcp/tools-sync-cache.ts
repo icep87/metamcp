@@ -78,3 +78,11 @@ export class ToolsSyncCache {
 
 // Singleton instance
 export const toolsSyncCache = new ToolsSyncCache();
+
+/**
+ * Standalone hash helper — same algorithm as ToolsSyncCache.hashTools()
+ * Use this when you need to hash without a class instance.
+ */
+export function hashTools(toolNames: string[]): string {
+  return toolsSyncCache.hashTools(toolNames);
+}
