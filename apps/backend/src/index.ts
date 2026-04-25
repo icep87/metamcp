@@ -2,6 +2,7 @@ import express from "express";
 
 import { auth } from "./auth";
 import { initializeIdleServers, initializeOnStartup } from "./lib/startup";
+import { toolDiscoveryService } from "./lib/metamcp/tool-discovery-service";
 import mcpProxyRouter from "./routers/mcp-proxy";
 import oauthRouter from "./routers/oauth";
 import publicEndpointsRouter from "./routers/public-metamcp";
@@ -113,6 +114,14 @@ start().catch((err) => {
   console.error("❌ Fatal startup error:", err);
   // Do not throw - keep consistent with other startup behavior
 });
+
+// Graceful shutdown
+function shutdown() {
+  toolDiscoveryService.stop();
+  process.exit(0);
+}
+process.on("SIGTERM", shutdown);
+process.on("SIGINT", shutdown);
 
 app.get("/health", (req, res) => {
   res.json({

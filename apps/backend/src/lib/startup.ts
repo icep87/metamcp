@@ -3,6 +3,7 @@ import { ServerParameters } from "@repo/zod-types";
 import { mcpServersRepository, namespacesRepository } from "../db/repositories";
 import { initializeEnvironmentConfiguration } from "./bootstrap.service";
 import { metaMcpServerPool } from "./metamcp";
+import { toolDiscoveryService } from "./metamcp/tool-discovery-service";
 import { convertDbServerToParams } from "./metamcp/utils";
 
 /**
@@ -98,6 +99,11 @@ export async function initializeIdleServers() {
     console.log(
       "✅ Successfully initialized idle servers for all namespaces and all MCP servers",
     );
+
+    // Start dynamic tool discovery — runs after idle servers are warm
+    toolDiscoveryService.start().catch((err) => {
+      console.error("Failed to start ToolDiscoveryService:", err);
+    });
   } catch (error) {
     console.log("❌ Error initializing idle servers:", error);
     // Don't exit the process, just log the error
