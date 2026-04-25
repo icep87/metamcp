@@ -17,7 +17,7 @@ export class PgNotify {
     new Map();
 
   constructor(connectionString: string) {
-    this.pool = new Pool({ connectionString, max: 2 });
+    this.pool = new Pool({ connectionString, max: 2 }); // 1 for listen + 1 for notify
   }
 
   /**
@@ -52,7 +52,17 @@ export class PgNotify {
       });
 
       this.listenClient.on("error", (err) => {
-        logger.error("PgNotify: listen client error", err);
+        logger.error("PgNotify: listen client error — will reconnect in 5s", err);
+        // Release the dead client and reset state so start() can reconnect
+        try { this.listenClient?.release(true); } catch { /* ignore */ }
+        this.listenClient = null;
+        this.started = false;
+        // Reconnect after a delay to avoid tight loops on persistent failures
+        setTimeout(() => {
+          this.start().catch((reconnectErr) => {
+            logger.error("PgNotify: reconnect failed", reconnectErr);
+          });
+        }, 5000);
       });
 
       // Re-subscribe to all channels already registered
