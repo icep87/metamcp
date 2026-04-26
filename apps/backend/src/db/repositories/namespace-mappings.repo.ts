@@ -166,6 +166,71 @@ export class NamespaceMappingsRepository {
       })
       .returning();
   }
+  /**
+   * Sync tool mappings for a (namespace, server) pair to exactly match `currentTools`.
+   *
+   * Uses delete-then-reinsert rather than upsert because upsert alone cannot remove
+   * tools that no longer exist on the server — only a DELETE of the full set followed
+   * by a selective INSERT achieves that. The entire operation is wrapped in a
+   * transaction so callers never observe a partially-updated state.
+   */
+  async syncToolMappingsForServer(input: {
+    namespaceUuid: string;
+    serverUuid: string;
+    currentTools: Array<{ toolUuid: string }>;
+  }): Promise<typeof namespaceToolMappingsTable.$inferSelect[]> {
+    const { namespaceUuid, serverUuid, currentTools } = input;
+
+    return await db.transaction(async (tx) => {
+      // 1. Load existing mappings for this (namespace, server) pair to preserve status + overrides
+      const existing = await tx
+        .select()
+        .from(namespaceToolMappingsTable)
+        .where(
+          and(
+            eq(namespaceToolMappingsTable.namespace_uuid, namespaceUuid),
+            eq(namespaceToolMappingsTable.mcp_server_uuid, serverUuid),
+          ),
+        );
+
+      const existingMap = new Map(existing.map((m) => [m.tool_uuid, m]));
+
+      // 2. Delete all existing mappings for this (namespace, server)
+      await tx
+        .delete(namespaceToolMappingsTable)
+        .where(
+          and(
+            eq(namespaceToolMappingsTable.namespace_uuid, namespaceUuid),
+            eq(namespaceToolMappingsTable.mcp_server_uuid, serverUuid),
+          ),
+        );
+
+      // 3. Nothing to insert — return early
+      if (currentTools.length === 0) {
+        return [];
+      }
+
+      // 4. Re-insert, preserving status and overrides for tools that existed before
+      const toInsert = currentTools.map(({ toolUuid }) => {
+        const prev = existingMap.get(toolUuid);
+        return {
+          namespace_uuid: namespaceUuid,
+          tool_uuid: toolUuid,
+          mcp_server_uuid: serverUuid,
+          status: (prev?.status ?? "ACTIVE") as "ACTIVE" | "INACTIVE",
+          override_name: prev?.override_name ?? null,
+          override_title: prev?.override_title ?? null,
+          override_description: prev?.override_description ?? null,
+          override_annotations: prev?.override_annotations ?? null,
+        };
+      });
+
+      return await tx
+        .insert(namespaceToolMappingsTable)
+        .values(toInsert)
+        .returning();
+    });
+  }
 }
 
 export const namespaceMappingsRepository = new NamespaceMappingsRepository();
