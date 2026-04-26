@@ -21,11 +21,14 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
 
+import { namespaceMappingsRepository } from "@/db/repositories/namespace-mappings.repo";
+import { toolsRepository } from "@/db/repositories/tools.repo";
 import logger from "@/utils/logger";
 
 import { toolsImplementations } from "../../trpc/tools.impl";
 import { configService } from "../config.service";
 import { ConnectedClient } from "./client";
+import { downstreamNotificationManager } from "./downstream-notification-manager";
 import { getMcpServers } from "./fetch-metamcp";
 import { mcpServerPool } from "./mcp-server-pool";
 import {
@@ -44,11 +47,8 @@ import {
   mapOverrideNameToOriginal,
 } from "./metamcp-middleware/tool-overrides.functional";
 import { parseToolName } from "./tool-name-parser";
-import { downstreamNotificationManager } from "./downstream-notification-manager";
 import { toolsSyncCache } from "./tools-sync-cache";
 import { sanitizeName } from "./utils";
-import { namespaceMappingsRepository } from "@/db/repositories/namespace-mappings.repo";
-import { toolsRepository } from "@/db/repositories/tools.repo";
 
 /**
  * Filter out tools that are overrides of existing tools to prevent duplicates in database

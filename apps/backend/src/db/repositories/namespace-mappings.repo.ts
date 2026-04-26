@@ -178,7 +178,7 @@ export class NamespaceMappingsRepository {
     namespaceUuid: string;
     serverUuid: string;
     currentTools: Array<{ toolUuid: string }>;
-  }): Promise<typeof namespaceToolMappingsTable.$inferSelect[]> {
+  }): Promise<(typeof namespaceToolMappingsTable.$inferSelect)[]> {
     const { namespaceUuid, serverUuid, currentTools } = input;
 
     // Note: This transaction reads existing mappings then deletes+reinserts.

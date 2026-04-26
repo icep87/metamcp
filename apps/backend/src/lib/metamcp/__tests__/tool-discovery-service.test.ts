@@ -1,4 +1,4 @@
-import { vi, describe, it, expect, beforeEach } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 // Mock all heavy dependencies before importing the service
 vi.mock("@/db", () => ({ db: { select: vi.fn() } }));
@@ -15,14 +15,18 @@ vi.mock("@/db/repositories/namespace-mappings.repo", () => ({
 }));
 vi.mock("@/db/repositories/tools.repo", () => ({
   toolsRepository: {
-    findByMcpServerUuid: vi.fn().mockResolvedValue([
-      { uuid: "tool-uuid-1", name: "myserver__tool1" },
-    ]),
+    findByMcpServerUuid: vi
+      .fn()
+      .mockResolvedValue([{ uuid: "tool-uuid-1", name: "myserver__tool1" }]),
   },
 }));
 vi.mock("../../../trpc/tools.impl", () => ({
   toolsImplementations: {
-    sync: vi.fn().mockResolvedValue({ success: true, count: 1, message: "Synced 1 tools" }),
+    sync: vi.fn().mockResolvedValue({
+      success: true,
+      count: 1,
+      message: "Synced 1 tools",
+    }),
   },
 }));
 vi.mock("../mcp-server-pool", () => ({
@@ -47,12 +51,13 @@ vi.mock("../pg-notify", () => ({
 }));
 vi.mock("../utils", () => ({ sanitizeName: (s: string) => s }));
 
-import { ToolDiscoveryService } from "../tool-discovery-service";
-import { toolsSyncCache } from "../tools-sync-cache";
+import { namespaceMappingsRepository } from "@/db/repositories/namespace-mappings.repo";
+
 import { toolsImplementations } from "../../../trpc/tools.impl";
 import { mcpServerPool } from "../mcp-server-pool";
 import { pgNotify } from "../pg-notify";
-import { namespaceMappingsRepository } from "@/db/repositories/namespace-mappings.repo";
+import { ToolDiscoveryService } from "../tool-discovery-service";
+import { toolsSyncCache } from "../tools-sync-cache";
 
 describe("ToolDiscoveryService", () => {
   beforeEach(() => {
@@ -89,16 +94,25 @@ describe("_refreshServer tool mapping sync", () => {
   });
 
   it("calls toolsImplementations.sync exactly once and syncs namespace_tool_mappings per namespace", async () => {
-    (mcpServerPool.getServerParams as any).mockReturnValue({ name: "myserver" });
+    (mcpServerPool.getServerParams as any).mockReturnValue({
+      name: "myserver",
+    });
     const fakeClient = {
-      listTools: vi.fn().mockResolvedValue({ tools: [{ name: "tool1", inputSchema: {} }] }),
+      listTools: vi
+        .fn()
+        .mockResolvedValue({ tools: [{ name: "tool1", inputSchema: {} }] }),
       getServerCapabilities: vi.fn().mockReturnValue({}),
     };
     (mcpServerPool.getSession as any).mockResolvedValue({ client: fakeClient });
 
     const svc = new ToolDiscoveryService();
-    vi.spyOn(svc as any, "getNamespacesForServer").mockResolvedValue(["ns-a", "ns-b"]);
-    vi.spyOn(svc as any, "ensureUpstreamSubscription").mockResolvedValue(undefined);
+    vi.spyOn(svc as any, "getNamespacesForServer").mockResolvedValue([
+      "ns-a",
+      "ns-b",
+    ]);
+    vi.spyOn(svc as any, "ensureUpstreamSubscription").mockResolvedValue(
+      undefined,
+    );
 
     await (svc as any)._refreshServer("srv-uuid");
 
@@ -107,30 +121,44 @@ describe("_refreshServer tool mapping sync", () => {
     // pgNotify must be called once per namespace
     expect(pgNotify.notify).toHaveBeenCalledTimes(2);
     // syncToolMappingsForServer must be called once per namespace
-    expect(namespaceMappingsRepository.syncToolMappingsForServer).toHaveBeenCalledTimes(2);
-    expect(namespaceMappingsRepository.syncToolMappingsForServer).toHaveBeenCalledWith(
-      expect.objectContaining({ namespaceUuid: "ns-a", serverUuid: "srv-uuid" }),
+    expect(
+      namespaceMappingsRepository.syncToolMappingsForServer,
+    ).toHaveBeenCalledTimes(2);
+    expect(
+      namespaceMappingsRepository.syncToolMappingsForServer,
+    ).toHaveBeenCalledWith(
+      expect.objectContaining({
+        namespaceUuid: "ns-a",
+        serverUuid: "srv-uuid",
+      }),
     );
   });
 
   it("calls sync() even when server has no namespace mappings (zero-namespace case)", async () => {
-    (mcpServerPool.getServerParams as any).mockReturnValue({ name: "myserver" });
+    (mcpServerPool.getServerParams as any).mockReturnValue({
+      name: "myserver",
+    });
     const fakeClient = {
-      listTools: vi.fn().mockResolvedValue({ tools: [{ name: "tool1", inputSchema: {} }] }),
+      listTools: vi
+        .fn()
+        .mockResolvedValue({ tools: [{ name: "tool1", inputSchema: {} }] }),
       getServerCapabilities: vi.fn().mockReturnValue({}),
     };
     (mcpServerPool.getSession as any).mockResolvedValue({ client: fakeClient });
 
     const svc = new ToolDiscoveryService();
     vi.spyOn(svc as any, "getNamespacesForServer").mockResolvedValue([]); // no namespaces
-    vi.spyOn(svc as any, "ensureUpstreamSubscription").mockResolvedValue(undefined);
+    vi.spyOn(svc as any, "ensureUpstreamSubscription").mockResolvedValue(
+      undefined,
+    );
 
     await (svc as any)._refreshServer("srv-uuid");
 
     // sync() still runs even with no namespaces (to clean up stale tools)
     expect(toolsImplementations.sync).toHaveBeenCalledTimes(1);
     // No namespace sync or notify needed
-    expect(namespaceMappingsRepository.syncToolMappingsForServer).not.toHaveBeenCalled();
+    expect(
+      namespaceMappingsRepository.syncToolMappingsForServer,
+    ).not.toHaveBeenCalled();
   });
 });
-

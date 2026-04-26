@@ -1,4 +1,4 @@
-import { vi, describe, it, expect, beforeEach } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 vi.mock("../../index", () => ({
   db: {
@@ -16,8 +16,8 @@ vi.mock("../../schema", () => ({
   },
 }));
 
-import { NamespaceMappingsRepository } from "../namespace-mappings.repo";
 import { db } from "../../index";
+import { NamespaceMappingsRepository } from "../namespace-mappings.repo";
 
 describe("NamespaceMappingsRepository.syncToolMappingsForServer", () => {
   let repo: NamespaceMappingsRepository;
