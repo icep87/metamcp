@@ -47,6 +47,8 @@ import { parseToolName } from "./tool-name-parser";
 import { downstreamNotificationManager } from "./downstream-notification-manager";
 import { toolsSyncCache } from "./tools-sync-cache";
 import { sanitizeName } from "./utils";
+import { namespaceMappingsRepository } from "@/db/repositories/namespace-mappings.repo";
+import { toolsRepository } from "@/db/repositories/tools.repo";
 
 /**
  * Filter out tools that are overrides of existing tools to prevent duplicates in database
@@ -281,6 +283,17 @@ export const createServer = async (
                 await toolsImplementations.sync({
                   tools: toolsToSave,
                   mcpServerUuid: mcpServerUuid,
+                });
+
+                // Sync namespace_tool_mappings to reflect the updated tool list
+                const currentDbTools =
+                  await toolsRepository.findByMcpServerUuid(mcpServerUuid);
+                await namespaceMappingsRepository.syncToolMappingsForServer({
+                  namespaceUuid,
+                  serverUuid: mcpServerUuid,
+                  currentTools: currentDbTools.map((t) => ({
+                    toolUuid: t.uuid,
+                  })),
                 });
               }
             }
