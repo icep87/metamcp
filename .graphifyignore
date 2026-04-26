@@ -1,0 +1,7 @@
+AGENTS.md         
+CLAUDE.md
+GEMINI.md
+.gemini/
+.opencode/
+docs/translations/ # generated content you don't want in the graph
+docs/superpowers

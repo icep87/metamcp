@@ -181,6 +181,11 @@ export class NamespaceMappingsRepository {
   }): Promise<typeof namespaceToolMappingsTable.$inferSelect[]> {
     const { namespaceUuid, serverUuid, currentTools } = input;
 
+    // Note: This transaction reads existing mappings then deletes+reinserts.
+    // A concurrent user edit (e.g., toggling a tool INACTIVE) landing between
+    // two sync cycles may be overwritten by the next discovery cycle. This is
+    // an accepted trade-off — tool sync runs every 5 minutes, and user edits
+    // will persist until the next tool-list change triggers a re-sync.
     return await db.transaction(async (tx) => {
       // 1. Load existing mappings for this (namespace, server) pair to preserve status + overrides
       const existing = await tx

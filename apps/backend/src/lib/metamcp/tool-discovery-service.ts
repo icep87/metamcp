@@ -4,6 +4,8 @@ import { eq } from "drizzle-orm";
 
 import { db } from "@/db";
 import { namespaceServerMappingsTable } from "@/db/schema";
+import { namespaceMappingsRepository } from "@/db/repositories/namespace-mappings.repo";
+import { toolsRepository } from "@/db/repositories/tools.repo";
 import logger from "@/utils/logger";
 
 import { toolsImplementations } from "../../trpc/tools.impl";
@@ -171,16 +173,28 @@ export class ToolDiscoveryService {
       );
 
       // Sync to DB and notify each affected namespace
+      const prefixedTools = tools.map((t) => ({
+        ...t,
+        name: `${sanitizeName(params.name)}__${t.name}`,
+      }));
+
+      // Sync tools table once (upsert current + delete obsolete)
+      await toolsImplementations.sync({
+        mcpServerUuid: serverUuid,
+        tools: prefixedTools,
+      });
+
+      // Get current tools from DB (authoritative post-sync state)
+      const currentDbTools = await toolsRepository.findByMcpServerUuid(serverUuid);
+      const currentToolUuids = currentDbTools.map((t) => ({ toolUuid: t.uuid }));
+
+      // Sync namespace_tool_mappings for every namespace that contains this server
       const namespaceUuids = await this.getNamespacesForServer(serverUuid);
       for (const namespaceUuid of namespaceUuids) {
-        const prefixedTools = tools.map((t) => ({
-          ...t,
-          name: `${sanitizeName(params.name)}__${t.name}`,
-        }));
-
-        await toolsImplementations.sync({
-          mcpServerUuid: serverUuid,
-          tools: prefixedTools,
+        await namespaceMappingsRepository.syncToolMappingsForServer({
+          namespaceUuid,
+          serverUuid,
+          currentTools: currentToolUuids,
         });
 
         // Postgres NOTIFY — picked up by this and all other replicas
