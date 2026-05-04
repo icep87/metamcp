@@ -28,6 +28,7 @@ export class EndpointsRepository {
         client_max_rate_strategy_key: input.client_max_rate_strategy_key,
         enable_oauth: input.enable_oauth ?? false,
         use_query_param_auth: input.use_query_param_auth ?? false,
+        forwarded_headers: input.forwarded_headers ?? [],
         user_id: input.user_id,
       })
       .returning();
@@ -58,6 +59,7 @@ export class EndpointsRepository {
         client_max_rate_strategy_key:
           endpointsTable.client_max_rate_strategy_key,
         use_query_param_auth: endpointsTable.use_query_param_auth,
+        forwarded_headers: endpointsTable.forwarded_headers,
         created_at: endpointsTable.created_at,
         updated_at: endpointsTable.updated_at,
         user_id: endpointsTable.user_id,
@@ -86,6 +88,7 @@ export class EndpointsRepository {
         client_max_rate_strategy_key:
           endpointsTable.client_max_rate_strategy_key,
         use_query_param_auth: endpointsTable.use_query_param_auth,
+        forwarded_headers: endpointsTable.forwarded_headers,
         created_at: endpointsTable.created_at,
         updated_at: endpointsTable.updated_at,
         user_id: endpointsTable.user_id,
@@ -172,6 +175,7 @@ export class EndpointsRepository {
         client_max_rate_strategy_key:
           endpointsTable.client_max_rate_strategy_key,
         use_query_param_auth: endpointsTable.use_query_param_auth,
+        forwarded_headers: endpointsTable.forwarded_headers,
         created_at: endpointsTable.created_at,
         updated_at: endpointsTable.updated_at,
         user_id: endpointsTable.user_id,
@@ -201,6 +205,7 @@ export class EndpointsRepository {
         client_max_rate_strategy_key:
           endpointsTable.client_max_rate_strategy_key,
         use_query_param_auth: endpointsTable.use_query_param_auth,
+        forwarded_headers: endpointsTable.forwarded_headers,
         created_at: endpointsTable.created_at,
         updated_at: endpointsTable.updated_at,
         user_id: endpointsTable.user_id,
@@ -272,6 +277,7 @@ export class EndpointsRepository {
         client_max_rate_strategy_key:
           endpointsTable.client_max_rate_strategy_key,
         use_query_param_auth: endpointsTable.use_query_param_auth,
+        forwarded_headers: endpointsTable.forwarded_headers,
         created_at: endpointsTable.created_at,
         updated_at: endpointsTable.updated_at,
         user_id: endpointsTable.user_id,
@@ -346,6 +352,7 @@ export class EndpointsRepository {
         client_max_rate_strategy_key:
           endpointsTable.client_max_rate_strategy_key,
         use_query_param_auth: endpointsTable.use_query_param_auth,
+        forwarded_headers: endpointsTable.forwarded_headers,
         created_at: endpointsTable.created_at,
         updated_at: endpointsTable.updated_at,
         user_id: endpointsTable.user_id,
@@ -379,6 +386,7 @@ export class EndpointsRepository {
         client_max_rate_strategy_key:
           endpointsTable.client_max_rate_strategy_key,
         use_query_param_auth: endpointsTable.use_query_param_auth,
+        forwarded_headers: endpointsTable.forwarded_headers,
         created_at: endpointsTable.created_at,
         updated_at: endpointsTable.updated_at,
         user_id: endpointsTable.user_id,
@@ -424,6 +432,7 @@ export class EndpointsRepository {
         client_max_rate_strategy: input.client_max_rate_strategy,
         client_max_rate_strategy_key: input.client_max_rate_strategy_key,
         use_query_param_auth: input.use_query_param_auth,
+        forwarded_headers: input.forwarded_headers ?? [],
         user_id: input.user_id,
         updated_at: new Date(),
       })
