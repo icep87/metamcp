@@ -9,6 +9,7 @@ import {
 export interface MetaMCPHandlerContext {
   namespaceUuid: string;
   sessionId: string;
+  forwardedHeaders?: Record<string, string>;
 }
 
 // Handler function types

@@ -104,6 +104,7 @@ export const createServer = async (
   namespaceUuid: string,
   sessionId: string,
   includeInactiveServers: boolean = false,
+  forwardedHeaders?: Record<string, string>,
 ) => {
   const toolToClient: Record<string, ConnectedClient> = {};
   const toolToServerUuid: Record<string, string> = {};
@@ -144,6 +145,7 @@ export const createServer = async (
   const handlerContext: MetaMCPHandlerContext = {
     namespaceUuid,
     sessionId,
+    forwardedHeaders,
   };
 
   // Original List Tools Handler
@@ -188,6 +190,7 @@ export const createServer = async (
           mcpServerUuid,
           params,
           namespaceUuid,
+          context.forwardedHeaders,
         );
         if (!session) {
           console.log(`[DEBUG-TOOLS] ❌ No session for: ${params.name}`);
@@ -367,6 +370,7 @@ export const createServer = async (
             mcpServerUuid,
             params,
             namespaceUuid,
+            handlerContext.forwardedHeaders,
           );
 
           if (session) {
@@ -824,15 +828,16 @@ export const createServer = async (
 
       await Promise.allSettled(
         validTemplateServers.map(async ([uuid, params]) => {
-          const session = await mcpServerPool.getSession(
-            sessionId,
-            uuid,
-            params,
-            namespaceUuid,
-          );
-          if (!session) return;
+        const session = await mcpServerPool.getSession(
+          sessionId,
+          uuid,
+          params,
+          namespaceUuid,
+          handlerContext.forwardedHeaders,
+        );
+        if (!session) return;
 
-          // Now check for self-referencing using the actual MCP server name
+        // Now check for self-referencing using the actual MCP server name
           const serverVersion = session.client.getServerVersion();
           const actualServerName = serverVersion?.name || params.name || "";
           const ourServerName = `metamcp-unified-${namespaceUuid}`;
