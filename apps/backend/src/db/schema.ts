@@ -265,6 +265,10 @@ export const endpointsTable = pgTable(
     use_query_param_auth: boolean("use_query_param_auth")
       .notNull()
       .default(false),
+    forwarded_headers: text("forwarded_headers")
+      .array()
+      .notNull()
+      .default(sql`'{}'::text[]`),
     created_at: timestamp("created_at", { withTimezone: true })
       .notNull()
       .defaultNow(),
