@@ -51,6 +51,9 @@ export function EditEndpoint({
     useState<string>("");
   const [selectedNamespaceName, setSelectedNamespaceName] =
     useState<string>("");
+  const [forwardedHeadersInput, setForwardedHeadersInput] = useState<string>(
+    endpoint?.forwarded_headers?.join(", ") ?? "",
+  );
   const { t } = useTranslations();
 
   // Get tRPC utils for cache invalidation
@@ -149,6 +152,7 @@ export function EditEndpoint({
       });
       setSelectedNamespaceUuid(endpoint.namespace.uuid);
       setSelectedNamespaceName(endpoint.namespace.name);
+      setForwardedHeadersInput(endpoint?.forwarded_headers?.join(", ") ?? "");
     }
   }, [endpoint, isOpen, editForm]);
 
@@ -186,6 +190,10 @@ export function EditEndpoint({
         clientMaxRateStrategyKey: data.clientMaxRateStrategyKey,
         enableOauth: data.enableOauth,
         useQueryParamAuth: data.useQueryParamAuth,
+        forwardedHeaders: forwardedHeadersInput
+          .split(",")
+          .map((h) => h.trim().toLowerCase())
+          .filter((h) => h.length > 0),
       };
       // Use tRPC mutation
       updateEndpointMutation.mutate(apiPayload);
@@ -628,6 +636,23 @@ export function EditEndpoint({
                   </p>
                 </div>
               )}
+            </div>
+
+            {/* Forwarded Headers */}
+            <div className="space-y-2 border-t pt-4">
+              <label htmlFor="forwardedHeaders" className="text-sm font-medium">
+                {t("endpoints:forwardedHeaders.label")}
+              </label>
+              <Input
+                id="forwardedHeaders"
+                value={forwardedHeadersInput}
+                onChange={(e) => setForwardedHeadersInput(e.target.value)}
+                placeholder="x-user-id, x-session-token"
+                disabled={isUpdating}
+              />
+              <p className="text-sm text-muted-foreground">
+                {t("endpoints:forwardedHeaders.description")}
+              </p>
             </div>
           </div>
 

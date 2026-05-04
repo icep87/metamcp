@@ -87,6 +87,10 @@
     "updateFailed": "更新失败",
     "updateFailedDescription": "更新端点失败"
   },
+  "forwardedHeaders": {
+    "label": "Forwarded Headers",
+    "description": "Comma-separated list of header names to forward from client requests to downstream MCP servers (e.g. x-user-id, x-session-token)."
+  },
   "list": {
     "title": "端点",
     "searchPlaceholder": "搜索端点...",

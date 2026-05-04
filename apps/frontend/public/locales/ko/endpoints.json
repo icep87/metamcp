@@ -87,6 +87,10 @@
     "updateFailed": "업데이트 실패",
     "updateFailedDescription": "Endpoint 업데이트에 실패했습니다"
   },
+  "forwardedHeaders": {
+    "label": "Forwarded Headers",
+    "description": "Comma-separated list of header names to forward from client requests to downstream MCP servers (e.g. x-user-id, x-session-token)."
+  },
   "list": {
     "title": "Endpoints",
     "searchPlaceholder": "Endpoint 검색...",

@@ -86,8 +86,11 @@
   "ipStrategy": "IP",
   "headerStrategy": "Header",
   "selectStrategy": "Select Strategy",
-  "edit": {
-    "title": "Edit Endpoint",
+  "forwardedHeaders": {
+    "label": "Forwarded Headers",
+    "description": "Comma-separated list of header names to forward from client requests to downstream MCP servers (e.g. x-user-id, x-session-token)."
+  },
+  "edit": {    "title": "Edit Endpoint",
     "description": "Update the endpoint name, description, and reassign to a different namespace.",
     "nameLabel": "Name",
     "namePlaceholder": "Enter endpoint name",
