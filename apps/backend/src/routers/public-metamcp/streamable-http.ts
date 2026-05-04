@@ -137,7 +137,7 @@ streamableHttpRouter.post(
         );
 
         // Capture and store forwarded headers for this session
-        const allowlist: string[] = (authReq.endpoint as any)?.forwarded_headers ?? [];
+        const allowlist: string[] = authReq.endpoint?.forwarded_headers ?? [];
         const forwardedHeaders = sessionHeadersStore.filterHeaders(
           req.headers as Record<string, string | string[] | undefined>,
           allowlist,
