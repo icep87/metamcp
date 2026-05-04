@@ -12,6 +12,7 @@ import { rateLimitMiddleware } from "@/middleware/rate-limit.middleware";
 import logger from "@/utils/logger";
 
 import { metaMcpServerPool } from "../../lib/metamcp/metamcp-server-pool";
+import { sessionHeadersStore } from "../../lib/metamcp/session-headers-store";
 import { SessionLifetimeManagerImpl } from "../../lib/session-lifetime-manager";
 
 const streamableHttpRouter = express.Router();
@@ -46,6 +47,7 @@ const cleanupSession = async (
 
     // Clean up MetaMCP server pool session
     await metaMcpServerPool.cleanupSession(sessionId);
+    sessionHeadersStore.delete(sessionId);
 
     logger.info(`Session ${sessionId} cleanup completed successfully`);
   } catch (error) {
@@ -134,10 +136,21 @@ streamableHttpRouter.post(
           `Generated new session ID: ${newSessionId} for endpoint: ${endpointName}`,
         );
 
+        // Capture and store forwarded headers for this session
+        const allowlist: string[] = (authReq.endpoint as any)?.forwarded_headers ?? [];
+        const forwardedHeaders = sessionHeadersStore.filterHeaders(
+          req.headers as Record<string, string | string[] | undefined>,
+          allowlist,
+        );
+        if (Object.keys(forwardedHeaders).length > 0) {
+          sessionHeadersStore.set(newSessionId, forwardedHeaders);
+        }
+
         // Get or create MetaMCP server instance from the pool
         const mcpServerInstance = await metaMcpServerPool.getServer(
           newSessionId,
           namespaceUuid,
+          forwardedHeaders,
         );
         if (!mcpServerInstance) {
           throw new Error("Failed to get MetaMCP server instance from pool");
