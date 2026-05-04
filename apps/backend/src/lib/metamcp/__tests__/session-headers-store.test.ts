@@ -1,4 +1,5 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
+
 import { sessionHeadersStore } from "../session-headers-store";
 
 describe("sessionHeadersStore", () => {
@@ -8,7 +9,9 @@ describe("sessionHeadersStore", () => {
 
   it("stores and retrieves headers by sessionId", () => {
     sessionHeadersStore.set("test-session", { "x-user-id": "alice" });
-    expect(sessionHeadersStore.get("test-session")).toEqual({ "x-user-id": "alice" });
+    expect(sessionHeadersStore.get("test-session")).toEqual({
+      "x-user-id": "alice",
+    });
   });
 
   it("returns undefined for unknown sessionId", () => {
@@ -32,10 +35,9 @@ describe("sessionHeadersStore.filterHeaders", () => {
   });
 
   it("is case-insensitive for allowlist matching", () => {
-    const result = sessionHeadersStore.filterHeaders(
-      { "X-User-Id": "alice" },
-      ["x-user-id"],
-    );
+    const result = sessionHeadersStore.filterHeaders({ "X-User-Id": "alice" }, [
+      "x-user-id",
+    ]);
     expect(result).toEqual({ "x-user-id": "alice" });
   });
 
@@ -48,10 +50,9 @@ describe("sessionHeadersStore.filterHeaders", () => {
   });
 
   it("ignores headers not present in request", () => {
-    const result = sessionHeadersStore.filterHeaders(
-      { "x-other": "val" },
-      ["x-user-id"],
-    );
+    const result = sessionHeadersStore.filterHeaders({ "x-other": "val" }, [
+      "x-user-id",
+    ]);
     expect(result).toEqual({});
   });
 

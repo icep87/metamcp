@@ -234,8 +234,8 @@ export const connectMetaMcpClient = async (
       return {
         client,
         cleanup: async () => {
-          await transport!.close();
-          await client!.close();
+          await transport.close();
+          await client.close();
         },
         onProcessCrash: (exitCode, signal) => {
           logger.warn(
@@ -274,7 +274,7 @@ export const connectMetaMcpClient = async (
       if (client) {
         try {
           await client.close();
-        } catch (cleanupError) {
+        } catch (_cleanupError) {
           // Client may not be fully initialized, ignore
         }
       }

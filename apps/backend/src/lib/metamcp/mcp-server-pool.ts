@@ -67,7 +67,10 @@ export class McpServerPool {
       const maxConnections = process.env.MAX_TOTAL_CONNECTIONS
         ? parseInt(process.env.MAX_TOTAL_CONNECTIONS, 10)
         : 100;
-      McpServerPool.instance = new McpServerPool(defaultIdleCount, isNaN(maxConnections) ? 100 : maxConnections);
+      McpServerPool.instance = new McpServerPool(
+        defaultIdleCount,
+        isNaN(maxConnections) ? 100 : maxConnections,
+      );
     }
     return McpServerPool.instance;
   }

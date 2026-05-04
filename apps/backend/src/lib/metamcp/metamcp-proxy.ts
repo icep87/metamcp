@@ -830,16 +830,16 @@ export const createServer = async (
 
       await Promise.allSettled(
         validTemplateServers.map(async ([uuid, params]) => {
-        const session = await mcpServerPool.getSession(
-          sessionId,
-          uuid,
-          params,
-          namespaceUuid,
-          handlerContext.forwardedHeaders,
-        );
-        if (!session) return;
+          const session = await mcpServerPool.getSession(
+            sessionId,
+            uuid,
+            params,
+            namespaceUuid,
+            handlerContext.forwardedHeaders,
+          );
+          if (!session) return;
 
-        // Now check for self-referencing using the actual MCP server name
+          // Now check for self-referencing using the actual MCP server name
           const serverVersion = session.client.getServerVersion();
           const actualServerName = serverVersion?.name || params.name || "";
           const ourServerName = `metamcp-unified-${namespaceUuid}`;

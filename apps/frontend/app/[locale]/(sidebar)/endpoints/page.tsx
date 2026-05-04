@@ -150,6 +150,7 @@ export default function EndpointsPage() {
         clientMaxRateStrategyKey: data.clientMaxRateStrategyKey,
         enableOauth: data.enableOauth,
         useQueryParamAuth: data.useQueryParamAuth,
+        forwardedHeaders: [],
         createMcpServer: data.createMcpServer,
         user_id: data.user_id,
       };
