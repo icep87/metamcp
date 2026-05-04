@@ -37,6 +37,7 @@ export const transformDockerUrl = (url: string): string => {
 
 export const createMetaMcpClient = (
   serverParams: ServerParameters,
+  forwardedHeaders?: Record<string, string>,
 ): { client: Client | undefined; transport: Transport | undefined } => {
   let transport: Transport | undefined;
 
@@ -81,8 +82,9 @@ export const createMetaMcpClient = (
     // Transform the URL if TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL is set to "true"
     const transformedUrl = transformDockerUrl(serverParams.url);
 
-    // Build headers: start with custom headers, then add auth header
+    // Build headers: forwarded first (lowest priority), then DB config, then auth
     const headers: Record<string, string> = {
+      ...(forwardedHeaders || {}),
       ...(serverParams.headers || {}),
     };
 
@@ -111,8 +113,9 @@ export const createMetaMcpClient = (
     // Transform the URL if TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL is set to "true"
     const transformedUrl = transformDockerUrl(serverParams.url);
 
-    // Build headers: start with custom headers, then add auth header
+    // Build headers: forwarded first (lowest priority), then DB config, then auth
     const headers: Record<string, string> = {
+      ...(forwardedHeaders || {}),
       ...(serverParams.headers || {}),
     };
 
@@ -162,6 +165,7 @@ export const createMetaMcpClient = (
 export const connectMetaMcpClient = async (
   serverParams: ServerParameters,
   onProcessCrash?: (exitCode: number | null, signal: string | null) => void,
+  forwardedHeaders?: Record<string, string>,
 ): Promise<ConnectedClient | undefined> => {
   const waitFor = 5000;
 
@@ -193,7 +197,7 @@ export const connectMetaMcpClient = async (
       }
 
       // Create fresh client and transport for each attempt
-      const result = createMetaMcpClient(serverParams);
+      const result = createMetaMcpClient(serverParams, forwardedHeaders);
       client = result.client;
       transport = result.transport;
 
