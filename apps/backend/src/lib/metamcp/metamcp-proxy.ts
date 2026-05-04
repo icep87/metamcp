@@ -601,6 +601,7 @@ export const createServer = async (
           uuid,
           params,
           namespaceUuid,
+          handlerContext.forwardedHeaders,
         );
         if (!session) return;
 
@@ -702,6 +703,7 @@ export const createServer = async (
           uuid,
           params,
           namespaceUuid,
+          handlerContext.forwardedHeaders,
         );
         if (!session) return;
 
