@@ -14,6 +14,11 @@ on:
       - '[0-9]+.[0-9]+.[0-9]+-beta'
       - 'v[0-9]+.[0-9]+.[0-9]+-beta'
   workflow_dispatch:
+    inputs:
+      tag_override:
+        description: 'Tag name to use for branch detection (e.g. v2.5.0-alpha). Leave empty to use GITHUB_REF_NAME.'
+        required: false
+        default: ''
 
 env:
   REGISTRY: ghcr.io
@@ -37,7 +42,10 @@ jobs:
     - name: Check branch for tag
       id: check-branch
       run: |
-        REF_NAME="${GITHUB_REF_NAME:-${{ github.ref_name }}}"
+        REF_NAME="${{ inputs.tag_override }}"
+        if [[ -z "$REF_NAME" ]]; then
+          REF_NAME="${GITHUB_REF_NAME}"
+        fi
         echo "Detected ref name: $REF_NAME"
         # Check if the tag name contains -test suffix
         if [[ "$REF_NAME" == *"-test" ]]; then
