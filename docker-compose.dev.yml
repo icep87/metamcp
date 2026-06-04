@@ -27,17 +27,17 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-metamcp_user}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-m3t4mcp}
       POSTGRES_DB: ${POSTGRES_DB:-metamcp_db}
-      
+
       # Database configuration (composed from above vars)
       DATABASE_URL: postgresql://${POSTGRES_USER:-metamcp_user}:${POSTGRES_PASSWORD:-m3t4mcp}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-metamcp_db}
-      
+
       # Application URL configuration
       APP_URL: ${APP_URL:-http://localhost:12008}
       NEXT_PUBLIC_APP_URL: ${APP_URL:-http://localhost:12008}
-      
+
       # Auth configuration
       BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:-your-super-secret-key-change-this-in-production}
-      
+
       # Docker networking fix
       TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL: ${TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL:-true}
     extra_hosts:
@@ -50,7 +50,7 @@ services:
       - metamcp-network
 
   postgres:
-    image: postgres:16-alpine
+    image: postgres:17-alpine
     container_name: metamcp-pg-dev
     restart: unless-stopped
     env_file:
@@ -64,7 +64,12 @@ services:
     volumes:
       - postgres_data_dev:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-metamcp_user} -d ${POSTGRES_DB:-metamcp_db}"]
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-metamcp_user} -d
+            ${POSTGRES_DB:-metamcp_db}",
+        ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -78,4 +83,4 @@ volumes:
 
 networks:
   metamcp-network:
-    driver: bridge 
+    driver: bridge

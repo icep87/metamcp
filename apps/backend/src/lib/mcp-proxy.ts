@@ -3,9 +3,22 @@ import { isJSONRPCRequest } from "@modelcontextprotocol/sdk/types.js";
 
 import logger from "@/utils/logger";
 
+export function isExpectedTransportDisconnectError(error: Error): boolean {
+  const message = error.message || "";
+
+  return (
+    message.includes("Not connected") ||
+    message.includes("SSE stream disconnected") ||
+    message.includes("TypeError: terminated") ||
+    message.includes("The operation was aborted") ||
+    message.includes("AbortError")
+  );
+}
+
 function onClientError(error: Error) {
-  // Don't log "Not connected" errors as they're expected when connections close
-  if (error?.message && error.message.includes("Not connected")) {
+  // Don't log disconnect errors as server errors; they are expected when a
+  // client closes an SSE/Streamable HTTP session.
+  if (isExpectedTransportDisconnectError(error)) {
     logger.debug("Client transport disconnected (expected during cleanup)");
     return;
   }
@@ -13,8 +26,9 @@ function onClientError(error: Error) {
 }
 
 function onServerError(error: Error) {
-  // Don't log "Not connected" errors as they're expected when connections close
-  if (error?.message && error.message.includes("Not connected")) {
+  // Don't log disconnect errors as server errors; the SDK reports closed
+  // Streamable HTTP response streams as "SSE stream disconnected: ...".
+  if (isExpectedTransportDisconnectError(error)) {
     logger.debug("Server transport disconnected (expected during cleanup)");
     return;
   }
@@ -95,7 +109,7 @@ export default function mcpProxy({
 
     transportToServer.send(message).catch(async (error) => {
       // Handle connection closed errors gracefully
-      if (error?.message && error.message.includes("Not connected")) {
+      if (isExpectedTransportDisconnectError(error)) {
         logger.debug(
           "Server transport disconnected while sending message, cleaning up",
         );
@@ -142,7 +156,7 @@ export default function mcpProxy({
 
     transportToClient.send(message).catch(async (error) => {
       // Handle connection closed errors gracefully
-      if (error?.message && error.message.includes("Not connected")) {
+      if (isExpectedTransportDisconnectError(error)) {
         logger.debug(
           "Client transport disconnected while sending message, cleaning up",
         );
@@ -179,8 +193,8 @@ export default function mcpProxy({
 
   transportToClient.onerror = async (error) => {
     // Mark as closed and trigger cleanup if we get a connection error
-    if (error?.message && error.message.includes("Not connected")) {
-      logger.debug("Client transport error: Not connected, cleaning up");
+    if (isExpectedTransportDisconnectError(error)) {
+      logger.debug("Client transport disconnected, cleaning up");
       await closeAllTransports();
       return;
     }
@@ -189,8 +203,8 @@ export default function mcpProxy({
 
   transportToServer.onerror = async (error) => {
     // Mark as closed and trigger cleanup if we get a connection error
-    if (error?.message && error.message.includes("Not connected")) {
-      logger.debug("Server transport error: Not connected, cleaning up");
+    if (isExpectedTransportDisconnectError(error)) {
+      logger.debug("Server transport disconnected, cleaning up");
       await closeAllTransports();
       return;
     }
