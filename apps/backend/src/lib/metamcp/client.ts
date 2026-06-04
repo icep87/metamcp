@@ -10,6 +10,7 @@ import logger from "@/utils/logger";
 import { ProcessManagedStdioTransport } from "../stdio-transport/process-managed-transport";
 import { metamcpLogStore } from "./log-store";
 import { serverErrorTracker } from "./server-error-tracker";
+import { sanitizeHeadersForDebugLog } from "./session-headers-store";
 import { resolveEnvVariables } from "./utils";
 
 const sleep = (time: number) =>
@@ -20,6 +21,87 @@ export interface ConnectedClient {
   cleanup: () => Promise<void>;
   onProcessCrash?: (exitCode: number | null, signal: string | null) => void;
 }
+
+const getCaseInsensitiveHeaderKey = (
+  headers: Record<string, string>,
+  headerName: string,
+): string | undefined =>
+  Object.keys(headers).find(
+    (key) => key.toLowerCase() === headerName.toLowerCase(),
+  );
+
+const buildHttpHeaders = (
+  serverParams: ServerParameters,
+  forwardedHeaders?: Record<string, string>,
+): {
+  authHeaderApplied: boolean;
+  forwardedHeaderOutcomes: Record<string, string>;
+  headers: Record<string, string>;
+} => {
+  const configuredHeaders = serverParams.headers || {};
+
+  // Build headers: forwarded first (lowest priority), then DB config, then auth
+  const headers: Record<string, string> = {
+    ...(forwardedHeaders || {}),
+    ...configuredHeaders,
+  };
+
+  // Check for authentication - prioritize OAuth tokens, fallback to bearerToken
+  const authToken =
+    serverParams.oauth_tokens?.access_token || serverParams.bearerToken;
+  if (authToken) {
+    headers["Authorization"] = `Bearer ${authToken}`;
+  }
+
+  const authHeaderApplied = Boolean(authToken);
+  const forwardedHeaderOutcomes: Record<string, string> = {};
+
+  for (const forwardedHeaderName of Object.keys(forwardedHeaders || {})) {
+    const configuredHeaderKey = getCaseInsensitiveHeaderKey(
+      configuredHeaders,
+      forwardedHeaderName,
+    );
+
+    if (configuredHeaderKey) {
+      forwardedHeaderOutcomes[forwardedHeaderName] =
+        `overridden-by-configured-header:${configuredHeaderKey}`;
+    } else if (
+      authHeaderApplied &&
+      forwardedHeaderName.toLowerCase() === "authorization"
+    ) {
+      forwardedHeaderOutcomes[forwardedHeaderName] = "overridden-by-auth-token";
+    } else {
+      forwardedHeaderOutcomes[forwardedHeaderName] = "forwarded";
+    }
+  }
+
+  return {
+    authHeaderApplied,
+    forwardedHeaderOutcomes,
+    headers,
+  };
+};
+
+const debugLogHttpHeaders = (
+  serverParams: ServerParameters,
+  transportType: "SSE" | "STREAMABLE_HTTP",
+  forwardedHeaders: Record<string, string> | undefined,
+  headers: Record<string, string>,
+  authHeaderApplied: boolean,
+  forwardedHeaderOutcomes: Record<string, string>,
+): void => {
+  logger.debug("Prepared upstream MCP request headers", {
+    serverName: serverParams.name,
+    serverUuid: serverParams.uuid,
+    transportType,
+    forwardedHeaderNames: Object.keys(forwardedHeaders || {}),
+    forwardedHeaders: sanitizeHeadersForDebugLog(forwardedHeaders || {}),
+    configuredHeaderNames: Object.keys(serverParams.headers || {}),
+    authHeaderApplied,
+    forwardedHeaderOutcomes,
+    finalHeaders: sanitizeHeadersForDebugLog(headers),
+  });
+};
 
 /**
  * Transforms localhost URLs to use host.docker.internal when running inside Docker
@@ -81,21 +163,18 @@ export const createMetaMcpClient = (
   } else if (serverParams.type === "SSE" && serverParams.url) {
     // Transform the URL if TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL is set to "true"
     const transformedUrl = transformDockerUrl(serverParams.url);
-
-    // Build headers: forwarded first (lowest priority), then DB config, then auth
-    const headers: Record<string, string> = {
-      ...(forwardedHeaders || {}),
-      ...(serverParams.headers || {}),
-    };
-
-    // Check for authentication - prioritize OAuth tokens, fallback to bearerToken
-    const authToken =
-      serverParams.oauth_tokens?.access_token || serverParams.bearerToken;
-    if (authToken) {
-      headers["Authorization"] = `Bearer ${authToken}`;
-    }
+    const { authHeaderApplied, forwardedHeaderOutcomes, headers } =
+      buildHttpHeaders(serverParams, forwardedHeaders);
 
     const hasHeaders = Object.keys(headers).length > 0;
+    debugLogHttpHeaders(
+      serverParams,
+      "SSE",
+      forwardedHeaders,
+      headers,
+      authHeaderApplied,
+      forwardedHeaderOutcomes,
+    );
 
     if (!hasHeaders) {
       transport = new SSEClientTransport(new URL(transformedUrl));
@@ -112,21 +191,18 @@ export const createMetaMcpClient = (
   } else if (serverParams.type === "STREAMABLE_HTTP" && serverParams.url) {
     // Transform the URL if TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL is set to "true"
     const transformedUrl = transformDockerUrl(serverParams.url);
-
-    // Build headers: forwarded first (lowest priority), then DB config, then auth
-    const headers: Record<string, string> = {
-      ...(forwardedHeaders || {}),
-      ...(serverParams.headers || {}),
-    };
-
-    // Check for authentication - prioritize OAuth tokens, fallback to bearerToken
-    const authToken =
-      serverParams.oauth_tokens?.access_token || serverParams.bearerToken;
-    if (authToken) {
-      headers["Authorization"] = `Bearer ${authToken}`;
-    }
+    const { authHeaderApplied, forwardedHeaderOutcomes, headers } =
+      buildHttpHeaders(serverParams, forwardedHeaders);
 
     const hasHeaders = Object.keys(headers).length > 0;
+    debugLogHttpHeaders(
+      serverParams,
+      "STREAMABLE_HTTP",
+      forwardedHeaders,
+      headers,
+      authHeaderApplied,
+      forwardedHeaderOutcomes,
+    );
 
     if (!hasHeaders) {
       transport = new StreamableHTTPClientTransport(new URL(transformedUrl));
@@ -205,12 +281,15 @@ export const connectMetaMcpClient = async (
         return undefined;
       }
 
+      const connectedClient = client;
+      const connectedTransport = transport;
+
       // Set up process crash detection for STDIO transports BEFORE connecting
-      if (transport instanceof ProcessManagedStdioTransport) {
+      if (connectedTransport instanceof ProcessManagedStdioTransport) {
         logger.info(
           `Setting up crash handler for server ${serverParams.name} (${serverParams.uuid})`,
         );
-        transport.onprocesscrash = (exitCode, signal) => {
+        connectedTransport.onprocesscrash = (exitCode, signal) => {
           logger.info(
             `Process crashed for server ${serverParams.name} (${serverParams.uuid}): code=${exitCode}, signal=${signal}`,
           );
@@ -229,13 +308,13 @@ export const connectMetaMcpClient = async (
         };
       }
 
-      await client.connect(transport);
+      await connectedClient.connect(connectedTransport);
 
       return {
-        client,
+        client: connectedClient,
         cleanup: async () => {
-          await transport.close();
-          await client.close();
+          await connectedTransport.close();
+          await connectedClient.close();
         },
         onProcessCrash: (exitCode, signal) => {
           logger.warn(

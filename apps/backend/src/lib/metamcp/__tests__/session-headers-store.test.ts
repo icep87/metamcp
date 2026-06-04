@@ -1,6 +1,9 @@
 import { beforeEach, describe, expect, it } from "vitest";
 
-import { sessionHeadersStore } from "../session-headers-store";
+import {
+  sanitizeHeadersForDebugLog,
+  sessionHeadersStore,
+} from "../session-headers-store";
 
 describe("sessionHeadersStore", () => {
   beforeEach(() => {
@@ -62,5 +65,41 @@ describe("sessionHeadersStore.filterHeaders", () => {
       ["x-user-id"],
     );
     expect(result).toEqual({ "x-user-id": "alice" });
+  });
+});
+
+describe("sanitizeHeadersForDebugLog", () => {
+  it("redacts sensitive header values but keeps non-sensitive forwarded values", () => {
+    const result = sanitizeHeadersForDebugLog({
+      authorization: "Bearer token",
+      "x-api-key": "secret-key",
+      "x-user-id": "alice",
+    });
+
+    expect(result).toEqual({
+      authorization: "Bearer [redacted]",
+      "x-api-key": "[redacted]",
+      "x-user-id": "alice",
+    });
+  });
+
+  it("redacts authorization token values case-insensitively", () => {
+    expect(
+      sanitizeHeadersForDebugLog({
+        Authorization: "Basic dXNlcjpwYXNz",
+      }),
+    ).toEqual({
+      Authorization: "Basic [redacted]",
+    });
+  });
+
+  it("fully redacts malformed authorization values", () => {
+    expect(
+      sanitizeHeadersForDebugLog({
+        authorization: "",
+      }),
+    ).toEqual({
+      authorization: "[redacted]",
+    });
   });
 });

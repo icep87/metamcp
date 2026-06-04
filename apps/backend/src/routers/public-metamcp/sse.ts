@@ -11,7 +11,10 @@ import { rateLimitMiddleware } from "@/middleware/rate-limit.middleware";
 import logger from "@/utils/logger";
 
 import { metaMcpServerPool } from "../../lib/metamcp/metamcp-server-pool";
-import { sessionHeadersStore } from "../../lib/metamcp/session-headers-store";
+import {
+  sanitizeHeadersForDebugLog,
+  sessionHeadersStore,
+} from "../../lib/metamcp/session-headers-store";
 import { SessionLifetimeManagerImpl } from "../../lib/session-lifetime-manager";
 
 const sseRouter = express.Router();
@@ -80,6 +83,14 @@ sseRouter.get(
         req.headers as Record<string, string | string[] | undefined>,
         allowlist,
       );
+      logger.debug("Public endpoint SSE forwarded headers", {
+        endpointName,
+        namespaceUuid,
+        sessionId,
+        allowlist,
+        forwardedHeaderNames: Object.keys(forwardedHeaders),
+        forwardedHeaders: sanitizeHeadersForDebugLog(forwardedHeaders),
+      });
       if (Object.keys(forwardedHeaders).length > 0) {
         sessionHeadersStore.set(sessionId, forwardedHeaders);
       }

@@ -596,7 +596,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/middleware.ts",
       "source_location": "L1",
       "id": "apps_frontend_middleware_ts",
-      "community": 2,
+      "community": 1,
       "norm_label": "middleware.ts"
     },
     {
@@ -605,7 +605,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/middleware.ts",
       "source_location": "L8",
       "id": "middleware_getlocale",
-      "community": 2,
+      "community": 1,
       "norm_label": "getlocale()"
     },
     {
@@ -614,7 +614,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/middleware.ts",
       "source_location": "L42",
       "id": "middleware_middleware",
-      "community": 2,
+      "community": 1,
       "norm_label": "middleware()"
     },
     {
@@ -794,7 +794,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/mcp-servers/page.tsx",
       "source_location": "L87",
       "id": "page_onsubmit",
-      "community": 0,
+      "community": 9,
       "norm_label": "onsubmit()"
     },
     {
@@ -803,7 +803,7 @@
       "source_file": "apps/frontend/app/[locale]/(sidebar)/endpoints/page.tsx",
       "source_location": "L1",
       "id": "apps_frontend_app_locale_sidebar_endpoints_page_tsx",
-      "community": 0,
+      "community": 9,
       "norm_label": "page.tsx"
     },
     {
@@ -812,7 +812,7 @@
       "source_file": "apps/frontend/app/[locale]/(sidebar)/endpoints/page.tsx",
       "source_location": "L172",
       "id": "page_handlenamespaceselect",
-      "community": 0,
+      "community": 9,
       "norm_label": "handlenamespaceselect()"
     },
     {
@@ -821,7 +821,7 @@
       "source_file": "apps/frontend/app/[locale]/(sidebar)/endpoints/page.tsx",
       "source_location": "L182",
       "id": "page_resetform",
-      "community": 0,
+      "community": 9,
       "norm_label": "resetform()"
     },
     {
@@ -830,7 +830,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/mcp-servers/page.tsx",
       "source_location": "L207",
       "id": "page_t",
-      "community": 0,
+      "community": 9,
       "norm_label": "t()"
     },
     {
@@ -974,7 +974,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/live-logs/page.tsx",
       "source_location": "L1",
       "id": "apps_frontend_app_locale_sidebar_live_logs_page_tsx",
-      "community": 16,
+      "community": 0,
       "norm_label": "page.tsx"
     },
     {
@@ -983,7 +983,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/live-logs/page.tsx",
       "source_location": "L35",
       "id": "page_handleclearlogs",
-      "community": 16,
+      "community": 0,
       "norm_label": "handleclearlogs()"
     },
     {
@@ -992,7 +992,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/cors-error/page.tsx",
       "source_location": "L43",
       "id": "page_handlerefresh",
-      "community": 16,
+      "community": 0,
       "norm_label": "handlerefresh()"
     },
     {
@@ -1001,7 +1001,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/live-logs/page.tsx",
       "source_location": "L54",
       "id": "page_handletoggleautorefresh",
-      "community": 16,
+      "community": 0,
       "norm_label": "handletoggleautorefresh()"
     },
     {
@@ -1010,7 +1010,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/live-logs/page.tsx",
       "source_location": "L76",
       "id": "page_formattimestamp",
-      "community": 16,
+      "community": 0,
       "norm_label": "formattimestamp()"
     },
     {
@@ -1019,7 +1019,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx",
       "source_location": "L1",
       "id": "apps_frontend_app_locale_sidebar_api_keys_page_tsx",
-      "community": 0,
+      "community": 9,
       "norm_label": "page.tsx"
     },
     {
@@ -1028,7 +1028,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx",
       "source_location": "L107",
       "id": "page_handlecreatesuccess",
-      "community": 0,
+      "community": 9,
       "norm_label": "handlecreatesuccess()"
     },
     {
@@ -1037,7 +1037,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx",
       "source_location": "L112",
       "id": "page_copytoclipboard",
-      "community": 0,
+      "community": 9,
       "norm_label": "copytoclipboard()"
     },
     {
@@ -1046,7 +1046,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx",
       "source_location": "L117",
       "id": "page_togglekeyvisibility",
-      "community": 0,
+      "community": 9,
       "norm_label": "togglekeyvisibility()"
     },
     {
@@ -1055,7 +1055,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx",
       "source_location": "L129",
       "id": "page_maskkey",
-      "community": 0,
+      "community": 9,
       "norm_label": "maskkey()"
     },
     {
@@ -1064,7 +1064,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx",
       "source_location": "L133",
       "id": "page_handledeleteclick",
-      "community": 0,
+      "community": 9,
       "norm_label": "handledeleteclick()"
     },
     {
@@ -1073,7 +1073,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx",
       "source_location": "L138",
       "id": "page_handledeleteconfirm",
-      "community": 0,
+      "community": 9,
       "norm_label": "handledeleteconfirm()"
     },
     {
@@ -1082,7 +1082,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx",
       "source_location": "L144",
       "id": "page_handledeletecancel",
-      "community": 0,
+      "community": 9,
       "norm_label": "handledeletecancel()"
     },
     {
@@ -1181,7 +1181,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/namespaces/page.tsx",
       "source_location": "L1",
       "id": "apps_frontend_app_locale_sidebar_namespaces_page_tsx",
-      "community": 0,
+      "community": 9,
       "norm_label": "page.tsx"
     },
     {
@@ -1190,7 +1190,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/namespaces/page.tsx",
       "source_location": "L134",
       "id": "page_handleservertoggle",
-      "community": 0,
+      "community": 9,
       "norm_label": "handleservertoggle()"
     },
     {
@@ -1550,7 +1550,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/mcp-servers/page.tsx",
       "source_location": "L1",
       "id": "apps_frontend_app_locale_sidebar_mcp_servers_page_tsx",
-      "community": 0,
+      "community": 9,
       "norm_label": "page.tsx"
     },
     {
@@ -2117,7 +2117,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/cors-error/page.tsx",
       "source_location": "L1",
       "id": "apps_frontend_app_locale_cors_error_page_tsx",
-      "community": 16,
+      "community": 0,
       "norm_label": "page.tsx"
     },
     {
@@ -2126,7 +2126,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/cors-error/page.tsx",
       "source_location": "L36",
       "id": "page_handleredirecttocorrectdomain",
-      "community": 16,
+      "community": 0,
       "norm_label": "handleredirecttocorrectdomain()"
     },
     {
@@ -2189,7 +2189,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/edit-mcp-server.tsx",
       "source_location": "L1",
       "id": "apps_frontend_components_edit_mcp_server_tsx",
-      "community": 0,
+      "community": 9,
       "norm_label": "edit-mcp-server.tsx"
     },
     {
@@ -2198,7 +2198,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/edit-mcp-server.tsx",
       "source_location": "L211",
       "id": "edit_mcp_server_handleeditserver",
-      "community": 0,
+      "community": 9,
       "norm_label": "handleeditserver()"
     },
     {
@@ -2207,7 +2207,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/edit-mcp-server.tsx",
       "source_location": "L283",
       "id": "edit_mcp_server_handleclose",
-      "community": 0,
+      "community": 9,
       "norm_label": "handleclose()"
     },
     {
@@ -2243,7 +2243,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/OAuthCallback.tsx",
       "source_location": "L1",
       "id": "apps_frontend_components_oauthcallback_tsx",
-      "community": 9,
+      "community": 8,
       "norm_label": "oauthcallback.tsx"
     },
     {
@@ -2252,7 +2252,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/OAuthCallback.tsx",
       "source_location": "L17",
       "id": "oauthcallback_handlecallback",
-      "community": 9,
+      "community": 8,
       "norm_label": "handlecallback()"
     },
     {
@@ -2261,7 +2261,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/edit-namespace.tsx",
       "source_location": "L1",
       "id": "apps_frontend_components_edit_namespace_tsx",
-      "community": 0,
+      "community": 9,
       "norm_label": "edit-namespace.tsx"
     },
     {
@@ -2270,7 +2270,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/edit-namespace.tsx",
       "source_location": "L140",
       "id": "edit_namespace_handleservertoggle",
-      "community": 0,
+      "community": 9,
       "norm_label": "handleservertoggle()"
     },
     {
@@ -2279,7 +2279,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/edit-namespace.tsx",
       "source_location": "L153",
       "id": "edit_namespace_handleeditnamespace",
-      "community": 0,
+      "community": 9,
       "norm_label": "handleeditnamespace()"
     },
     {
@@ -2288,7 +2288,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/edit-namespace.tsx",
       "source_location": "L181",
       "id": "edit_namespace_handleclose",
-      "community": 0,
+      "community": 9,
       "norm_label": "handleclose()"
     },
     {
@@ -3395,7 +3395,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/hooks/useConnection.ts",
       "source_location": "L1",
       "id": "apps_frontend_hooks_useconnection_ts",
-      "community": 9,
+      "community": 8,
       "norm_label": "useconnection.ts"
     },
     {
@@ -3404,7 +3404,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/hooks/useConnection.ts",
       "source_location": "L72",
       "id": "useconnection_useconnection",
-      "community": 9,
+      "community": 8,
       "norm_label": "useconnection()"
     },
     {
@@ -3467,7 +3467,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L1",
       "id": "apps_frontend_lib_oauth_provider_ts",
-      "community": 9,
+      "community": 8,
       "norm_label": "oauth-provider.ts"
     },
     {
@@ -3476,7 +3476,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L16",
       "id": "oauth_provider_dboauthclientprovider",
-      "community": 9,
+      "community": 8,
       "norm_label": "dboauthclientprovider"
     },
     {
@@ -3485,7 +3485,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L20",
       "id": "oauth_provider_dboauthclientprovider_constructor",
-      "community": 9,
+      "community": 8,
       "norm_label": ".constructor()"
     },
     {
@@ -3503,7 +3503,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L31",
       "id": "oauth_provider_dboauthclientprovider_clientmetadata",
-      "community": 9,
+      "community": 8,
       "norm_label": ".clientmetadata()"
     },
     {
@@ -3512,7 +3512,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L43",
       "id": "oauth_provider_dboauthclientprovider_serverexists",
-      "community": 9,
+      "community": 8,
       "norm_label": ".serverexists()"
     },
     {
@@ -3521,7 +3521,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L57",
       "id": "oauth_provider_dboauthclientprovider_clientinformation",
-      "community": 9,
+      "community": 8,
       "norm_label": ".clientinformation()"
     },
     {
@@ -3530,7 +3530,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L93",
       "id": "oauth_provider_dboauthclientprovider_saveclientinformation",
-      "community": 9,
+      "community": 8,
       "norm_label": ".saveclientinformation()"
     },
     {
@@ -3539,7 +3539,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L114",
       "id": "oauth_provider_dboauthclientprovider_tokens",
-      "community": 9,
+      "community": 8,
       "norm_label": ".tokens()"
     },
     {
@@ -3548,7 +3548,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L143",
       "id": "oauth_provider_dboauthclientprovider_savetokens",
-      "community": 9,
+      "community": 8,
       "norm_label": ".savetokens()"
     },
     {
@@ -3557,7 +3557,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L161",
       "id": "oauth_provider_dboauthclientprovider_redirecttoauthorization",
-      "community": 9,
+      "community": 8,
       "norm_label": ".redirecttoauthorization()"
     },
     {
@@ -3566,7 +3566,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L165",
       "id": "oauth_provider_dboauthclientprovider_savecodeverifier",
-      "community": 9,
+      "community": 8,
       "norm_label": ".savecodeverifier()"
     },
     {
@@ -3575,7 +3575,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L186",
       "id": "oauth_provider_dboauthclientprovider_codeverifier",
-      "community": 9,
+      "community": 8,
       "norm_label": ".codeverifier()"
     },
     {
@@ -3584,7 +3584,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L217",
       "id": "oauth_provider_dboauthclientprovider_clear",
-      "community": 9,
+      "community": 8,
       "norm_label": ".clear()"
     },
     {
@@ -3593,7 +3593,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L231",
       "id": "oauth_provider_debugdboauthclientprovider",
-      "community": 9,
+      "community": 8,
       "norm_label": "debugdboauthclientprovider"
     },
     {
@@ -3602,7 +3602,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L232",
       "id": "oauth_provider_debugdboauthclientprovider_redirecturl",
-      "community": 9,
+      "community": 8,
       "norm_label": ".redirecturl()"
     },
     {
@@ -3611,7 +3611,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L236",
       "id": "oauth_provider_debugdboauthclientprovider_saveservermetadata",
-      "community": 9,
+      "community": 8,
       "norm_label": ".saveservermetadata()"
     },
     {
@@ -3620,7 +3620,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L244",
       "id": "oauth_provider_debugdboauthclientprovider_getservermetadata",
-      "community": 9,
+      "community": 8,
       "norm_label": ".getservermetadata()"
     },
     {
@@ -3629,7 +3629,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L256",
       "id": "oauth_provider_debugdboauthclientprovider_clear",
-      "community": 9,
+      "community": 8,
       "norm_label": ".clear()"
     },
     {
@@ -3638,7 +3638,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L265",
       "id": "oauth_provider_createauthprovider",
-      "community": 9,
+      "community": 8,
       "norm_label": "createauthprovider()"
     },
     {
@@ -3647,7 +3647,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/oauth-provider.ts",
       "source_location": "L273",
       "id": "oauth_provider_createdebugauthprovider",
-      "community": 9,
+      "community": 8,
       "norm_label": "createdebugauthprovider()"
     },
     {
@@ -3674,7 +3674,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/tool-name-parser.ts",
       "source_location": "L1",
       "id": "apps_frontend_lib_tool_name_parser_ts",
-      "community": 8,
+      "community": 7,
       "norm_label": "tool-name-parser.ts"
     },
     {
@@ -3683,7 +3683,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/tool-name-parser.ts",
       "source_location": "L28",
       "id": "tool_name_parser_parsetoolname",
-      "community": 8,
+      "community": 7,
       "norm_label": "parsetoolname()"
     },
     {
@@ -3692,7 +3692,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/tool-name-parser.ts",
       "source_location": "L57",
       "id": "tool_name_parser_createtoolname",
-      "community": 8,
+      "community": 7,
       "norm_label": "createtoolname()"
     },
     {
@@ -3701,7 +3701,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/constants.ts",
       "source_location": "L1",
       "id": "apps_frontend_lib_constants_ts",
-      "community": 9,
+      "community": 8,
       "norm_label": "constants.ts"
     },
     {
@@ -3710,7 +3710,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/lib/constants.ts",
       "source_location": "L12",
       "id": "constants_getserverspecifickey",
-      "community": 9,
+      "community": 8,
       "norm_label": "getserverspecifickey()"
     },
     {
@@ -3872,7 +3872,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/trpc.ts",
       "source_location": "L1",
       "id": "apps_backend_src_trpc_ts",
-      "community": 2,
+      "community": 1,
       "norm_label": "trpc.ts"
     },
     {
@@ -3881,7 +3881,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/trpc.ts",
       "source_location": "L17",
       "id": "trpc_createcontext",
-      "community": 2,
+      "community": 1,
       "norm_label": "createcontext()"
     },
     {
@@ -3890,7 +3890,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/index.ts",
       "source_location": "L1",
       "id": "apps_backend_src_index_ts",
-      "community": 5,
+      "community": 4,
       "norm_label": "index.ts"
     },
     {
@@ -3899,7 +3899,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/index.ts",
       "source_location": "L87",
       "id": "index_start",
-      "community": 5,
+      "community": 4,
       "norm_label": "start()"
     },
     {
@@ -3908,7 +3908,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/index.ts",
       "source_location": "L119",
       "id": "index_shutdown",
-      "community": 5,
+      "community": 4,
       "norm_label": "shutdown()"
     },
     {
@@ -3962,7 +3962,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L1",
       "id": "apps_backend_src_routers_oauth_utils_ts",
-      "community": 13,
+      "community": 14,
       "norm_label": "utils.ts"
     },
     {
@@ -3971,7 +3971,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L20",
       "id": "utils_generatesecureauthcode",
-      "community": 13,
+      "community": 14,
       "norm_label": "generatesecureauthcode()"
     },
     {
@@ -3980,7 +3980,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L29",
       "id": "utils_generatesecureaccesstoken",
-      "community": 13,
+      "community": 14,
       "norm_label": "generatesecureaccesstoken()"
     },
     {
@@ -3989,7 +3989,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L38",
       "id": "utils_generatesecurerefreshtoken",
-      "community": 13,
+      "community": 14,
       "norm_label": "generatesecurerefreshtoken()"
     },
     {
@@ -3998,7 +3998,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L47",
       "id": "utils_generatesecureclientid",
-      "community": 13,
+      "community": 14,
       "norm_label": "generatesecureclientid()"
     },
     {
@@ -4007,7 +4007,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L56",
       "id": "utils_generatesecureclientsecret",
-      "community": 13,
+      "community": 14,
       "norm_label": "generatesecureclientsecret()"
     },
     {
@@ -4016,7 +4016,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L65",
       "id": "utils_validateredirecturi",
-      "community": 13,
+      "community": 14,
       "norm_label": "validateredirecturi()"
     },
     {
@@ -4025,7 +4025,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L115",
       "id": "utils_hashclientsecret",
-      "community": 13,
+      "community": 14,
       "norm_label": "hashclientsecret()"
     },
     {
@@ -4034,7 +4034,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L129",
       "id": "utils_verifyclientsecret",
-      "community": 13,
+      "community": 14,
       "norm_label": "verifyclientsecret()"
     },
     {
@@ -4043,7 +4043,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L142",
       "id": "utils_getbaseurl",
-      "community": 13,
+      "community": 14,
       "norm_label": "getbaseurl()"
     },
     {
@@ -4052,7 +4052,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L164",
       "id": "utils_jsonparsingmiddleware",
-      "community": 13,
+      "community": 14,
       "norm_label": "jsonparsingmiddleware()"
     },
     {
@@ -4061,7 +4061,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L186",
       "id": "utils_urlencodedparsingmiddleware",
-      "community": 13,
+      "community": 14,
       "norm_label": "urlencodedparsingmiddleware()"
     },
     {
@@ -4070,7 +4070,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L209",
       "id": "utils_ratelimiter",
-      "community": 13,
+      "community": 14,
       "norm_label": "ratelimiter"
     },
     {
@@ -4079,7 +4079,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L215",
       "id": "utils_ratelimiter_constructor",
-      "community": 13,
+      "community": 14,
       "norm_label": ".constructor()"
     },
     {
@@ -4088,7 +4088,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L220",
       "id": "utils_ratelimiter_isratelimited",
-      "community": 13,
+      "community": 14,
       "norm_label": ".isratelimited()"
     },
     {
@@ -4097,7 +4097,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L241",
       "id": "utils_ratelimiter_reset",
-      "community": 0,
+      "community": 9,
       "norm_label": ".reset()"
     },
     {
@@ -4106,7 +4106,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L246",
       "id": "utils_ratelimiter_cleanup",
-      "community": 13,
+      "community": 14,
       "norm_label": ".cleanup()"
     },
     {
@@ -4115,7 +4115,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L272",
       "id": "utils_ratelimitauth",
-      "community": 13,
+      "community": 14,
       "norm_label": "ratelimitauth()"
     },
     {
@@ -4124,7 +4124,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L296",
       "id": "utils_ratelimittoken",
-      "community": 13,
+      "community": 14,
       "norm_label": "ratelimittoken()"
     },
     {
@@ -4133,7 +4133,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/oauth/utils.ts",
       "source_location": "L320",
       "id": "utils_securityheaders",
-      "community": 13,
+      "community": 14,
       "norm_label": "securityheaders()"
     },
     {
@@ -4187,16 +4187,16 @@
       "source_file": "apps/backend/src/routers/public-metamcp/streamable-http.ts",
       "source_location": "L1",
       "id": "apps_backend_src_routers_public_metamcp_streamable_http_ts",
-      "community": 3,
+      "community": 2,
       "norm_label": "streamable-http.ts"
     },
     {
       "label": "cleanupSession()",
       "file_type": "code",
       "source_file": "apps/backend/src/routers/public-metamcp/streamable-http.ts",
-      "source_location": "L27",
+      "source_location": "L30",
       "id": "streamable_http_cleanupsession",
-      "community": 3,
+      "community": 2,
       "norm_label": "cleanupsession()"
     },
     {
@@ -4205,16 +4205,16 @@
       "source_file": "apps/backend/src/routers/public-metamcp/sse.ts",
       "source_location": "L1",
       "id": "apps_backend_src_routers_public_metamcp_sse_ts",
-      "community": 3,
+      "community": 2,
       "norm_label": "sse.ts"
     },
     {
       "label": "cleanupSession()",
       "file_type": "code",
       "source_file": "apps/backend/src/routers/public-metamcp/sse.ts",
-      "source_location": "L23",
+      "source_location": "L26",
       "id": "sse_cleanupsession",
-      "community": 3,
+      "community": 2,
       "norm_label": "cleanupsession()"
     },
     {
@@ -4259,7 +4259,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/public-metamcp/openapi/tool-execution.ts",
       "source_location": "L1",
       "id": "apps_backend_src_routers_public_metamcp_openapi_tool_execution_ts",
-      "community": 3,
+      "community": 2,
       "norm_label": "tool-execution.ts"
     },
     {
@@ -4268,7 +4268,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/public-metamcp/openapi/tool-execution.ts",
       "source_location": "L11",
       "id": "tool_execution_executetoolwithmiddleware",
-      "community": 3,
+      "community": 2,
       "norm_label": "executetoolwithmiddleware()"
     },
     {
@@ -4277,7 +4277,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/public-metamcp/openapi/handlers.ts",
       "source_location": "L1",
       "id": "apps_backend_src_routers_public_metamcp_openapi_handlers_ts",
-      "community": 8,
+      "community": 7,
       "norm_label": "handlers.ts"
     },
     {
@@ -4286,7 +4286,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/public-metamcp/openapi/handlers.ts",
       "source_location": "L32",
       "id": "handlers_createoriginallisttoolshandler",
-      "community": 8,
+      "community": 7,
       "norm_label": "createoriginallisttoolshandler()"
     },
     {
@@ -4295,7 +4295,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/public-metamcp/openapi/handlers.ts",
       "source_location": "L102",
       "id": "handlers_createoriginalcalltoolhandler",
-      "community": 8,
+      "community": 7,
       "norm_label": "createoriginalcalltoolhandler()"
     },
     {
@@ -4304,7 +4304,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/public-metamcp/openapi/handlers.ts",
       "source_location": "L194",
       "id": "handlers_createmiddlewareenabledhandlers",
-      "community": 8,
+      "community": 7,
       "norm_label": "createmiddlewareenabledhandlers()"
     },
     {
@@ -4322,7 +4322,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/metamcp.ts",
       "source_location": "L1",
       "id": "apps_backend_src_routers_mcp_proxy_metamcp_ts",
-      "community": 8,
+      "community": 7,
       "norm_label": "metamcp.ts"
     },
     {
@@ -4331,7 +4331,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/metamcp.ts",
       "source_location": "L29",
       "id": "metamcp_createmetamcpserver",
-      "community": 8,
+      "community": 7,
       "norm_label": "createmetamcpserver()"
     },
     {
@@ -4340,7 +4340,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/metamcp.ts",
       "source_location": "L43",
       "id": "metamcp_cleanupsession",
-      "community": 3,
+      "community": 2,
       "norm_label": "cleanupsession()"
     },
     {
@@ -4349,7 +4349,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L1",
       "id": "apps_backend_src_routers_mcp_proxy_server_ts",
-      "community": 4,
+      "community": 5,
       "norm_label": "server.ts"
     },
     {
@@ -4358,7 +4358,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L43",
       "id": "server_createstdiokey",
-      "community": 4,
+      "community": 5,
       "norm_label": "createstdiokey()"
     },
     {
@@ -4367,7 +4367,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L52",
       "id": "server_isstdioincooldown",
-      "community": 4,
+      "community": 5,
       "norm_label": "isstdioincooldown()"
     },
     {
@@ -4376,7 +4376,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L69",
       "id": "server_setstdiocooldown",
-      "community": 4,
+      "community": 5,
       "norm_label": "setstdiocooldown()"
     },
     {
@@ -4385,7 +4385,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L79",
       "id": "server_extractserveruuidfromstdiocommand",
-      "community": 4,
+      "community": 5,
       "norm_label": "extractserveruuidfromstdiocommand()"
     },
     {
@@ -4394,7 +4394,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L129",
       "id": "server_checkservererrorstatus",
-      "community": 4,
+      "community": 5,
       "norm_label": "checkservererrorstatus()"
     },
     {
@@ -4403,7 +4403,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L154",
       "id": "server_gethttpheaders",
-      "community": 4,
+      "community": 5,
       "norm_label": "gethttpheaders()"
     },
     {
@@ -4412,7 +4412,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L199",
       "id": "server_cleanupsession",
-      "community": 4,
+      "community": 5,
       "norm_label": "cleanupsession()"
     },
     {
@@ -4421,7 +4421,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L233",
       "id": "server_createtransport",
-      "community": 4,
+      "community": 5,
       "norm_label": "createtransport()"
     },
     {
@@ -4430,7 +4430,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/routers/mcp-proxy/server.ts",
       "source_location": "L578",
       "id": "server_handleconnectionclose",
-      "community": 4,
+      "community": 5,
       "norm_label": "handleconnectionclose()"
     },
     {
@@ -4439,7 +4439,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/better-auth-mcp.middleware.ts",
       "source_location": "L1",
       "id": "apps_backend_src_middleware_better_auth_mcp_middleware_ts",
-      "community": 2,
+      "community": 1,
       "norm_label": "better-auth-mcp.middleware.ts"
     },
     {
@@ -4448,7 +4448,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/better-auth-mcp.middleware.ts",
       "source_location": "L13",
       "id": "better_auth_mcp_middleware_betterauthmcpmiddleware",
-      "community": 2,
+      "community": 1,
       "norm_label": "betterauthmcpmiddleware()"
     },
     {
@@ -4457,7 +4457,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/lookup-endpoint-middleware.ts",
       "source_location": "L1",
       "id": "apps_backend_src_middleware_lookup_endpoint_middleware_ts",
-      "community": 4,
+      "community": 5,
       "norm_label": "lookup-endpoint-middleware.ts"
     },
     {
@@ -4466,7 +4466,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/lookup-endpoint-middleware.ts",
       "source_location": "L9",
       "id": "lookup_endpoint_middleware_lookupendpoint",
-      "community": 4,
+      "community": 5,
       "norm_label": "lookupendpoint()"
     },
     {
@@ -4475,7 +4475,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L1",
       "id": "apps_backend_src_middleware_api_key_oauth_middleware_ts",
-      "community": 2,
+      "community": 1,
       "norm_label": "api-key-oauth.middleware.ts"
     },
     {
@@ -4484,7 +4484,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L29",
       "id": "api_key_oauth_middleware_getbaseurl",
-      "community": 2,
+      "community": 1,
       "norm_label": "getbaseurl()"
     },
     {
@@ -4493,7 +4493,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L54",
       "id": "api_key_oauth_middleware_validateoauthtoken",
-      "community": 2,
+      "community": 1,
       "norm_label": "validateoauthtoken()"
     },
     {
@@ -4502,7 +4502,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L120",
       "id": "api_key_oauth_middleware_extractauthtoken",
-      "community": 2,
+      "community": 1,
       "norm_label": "extractauthtoken()"
     },
     {
@@ -4511,7 +4511,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L169",
       "id": "api_key_oauth_middleware_authenticateapikey",
-      "community": 2,
+      "community": 1,
       "norm_label": "authenticateapikey()"
     },
     {
@@ -4520,7 +4520,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L372",
       "id": "api_key_oauth_middleware_checkapikeyaccess",
-      "community": 2,
+      "community": 1,
       "norm_label": "checkapikeyaccess()"
     },
     {
@@ -4529,7 +4529,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L404",
       "id": "api_key_oauth_middleware_checkoauthaccess",
-      "community": 2,
+      "community": 1,
       "norm_label": "checkoauthaccess()"
     },
     {
@@ -4538,7 +4538,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L440",
       "id": "api_key_oauth_middleware_sendapikeyrequiredresponse",
-      "community": 2,
+      "community": 1,
       "norm_label": "sendapikeyrequiredresponse()"
     },
     {
@@ -4547,7 +4547,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/api-key-oauth.middleware.ts",
       "source_location": "L455",
       "id": "api_key_oauth_middleware_sendoauthchallengeresponse",
-      "community": 2,
+      "community": 1,
       "norm_label": "sendoauthchallengeresponse()"
     },
     {
@@ -4556,7 +4556,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/rate-limit.middleware.ts",
       "source_location": "L1",
       "id": "apps_backend_src_middleware_rate_limit_middleware_ts",
-      "community": 11,
+      "community": 13,
       "norm_label": "rate-limit.middleware.ts"
     },
     {
@@ -4565,7 +4565,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/rate-limit.middleware.ts",
       "source_location": "L21",
       "id": "rate_limit_middleware_tokenbucketratelimiter",
-      "community": 11,
+      "community": 13,
       "norm_label": "tokenbucketratelimiter()"
     },
     {
@@ -4574,7 +4574,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/rate-limit.middleware.ts",
       "source_location": "L42",
       "id": "rate_limit_middleware_slidingwindowratelimiter",
-      "community": 11,
+      "community": 13,
       "norm_label": "slidingwindowratelimiter()"
     },
     {
@@ -4583,7 +4583,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/rate-limit.middleware.ts",
       "source_location": "L63",
       "id": "rate_limit_middleware_ratelimiter",
-      "community": 11,
+      "community": 13,
       "norm_label": "ratelimiter()"
     },
     {
@@ -4592,7 +4592,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/middleware/rate-limit.middleware.ts",
       "source_location": "L92",
       "id": "rate_limit_middleware_ratelimitmiddleware",
-      "community": 11,
+      "community": 13,
       "norm_label": "ratelimitmiddleware()"
     },
     {
@@ -4736,7 +4736,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_session_lifetime_manager_ts",
-      "community": 2,
+      "community": 1,
       "norm_label": "session-lifetime-manager.ts"
     },
     {
@@ -4745,7 +4745,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L22",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl",
-      "community": 2,
+      "community": 1,
       "norm_label": "sessionlifetimemanagerimpl"
     },
     {
@@ -4754,7 +4754,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L30",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_constructor",
-      "community": 2,
+      "community": 1,
       "norm_label": ".constructor()"
     },
     {
@@ -4763,7 +4763,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L34",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_addsession",
-      "community": 2,
+      "community": 1,
       "norm_label": ".addsession()"
     },
     {
@@ -4772,7 +4772,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L39",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_removesession",
-      "community": 3,
+      "community": 2,
       "norm_label": ".removesession()"
     },
     {
@@ -4781,7 +4781,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L44",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_getsession",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getsession()"
     },
     {
@@ -4790,7 +4790,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L48",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_getallsessions",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getallsessions()"
     },
     {
@@ -4799,7 +4799,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L52",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_getsessionage",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getsessionage()"
     },
     {
@@ -4808,7 +4808,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L57",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_issessionexpired",
-      "community": 2,
+      "community": 1,
       "norm_label": ".issessionexpired()"
     },
     {
@@ -4817,7 +4817,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L68",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_cleanupexpiredsessions",
-      "community": 2,
+      "community": 1,
       "norm_label": ".cleanupexpiredsessions()"
     },
     {
@@ -4826,7 +4826,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L112",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_startcleanuptimer",
-      "community": 2,
+      "community": 1,
       "norm_label": ".startcleanuptimer()"
     },
     {
@@ -4835,7 +4835,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L121",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_stopcleanuptimer",
-      "community": 2,
+      "community": 1,
       "norm_label": ".stopcleanuptimer()"
     },
     {
@@ -4844,7 +4844,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L129",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_getsessioncount",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getsessioncount()"
     },
     {
@@ -4853,7 +4853,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L133",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_getsessionids",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getsessionids()"
     },
     {
@@ -4862,7 +4862,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/session-lifetime-manager.ts",
       "source_location": "L137",
       "id": "session_lifetime_manager_sessionlifetimemanagerimpl_getsessiontimestamps",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getsessiontimestamps()"
     },
     {
@@ -4871,7 +4871,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/auth-rate-limiter.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_auth_rate_limiter_ts",
-      "community": 2,
+      "community": 1,
       "norm_label": "auth-rate-limiter.ts"
     },
     {
@@ -4880,7 +4880,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/auth-rate-limiter.ts",
       "source_location": "L8",
       "id": "auth_rate_limiter_authratelimiter",
-      "community": 2,
+      "community": 1,
       "norm_label": "authratelimiter"
     },
     {
@@ -4889,7 +4889,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/auth-rate-limiter.ts",
       "source_location": "L14",
       "id": "auth_rate_limiter_authratelimiter_constructor",
-      "community": 2,
+      "community": 1,
       "norm_label": ".constructor()"
     },
     {
@@ -4898,7 +4898,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/auth-rate-limiter.ts",
       "source_location": "L19",
       "id": "auth_rate_limiter_authratelimiter_isratelimited",
-      "community": 2,
+      "community": 1,
       "norm_label": ".isratelimited()"
     },
     {
@@ -4907,7 +4907,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/auth-rate-limiter.ts",
       "source_location": "L48",
       "id": "auth_rate_limiter_authratelimiter_recordfailedattempt",
-      "community": 2,
+      "community": 1,
       "norm_label": ".recordfailedattempt()"
     },
     {
@@ -4916,7 +4916,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/auth-rate-limiter.ts",
       "source_location": "L69",
       "id": "auth_rate_limiter_authratelimiter_cleanup",
-      "community": 3,
+      "community": 2,
       "norm_label": ".cleanup()"
     },
     {
@@ -4925,7 +4925,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/auth-rate-limiter.ts",
       "source_location": "L94",
       "id": "auth_rate_limiter_getauthratelimitidentifier",
-      "community": 2,
+      "community": 1,
       "norm_label": "getauthratelimitidentifier()"
     },
     {
@@ -5024,7 +5024,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_rate_limit_ts",
-      "community": 11,
+      "community": 13,
       "norm_label": "rate-limit.ts"
     },
     {
@@ -5033,7 +5033,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L10",
       "id": "rate_limit_ratelimiterror",
-      "community": 11,
+      "community": 13,
       "norm_label": "ratelimiterror"
     },
     {
@@ -5042,7 +5042,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L13",
       "id": "rate_limit_ratelimiterror_constructor",
-      "community": 11,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -5051,7 +5051,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L23",
       "id": "rate_limit_tokenbucketratelimiter",
-      "community": 11,
+      "community": 13,
       "norm_label": "tokenbucketratelimiter"
     },
     {
@@ -5060,7 +5060,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L29",
       "id": "rate_limit_tokenbucketratelimiter_constructor",
-      "community": 11,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -5069,7 +5069,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L36",
       "id": "rate_limit_tokenbucketratelimiter_consume",
-      "community": 11,
+      "community": 13,
       "norm_label": ".consume()"
     },
     {
@@ -5078,7 +5078,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L58",
       "id": "rate_limit_slidingwindowratelimiter",
-      "community": 11,
+      "community": 13,
       "norm_label": "slidingwindowratelimiter"
     },
     {
@@ -5087,7 +5087,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L63",
       "id": "rate_limit_slidingwindowratelimiter_constructor",
-      "community": 11,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -5096,7 +5096,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L68",
       "id": "rate_limit_slidingwindowratelimiter_isallowed",
-      "community": 11,
+      "community": 13,
       "norm_label": ".isallowed()"
     },
     {
@@ -5105,7 +5105,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L84",
       "id": "rate_limit_ratelimiting",
-      "community": 11,
+      "community": 13,
       "norm_label": "ratelimiting"
     },
     {
@@ -5114,7 +5114,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L89",
       "id": "rate_limit_ratelimiting_constructor",
-      "community": 11,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -5123,7 +5123,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L95",
       "id": "rate_limit_ratelimiting_onrequest",
-      "community": 11,
+      "community": 1,
       "norm_label": ".onrequest()"
     },
     {
@@ -5132,7 +5132,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L135",
       "id": "rate_limit_slidingwindowratelimiting",
-      "community": 11,
+      "community": 13,
       "norm_label": "slidingwindowratelimiting"
     },
     {
@@ -5141,7 +5141,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L141",
       "id": "rate_limit_slidingwindowratelimiting_constructor",
-      "community": 11,
+      "community": 13,
       "norm_label": ".constructor()"
     },
     {
@@ -5150,7 +5150,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L149",
       "id": "rate_limit_slidingwindowratelimiting_onrequest",
-      "community": 11,
+      "community": 13,
       "norm_label": ".onrequest()"
     },
     {
@@ -5159,7 +5159,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/rate-limit.ts",
       "source_location": "L215",
       "id": "rate_limit_slidingwindowratelimiting_onresponse",
-      "community": 11,
+      "community": 13,
       "norm_label": ".onresponse()"
     },
     {
@@ -5168,7 +5168,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/startup.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_startup_ts",
-      "community": 7,
+      "community": 11,
       "norm_label": "startup.ts"
     },
     {
@@ -5177,7 +5177,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/startup.ts",
       "source_location": "L14",
       "id": "startup_initializeonstartup",
-      "community": 7,
+      "community": 11,
       "norm_label": "initializeonstartup()"
     },
     {
@@ -5204,7 +5204,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_bootstrap_service_ts",
-      "community": 7,
+      "community": 11,
       "norm_label": "bootstrap.service.ts"
     },
     {
@@ -5213,7 +5213,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L89",
       "id": "bootstrap_service_parsebool",
-      "community": 7,
+      "community": 11,
       "norm_label": "parsebool()"
     },
     {
@@ -5222,7 +5222,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L97",
       "id": "bootstrap_service_nonempty",
-      "community": 7,
+      "community": 11,
       "norm_label": "nonempty()"
     },
     {
@@ -5231,7 +5231,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L102",
       "id": "bootstrap_service_generateapikey",
-      "community": 7,
+      "community": 11,
       "norm_label": "generateapikey()"
     },
     {
@@ -5240,7 +5240,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L106",
       "id": "bootstrap_service_maskkey",
-      "community": 7,
+      "community": 11,
       "norm_label": "maskkey()"
     },
     {
@@ -5249,7 +5249,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L112",
       "id": "bootstrap_service_sha256hex",
-      "community": 7,
+      "community": 11,
       "norm_label": "sha256hex()"
     },
     {
@@ -5258,7 +5258,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L116",
       "id": "bootstrap_service_parsejsonarray",
-      "community": 7,
+      "community": 11,
       "norm_label": "parsejsonarray()"
     },
     {
@@ -5267,7 +5267,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L140",
       "id": "bootstrap_service_getowneremail",
-      "community": 7,
+      "community": 1,
       "norm_label": "getowneremail()"
     },
     {
@@ -5276,7 +5276,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L147",
       "id": "bootstrap_service_parseenvconfig",
-      "community": 7,
+      "community": 11,
       "norm_label": "parseenvconfig()"
     },
     {
@@ -5285,7 +5285,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L218",
       "id": "bootstrap_service_upsertconfig",
-      "community": 7,
+      "community": 11,
       "norm_label": "upsertconfig()"
     },
     {
@@ -5294,7 +5294,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L233",
       "id": "bootstrap_service_getconfigvalue",
-      "community": 7,
+      "community": 11,
       "norm_label": "getconfigvalue()"
     },
     {
@@ -5303,7 +5303,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L240",
       "id": "bootstrap_service_shouldskipbootstrap",
-      "community": 7,
+      "community": 11,
       "norm_label": "shouldskipbootstrap()"
     },
     {
@@ -5312,7 +5312,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L261",
       "id": "bootstrap_service_markbootstrapcomplete",
-      "community": 7,
+      "community": 11,
       "norm_label": "markbootstrapcomplete()"
     },
     {
@@ -5321,7 +5321,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L273",
       "id": "bootstrap_service_warnifpasswordchanged",
-      "community": 7,
+      "community": 11,
       "norm_label": "warnifpasswordchanged()"
     },
     {
@@ -5330,7 +5330,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L307",
       "id": "bootstrap_service_recordpasswordfingerprint",
-      "community": 7,
+      "community": 11,
       "norm_label": "recordpasswordfingerprint()"
     },
     {
@@ -5339,7 +5339,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L326",
       "id": "bootstrap_service_ensureuser",
-      "community": 7,
+      "community": 11,
       "norm_label": "ensureuser()"
     },
     {
@@ -5348,7 +5348,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L491",
       "id": "bootstrap_service_bootstrapusers",
-      "community": 7,
+      "community": 11,
       "norm_label": "bootstrapusers()"
     },
     {
@@ -5357,7 +5357,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L522",
       "id": "bootstrap_service_maybedeleteotherusers",
-      "community": 7,
+      "community": 11,
       "norm_label": "maybedeleteotherusers()"
     },
     {
@@ -5366,7 +5366,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L551",
       "id": "bootstrap_service_bootstrapapikeys",
-      "community": 7,
+      "community": 11,
       "norm_label": "bootstrapapikeys()"
     },
     {
@@ -5375,7 +5375,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L639",
       "id": "bootstrap_service_bootstrapnamespaces",
-      "community": 7,
+      "community": 1,
       "norm_label": "bootstrapnamespaces()"
     },
     {
@@ -5384,7 +5384,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L750",
       "id": "bootstrap_service_bootstrapendpoints",
-      "community": 7,
+      "community": 1,
       "norm_label": "bootstrapendpoints()"
     },
     {
@@ -5393,7 +5393,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L877",
       "id": "bootstrap_service_validateconfig",
-      "community": 7,
+      "community": 11,
       "norm_label": "validateconfig()"
     },
     {
@@ -5402,7 +5402,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/bootstrap.service.ts",
       "source_location": "L970",
       "id": "bootstrap_service_initializeenvironmentconfiguration",
-      "community": 7,
+      "community": 11,
       "norm_label": "initializeenvironmentconfiguration()"
     },
     {
@@ -5411,7 +5411,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/shared.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_stdio_transport_shared_ts",
-      "community": 14,
+      "community": 15,
       "norm_label": "shared.ts"
     },
     {
@@ -5420,7 +5420,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/shared.ts",
       "source_location": "L9",
       "id": "shared_readbuffer",
-      "community": 14,
+      "community": 15,
       "norm_label": "readbuffer"
     },
     {
@@ -5429,7 +5429,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/shared.ts",
       "source_location": "L12",
       "id": "shared_readbuffer_append",
-      "community": 14,
+      "community": 15,
       "norm_label": ".append()"
     },
     {
@@ -5438,7 +5438,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/shared.ts",
       "source_location": "L16",
       "id": "shared_readbuffer_readmessage",
-      "community": 14,
+      "community": 15,
       "norm_label": ".readmessage()"
     },
     {
@@ -5447,7 +5447,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/shared.ts",
       "source_location": "L31",
       "id": "shared_readbuffer_clear",
-      "community": 14,
+      "community": 15,
       "norm_label": ".clear()"
     },
     {
@@ -5456,7 +5456,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/shared.ts",
       "source_location": "L36",
       "id": "shared_deserializemessage",
-      "community": 14,
+      "community": 15,
       "norm_label": "deserializemessage()"
     },
     {
@@ -5465,7 +5465,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/shared.ts",
       "source_location": "L40",
       "id": "shared_serializemessage",
-      "community": 14,
+      "community": 15,
       "norm_label": "serializemessage()"
     },
     {
@@ -5474,7 +5474,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_stdio_transport_process_managed_transport_ts",
-      "community": 14,
+      "community": 15,
       "norm_label": "process-managed-transport.ts"
     },
     {
@@ -5483,7 +5483,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L96",
       "id": "process_managed_transport_getdefaultenvironment",
-      "community": 14,
+      "community": 15,
       "norm_label": "getdefaultenvironment()"
     },
     {
@@ -5492,7 +5492,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L121",
       "id": "process_managed_transport_processmanagedstdiotransport",
-      "community": 14,
+      "community": 15,
       "norm_label": "processmanagedstdiotransport"
     },
     {
@@ -5501,7 +5501,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L134",
       "id": "process_managed_transport_processmanagedstdiotransport_constructor",
-      "community": 14,
+      "community": 15,
       "norm_label": ".constructor()"
     },
     {
@@ -5510,7 +5510,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L144",
       "id": "process_managed_transport_processmanagedstdiotransport_start",
-      "community": 14,
+      "community": 15,
       "norm_label": ".start()"
     },
     {
@@ -5519,7 +5519,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L228",
       "id": "process_managed_transport_processmanagedstdiotransport_stderr",
-      "community": 14,
+      "community": 15,
       "norm_label": ".stderr()"
     },
     {
@@ -5528,7 +5528,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L241",
       "id": "process_managed_transport_processmanagedstdiotransport_pid",
-      "community": 14,
+      "community": 15,
       "norm_label": ".pid()"
     },
     {
@@ -5537,7 +5537,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L245",
       "id": "process_managed_transport_processmanagedstdiotransport_processreadbuffer",
-      "community": 14,
+      "community": 15,
       "norm_label": ".processreadbuffer()"
     },
     {
@@ -5546,7 +5546,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L260",
       "id": "process_managed_transport_processmanagedstdiotransport_close",
-      "community": 3,
+      "community": 2,
       "norm_label": ".close()"
     },
     {
@@ -5555,7 +5555,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L278",
       "id": "process_managed_transport_processmanagedstdiotransport_send",
-      "community": 14,
+      "community": 15,
       "norm_label": ".send()"
     },
     {
@@ -5564,7 +5564,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
       "source_location": "L294",
       "id": "process_managed_transport_iselectron",
-      "community": 14,
+      "community": 15,
       "norm_label": "iselectron()"
     },
     {
@@ -5573,7 +5573,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_mcp_server_pool_ts",
-      "community": 5,
+      "community": 4,
       "norm_label": "mcp-server-pool.ts"
     },
     {
@@ -5582,7 +5582,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L16",
       "id": "mcp_server_pool_mcpserverpool",
-      "community": 5,
+      "community": 4,
       "norm_label": "mcpserverpool"
     },
     {
@@ -5591,7 +5591,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L53",
       "id": "mcp_server_pool_mcpserverpool_constructor",
-      "community": 5,
+      "community": 4,
       "norm_label": ".constructor()"
     },
     {
@@ -5600,7 +5600,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L65",
       "id": "mcp_server_pool_mcpserverpool_getinstance",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getinstance()"
     },
     {
@@ -5609,7 +5609,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L81",
       "id": "mcp_server_pool_mcpserverpool_getsession",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getsession()"
     },
     {
@@ -5618,7 +5618,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L171",
       "id": "mcp_server_pool_mcpserverpool_createnewconnection",
-      "community": 5,
+      "community": 4,
       "norm_label": ".createnewconnection()"
     },
     {
@@ -5627,7 +5627,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L235",
       "id": "mcp_server_pool_mcpserverpool_createidlesession",
-      "community": 5,
+      "community": 4,
       "norm_label": ".createidlesession()"
     },
     {
@@ -5636,7 +5636,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L255",
       "id": "mcp_server_pool_mcpserverpool_createidlesessionasync",
-      "community": 5,
+      "community": 4,
       "norm_label": ".createidlesessionasync()"
     },
     {
@@ -5654,7 +5654,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L328",
       "id": "mcp_server_pool_mcpserverpool_cleanupsession",
-      "community": 5,
+      "community": 4,
       "norm_label": ".cleanupsession()"
     },
     {
@@ -5663,7 +5663,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L369",
       "id": "mcp_server_pool_mcpserverpool_cleanupall",
-      "community": 3,
+      "community": 2,
       "norm_label": ".cleanupall()"
     },
     {
@@ -5672,7 +5672,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L403",
       "id": "mcp_server_pool_mcpserverpool_getpoolstatus",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getpoolstatus()"
     },
     {
@@ -5681,7 +5681,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L422",
       "id": "mcp_server_pool_mcpserverpool_gettotalconnectioncount",
-      "community": 5,
+      "community": 4,
       "norm_label": ".gettotalconnectioncount()"
     },
     {
@@ -5690,7 +5690,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L436",
       "id": "mcp_server_pool_mcpserverpool_cancreateconnection",
-      "community": 5,
+      "community": 4,
       "norm_label": ".cancreateconnection()"
     },
     {
@@ -5699,7 +5699,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L450",
       "id": "mcp_server_pool_mcpserverpool_getsessionconnections",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getsessionconnections()"
     },
     {
@@ -5708,7 +5708,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L459",
       "id": "mcp_server_pool_mcpserverpool_getactivesessionids",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getactivesessionids()"
     },
     {
@@ -5717,7 +5717,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L466",
       "id": "mcp_server_pool_mcpserverpool_getbackgroundidlesessionsbynamespace",
-      "community": 11,
+      "community": 13,
       "norm_label": ".getbackgroundidlesessionsbynamespace()"
     },
     {
@@ -5726,7 +5726,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L473",
       "id": "mcp_server_pool_mcpserverpool_setbackgroundidlesessionsbynamespace",
-      "community": 5,
+      "community": 4,
       "norm_label": ".setbackgroundidlesessionsbynamespace()"
     },
     {
@@ -5735,7 +5735,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L484",
       "id": "mcp_server_pool_mcpserverpool_invalidateidlesession",
-      "community": 3,
+      "community": 2,
       "norm_label": ".invalidateidlesession()"
     },
     {
@@ -5744,7 +5744,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L521",
       "id": "mcp_server_pool_mcpserverpool_invalidateidlesessions",
-      "community": 5,
+      "community": 4,
       "norm_label": ".invalidateidlesessions()"
     },
     {
@@ -5753,7 +5753,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L536",
       "id": "mcp_server_pool_mcpserverpool_cleanupidlesession",
-      "community": 3,
+      "community": 2,
       "norm_label": ".cleanupidlesession()"
     },
     {
@@ -5762,7 +5762,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L565",
       "id": "mcp_server_pool_mcpserverpool_ensureidlesessionfornewserver",
-      "community": 5,
+      "community": 4,
       "norm_label": ".ensureidlesessionfornewserver()"
     },
     {
@@ -5771,7 +5771,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L587",
       "id": "mcp_server_pool_mcpserverpool_handleservercrash",
-      "community": 2,
+      "community": 1,
       "norm_label": ".handleservercrash()"
     },
     {
@@ -5780,7 +5780,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L608",
       "id": "mcp_server_pool_mcpserverpool_handleservercrashwithoutnamespace",
-      "community": 2,
+      "community": 1,
       "norm_label": ".handleservercrashwithoutnamespace()"
     },
     {
@@ -5789,7 +5789,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L628",
       "id": "mcp_server_pool_mcpserverpool_cleanupserversessions",
-      "community": 2,
+      "community": 1,
       "norm_label": ".cleanupserversessions()"
     },
     {
@@ -5798,7 +5798,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L672",
       "id": "mcp_server_pool_mcpserverpool_isserverinerrorstate",
-      "community": 5,
+      "community": 4,
       "norm_label": ".isserverinerrorstate()"
     },
     {
@@ -5807,7 +5807,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L679",
       "id": "mcp_server_pool_mcpserverpool_resetservererrorstate",
-      "community": 5,
+      "community": 4,
       "norm_label": ".resetservererrorstate()"
     },
     {
@@ -5816,7 +5816,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L689",
       "id": "mcp_server_pool_mcpserverpool_startcleanuptimer",
-      "community": 5,
+      "community": 4,
       "norm_label": ".startcleanuptimer()"
     },
     {
@@ -5825,7 +5825,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L702",
       "id": "mcp_server_pool_mcpserverpool_cleanupexpiredsessions",
-      "community": 5,
+      "community": 4,
       "norm_label": ".cleanupexpiredsessions()"
     },
     {
@@ -5834,7 +5834,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L742",
       "id": "mcp_server_pool_mcpserverpool_excludesessionfromexpiry",
-      "community": 5,
+      "community": 4,
       "norm_label": ".excludesessionfromexpiry()"
     },
     {
@@ -5843,7 +5843,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L749",
       "id": "mcp_server_pool_mcpserverpool_getserveruuids",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getserveruuids()"
     },
     {
@@ -5852,7 +5852,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L756",
       "id": "mcp_server_pool_mcpserverpool_getserverparams",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getserverparams()"
     },
     {
@@ -5861,7 +5861,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L763",
       "id": "mcp_server_pool_mcpserverpool_getsessionage",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getsessionage()"
     },
     {
@@ -5870,7 +5870,7 @@
       "source_file": "apps/backend/src/lib/metamcp/mcp-server-pool.ts",
       "source_location": "L771",
       "id": "mcp_server_pool_mcpserverpool_issessionexpired",
-      "community": 5,
+      "community": 4,
       "norm_label": ".issessionexpired()"
     },
     {
@@ -5879,7 +5879,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-proxy.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_metamcp_proxy_ts",
-      "community": 8,
+      "community": 7,
       "norm_label": "metamcp-proxy.ts"
     },
     {
@@ -5888,7 +5888,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-proxy.ts",
       "source_location": "L57",
       "id": "metamcp_proxy_filteroutoverridetools",
-      "community": 8,
+      "community": 7,
       "norm_label": "filteroutoverridetools()"
     },
     {
@@ -5897,7 +5897,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-proxy.ts",
       "source_location": "L103",
       "id": "metamcp_proxy_createserver",
-      "community": 8,
+      "community": 7,
       "norm_label": "createserver()"
     },
     {
@@ -5906,7 +5906,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_server_error_tracker_ts",
-      "community": 2,
+      "community": 1,
       "norm_label": "server-error-tracker.ts"
     },
     {
@@ -5915,7 +5915,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L15",
       "id": "server_error_tracker_servererrortracker",
-      "community": 2,
+      "community": 1,
       "norm_label": "servererrortracker"
     },
     {
@@ -5924,7 +5924,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L27",
       "id": "server_error_tracker_servererrortracker_constructor",
-      "community": 2,
+      "community": 1,
       "norm_label": ".constructor()"
     },
     {
@@ -5933,7 +5933,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L29",
       "id": "server_error_tracker_servererrortracker_getinstance",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getinstance()"
     },
     {
@@ -5942,7 +5942,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L39",
       "id": "server_error_tracker_servererrortracker_setservermaxattempts",
-      "community": 2,
+      "community": 1,
       "norm_label": ".setservermaxattempts()"
     },
     {
@@ -5951,7 +5951,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L46",
       "id": "server_error_tracker_servererrortracker_getservermaxattempts",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getservermaxattempts()"
     },
     {
@@ -5960,7 +5960,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L68",
       "id": "server_error_tracker_servererrortracker_recordservercrash",
-      "community": 2,
+      "community": 1,
       "norm_label": ".recordservercrash()"
     },
     {
@@ -5969,7 +5969,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L118",
       "id": "server_error_tracker_servererrortracker_markserveraserror",
-      "community": 2,
+      "community": 1,
       "norm_label": ".markserveraserror()"
     },
     {
@@ -5978,7 +5978,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L135",
       "id": "server_error_tracker_servererrortracker_resetserverattempts",
-      "community": 2,
+      "community": 1,
       "norm_label": ".resetserverattempts()"
     },
     {
@@ -5987,7 +5987,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L142",
       "id": "server_error_tracker_servererrortracker_getserverattempts",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getserverattempts()"
     },
     {
@@ -5996,7 +5996,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L149",
       "id": "server_error_tracker_servererrortracker_isserverinerrorstate",
-      "community": 4,
+      "community": 5,
       "norm_label": ".isserverinerrorstate()"
     },
     {
@@ -6005,7 +6005,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/server-error-tracker.ts",
       "source_location": "L165",
       "id": "server_error_tracker_servererrortracker_resetservererrorstate",
-      "community": 2,
+      "community": 1,
       "norm_label": ".resetservererrorstate()"
     },
     {
@@ -6014,7 +6014,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_metamcp_server_pool_ts",
-      "community": 3,
+      "community": 2,
       "norm_label": "metamcp-server-pool.ts"
     },
     {
@@ -6023,7 +6023,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L21",
       "id": "metamcp_server_pool_metamcpserverpool",
-      "community": 3,
+      "community": 2,
       "norm_label": "metamcpserverpool"
     },
     {
@@ -6032,7 +6032,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L46",
       "id": "metamcp_server_pool_metamcpserverpool_constructor",
-      "community": 3,
+      "community": 2,
       "norm_label": ".constructor()"
     },
     {
@@ -6041,7 +6041,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L54",
       "id": "metamcp_server_pool_metamcpserverpool_getinstance",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getinstance()"
     },
     {
@@ -6050,7 +6050,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L64",
       "id": "metamcp_server_pool_metamcpserverpool_getserver",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getserver()"
     },
     {
@@ -6059,7 +6059,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L122",
       "id": "metamcp_server_pool_metamcpserverpool_createnewserver",
-      "community": 3,
+      "community": 2,
       "norm_label": ".createnewserver()"
     },
     {
@@ -6068,7 +6068,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L150",
       "id": "metamcp_server_pool_metamcpserverpool_createidleserver",
-      "community": 3,
+      "community": 2,
       "norm_label": ".createidleserver()"
     },
     {
@@ -6077,7 +6077,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L182",
       "id": "metamcp_server_pool_metamcpserverpool_createidleserverasync",
-      "community": 3,
+      "community": 2,
       "norm_label": ".createidleserverasync()"
     },
     {
@@ -6095,7 +6095,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L252",
       "id": "metamcp_server_pool_metamcpserverpool_cleanupsession",
-      "community": 3,
+      "community": 2,
       "norm_label": ".cleanupsession()"
     },
     {
@@ -6104,7 +6104,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L284",
       "id": "metamcp_server_pool_metamcpserverpool_cleanupall",
-      "community": 3,
+      "community": 2,
       "norm_label": ".cleanupall()"
     },
     {
@@ -6113,7 +6113,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L320",
       "id": "metamcp_server_pool_metamcpserverpool_getpoolstatus",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getpoolstatus()"
     },
     {
@@ -6122,7 +6122,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L335",
       "id": "metamcp_server_pool_metamcpserverpool_getserverinstance",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getserverinstance()"
     },
     {
@@ -6131,7 +6131,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L342",
       "id": "metamcp_server_pool_metamcpserverpool_getactivesessionids",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getactivesessionids()"
     },
     {
@@ -6140,7 +6140,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L349",
       "id": "metamcp_server_pool_metamcpserverpool_getmcpserverpoolstatus",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getmcpserverpoolstatus()"
     },
     {
@@ -6149,7 +6149,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L357",
       "id": "metamcp_server_pool_metamcpserverpool_invalidateidleserver",
-      "community": 3,
+      "community": 2,
       "norm_label": ".invalidateidleserver()"
     },
     {
@@ -6158,7 +6158,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L390",
       "id": "metamcp_server_pool_metamcpserverpool_invalidateidleservers",
-      "community": 3,
+      "community": 2,
       "norm_label": ".invalidateidleservers()"
     },
     {
@@ -6167,7 +6167,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L405",
       "id": "metamcp_server_pool_metamcpserverpool_cleanupidleserver",
-      "community": 3,
+      "community": 2,
       "norm_label": ".cleanupidleserver()"
     },
     {
@@ -6176,7 +6176,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L431",
       "id": "metamcp_server_pool_metamcpserverpool_ensureidleserverfornewnamespace",
-      "community": 3,
+      "community": 2,
       "norm_label": ".ensureidleserverfornewnamespace()"
     },
     {
@@ -6185,7 +6185,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L452",
       "id": "metamcp_server_pool_metamcpserverpool_getopenapiserver",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getopenapiserver()"
     },
     {
@@ -6194,7 +6194,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L512",
       "id": "metamcp_server_pool_metamcpserverpool_invalidateopenapisessions",
-      "community": 3,
+      "community": 2,
       "norm_label": ".invalidateopenapisessions()"
     },
     {
@@ -6203,7 +6203,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L552",
       "id": "metamcp_server_pool_metamcpserverpool_startcleanuptimer",
-      "community": 3,
+      "community": 2,
       "norm_label": ".startcleanuptimer()"
     },
     {
@@ -6212,7 +6212,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L565",
       "id": "metamcp_server_pool_metamcpserverpool_cleanupexpiredsessions",
-      "community": 3,
+      "community": 2,
       "norm_label": ".cleanupexpiredsessions()"
     },
     {
@@ -6221,7 +6221,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L604",
       "id": "metamcp_server_pool_metamcpserverpool_getsessionage",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getsessionage()"
     },
     {
@@ -6230,7 +6230,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-server-pool.ts",
       "source_location": "L612",
       "id": "metamcp_server_pool_metamcpserverpool_issessionexpired",
-      "community": 3,
+      "community": 2,
       "norm_label": ".issessionexpired()"
     },
     {
@@ -6293,7 +6293,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/tool-name-parser.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_tool_name_parser_ts",
-      "community": 8,
+      "community": 7,
       "norm_label": "tool-name-parser.ts"
     },
     {
@@ -6302,7 +6302,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/downstream-notification-manager.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_downstream_notification_manager_ts",
-      "community": 2,
+      "community": 1,
       "norm_label": "downstream-notification-manager.ts"
     },
     {
@@ -6311,7 +6311,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/downstream-notification-manager.ts",
       "source_location": "L9",
       "id": "downstream_notification_manager_downstreamnotificationmanager",
-      "community": 2,
+      "community": 1,
       "norm_label": "downstreamnotificationmanager"
     },
     {
@@ -6320,7 +6320,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/downstream-notification-manager.ts",
       "source_location": "L19",
       "id": "downstream_notification_manager_downstreamnotificationmanager_register",
-      "community": 2,
+      "community": 1,
       "norm_label": ".register()"
     },
     {
@@ -6329,7 +6329,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/downstream-notification-manager.ts",
       "source_location": "L33",
       "id": "downstream_notification_manager_downstreamnotificationmanager_deregister",
-      "community": 2,
+      "community": 1,
       "norm_label": ".deregister()"
     },
     {
@@ -6338,7 +6338,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/downstream-notification-manager.ts",
       "source_location": "L46",
       "id": "downstream_notification_manager_downstreamnotificationmanager_notifynamespace",
-      "community": 2,
+      "community": 1,
       "norm_label": ".notifynamespace()"
     },
     {
@@ -6347,7 +6347,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/downstream-notification-manager.ts",
       "source_location": "L76",
       "id": "downstream_notification_manager_downstreamnotificationmanager_getsessionids",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getsessionids()"
     },
     {
@@ -6356,8 +6356,35 @@
       "source_file": "apps/backend/src/lib/metamcp/session-headers-store.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_session_headers_store_ts",
-      "community": 143,
+      "community": 5,
       "norm_label": "session-headers-store.ts"
+    },
+    {
+      "label": "isSensitiveHeaderName()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/lib/metamcp/session-headers-store.ts",
+      "source_location": "L18",
+      "id": "session_headers_store_issensitiveheadername",
+      "community": 5,
+      "norm_label": "issensitiveheadername()"
+    },
+    {
+      "label": "sanitizeHeaderValueForDebugLog()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/lib/metamcp/session-headers-store.ts",
+      "source_location": "L23",
+      "id": "session_headers_store_sanitizeheadervaluefordebuglog",
+      "community": 5,
+      "norm_label": "sanitizeheadervaluefordebuglog()"
+    },
+    {
+      "label": "sanitizeHeadersForDebugLog()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/lib/metamcp/session-headers-store.ts",
+      "source_location": "L35",
+      "id": "session_headers_store_sanitizeheadersfordebuglog",
+      "community": 5,
+      "norm_label": "sanitizeheadersfordebuglog()"
     },
     {
       "label": "pg-notify.ts",
@@ -6365,7 +6392,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/pg-notify.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_pg_notify_ts",
-      "community": 5,
+      "community": 4,
       "norm_label": "pg-notify.ts"
     },
     {
@@ -6374,7 +6401,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/pg-notify.ts",
       "source_location": "L12",
       "id": "pg_notify_pgnotify",
-      "community": 5,
+      "community": 4,
       "norm_label": "pgnotify"
     },
     {
@@ -6383,7 +6410,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/pg-notify.ts",
       "source_location": "L19",
       "id": "pg_notify_pgnotify_constructor",
-      "community": 5,
+      "community": 4,
       "norm_label": ".constructor()"
     },
     {
@@ -6392,7 +6419,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/pg-notify.ts",
       "source_location": "L26",
       "id": "pg_notify_pgnotify_start",
-      "community": 5,
+      "community": 4,
       "norm_label": ".start()"
     },
     {
@@ -6401,7 +6428,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/pg-notify.ts",
       "source_location": "L84",
       "id": "pg_notify_pgnotify_notify",
-      "community": 5,
+      "community": 4,
       "norm_label": ".notify()"
     },
     {
@@ -6410,7 +6437,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/pg-notify.ts",
       "source_location": "L104",
       "id": "pg_notify_pgnotify_subscribe",
-      "community": 5,
+      "community": 1,
       "norm_label": ".subscribe()"
     },
     {
@@ -6419,7 +6446,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/pg-notify.ts",
       "source_location": "L127",
       "id": "pg_notify_pgnotify_stop",
-      "community": 5,
+      "community": 4,
       "norm_label": ".stop()"
     },
     {
@@ -6428,43 +6455,70 @@
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_client_ts",
-      "community": 4,
+      "community": 5,
       "norm_label": "client.ts"
     },
     {
       "label": "sleep()",
       "file_type": "code",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L15",
+      "source_location": "L16",
       "id": "client_sleep",
-      "community": 4,
+      "community": 5,
       "norm_label": "sleep()"
+    },
+    {
+      "label": "getCaseInsensitiveHeaderKey()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L25",
+      "id": "client_getcaseinsensitiveheaderkey",
+      "community": 5,
+      "norm_label": "getcaseinsensitiveheaderkey()"
+    },
+    {
+      "label": "buildHttpHeaders()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L33",
+      "id": "client_buildhttpheaders",
+      "community": 5,
+      "norm_label": "buildhttpheaders()"
+    },
+    {
+      "label": "debugLogHttpHeaders()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L85",
+      "id": "client_debugloghttpheaders",
+      "community": 5,
+      "norm_label": "debugloghttpheaders()"
     },
     {
       "label": "transformDockerUrl()",
       "file_type": "code",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L27",
+      "source_location": "L109",
       "id": "client_transformdockerurl",
-      "community": 4,
+      "community": 5,
       "norm_label": "transformdockerurl()"
     },
     {
       "label": "createMetaMcpClient()",
       "file_type": "code",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L38",
+      "source_location": "L120",
       "id": "client_createmetamcpclient",
-      "community": 4,
+      "community": 5,
       "norm_label": "createmetamcpclient()"
     },
     {
       "label": "connectMetaMcpClient()",
       "file_type": "code",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L165",
+      "source_location": "L241",
       "id": "client_connectmetamcpclient",
-      "community": 4,
+      "community": 5,
       "norm_label": "connectmetamcpclient()"
     },
     {
@@ -6572,7 +6626,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/log-store.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_log_store_ts",
-      "community": 16,
+      "community": 0,
       "norm_label": "log-store.ts"
     },
     {
@@ -6581,7 +6635,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/log-store.ts",
       "source_location": "L12",
       "id": "log_store_metamcplogstore",
-      "community": 16,
+      "community": 0,
       "norm_label": "metamcplogstore"
     },
     {
@@ -6590,7 +6644,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/log-store.ts",
       "source_location": "L17",
       "id": "log_store_metamcplogstore_addlog",
-      "community": 4,
+      "community": 5,
       "norm_label": ".addlog()"
     },
     {
@@ -6599,7 +6653,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/log-store.ts",
       "source_location": "L68",
       "id": "log_store_metamcplogstore_getlogs",
-      "community": 16,
+      "community": 0,
       "norm_label": ".getlogs()"
     },
     {
@@ -6608,7 +6662,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/log-store.ts",
       "source_location": "L73",
       "id": "log_store_metamcplogstore_clearlogs",
-      "community": 16,
+      "community": 0,
       "norm_label": ".clearlogs()"
     },
     {
@@ -6617,7 +6671,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/log-store.ts",
       "source_location": "L77",
       "id": "log_store_metamcplogstore_addlistener",
-      "community": 16,
+      "community": 0,
       "norm_label": ".addlistener()"
     },
     {
@@ -6626,7 +6680,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/log-store.ts",
       "source_location": "L82",
       "id": "log_store_metamcplogstore_getlogcount",
-      "community": 16,
+      "community": 0,
       "norm_label": ".getlogcount()"
     },
     {
@@ -6635,7 +6689,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/index.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_index_ts",
-      "community": 144,
+      "community": 143,
       "norm_label": "index.ts"
     },
     {
@@ -6644,7 +6698,7 @@
       "source_file": "apps/backend/src/lib/metamcp/tool-discovery-service.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_tool_discovery_service_ts",
-      "community": 5,
+      "community": 4,
       "norm_label": "tool-discovery-service.ts"
     },
     {
@@ -6653,7 +6707,7 @@
       "source_file": "apps/backend/src/lib/metamcp/tool-discovery-service.ts",
       "source_location": "L34",
       "id": "tool_discovery_service_tooldiscoveryservice",
-      "community": 5,
+      "community": 4,
       "norm_label": "tooldiscoveryservice"
     },
     {
@@ -6662,7 +6716,7 @@
       "source_file": "apps/backend/src/lib/metamcp/tool-discovery-service.ts",
       "source_location": "L44",
       "id": "tool_discovery_service_tooldiscoveryservice_start",
-      "community": 5,
+      "community": 4,
       "norm_label": ".start()"
     },
     {
@@ -6671,7 +6725,7 @@
       "source_file": "apps/backend/src/lib/metamcp/tool-discovery-service.ts",
       "source_location": "L72",
       "id": "tool_discovery_service_tooldiscoveryservice_stop",
-      "community": 5,
+      "community": 4,
       "norm_label": ".stop()"
     },
     {
@@ -6680,7 +6734,7 @@
       "source_file": "apps/backend/src/lib/metamcp/tool-discovery-service.ts",
       "source_location": "L92",
       "id": "tool_discovery_service_tooldiscoveryservice_refreshall",
-      "community": 5,
+      "community": 4,
       "norm_label": ".refreshall()"
     },
     {
@@ -6689,7 +6743,7 @@
       "source_file": "apps/backend/src/lib/metamcp/tool-discovery-service.ts",
       "source_location": "L105",
       "id": "tool_discovery_service_tooldiscoveryservice_refreshserver",
-      "community": 5,
+      "community": 4,
       "norm_label": ".refreshserver()"
     },
     {
@@ -6698,7 +6752,7 @@
       "source_file": "apps/backend/src/lib/metamcp/tool-discovery-service.ts",
       "source_location": "L219",
       "id": "tool_discovery_service_tooldiscoveryservice_ensureupstreamsubscription",
-      "community": 5,
+      "community": 4,
       "norm_label": ".ensureupstreamsubscription()"
     },
     {
@@ -6707,7 +6761,7 @@
       "source_file": "apps/backend/src/lib/metamcp/tool-discovery-service.ts",
       "source_location": "L281",
       "id": "tool_discovery_service_tooldiscoveryservice_getnamespacesforserver",
-      "community": 5,
+      "community": 4,
       "norm_label": ".getnamespacesforserver()"
     },
     {
@@ -6716,7 +6770,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_metamcp_middleware_filter_tools_functional_ts",
-      "community": 8,
+      "community": 7,
       "norm_label": "filter-tools.functional.ts"
     },
     {
@@ -6725,7 +6779,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L30",
       "id": "filter_tools_functional_toolstatuscache",
-      "community": 8,
+      "community": 7,
       "norm_label": "toolstatuscache"
     },
     {
@@ -6734,7 +6788,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L35",
       "id": "filter_tools_functional_toolstatuscache_constructor",
-      "community": 8,
+      "community": 7,
       "norm_label": ".constructor()"
     },
     {
@@ -6743,7 +6797,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L39",
       "id": "filter_tools_functional_toolstatuscache_getcachekey",
-      "community": 8,
+      "community": 7,
       "norm_label": ".getcachekey()"
     },
     {
@@ -6752,7 +6806,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L47",
       "id": "filter_tools_functional_toolstatuscache_get",
-      "community": 8,
+      "community": 7,
       "norm_label": ".get()"
     },
     {
@@ -6761,7 +6815,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L64",
       "id": "filter_tools_functional_toolstatuscache_set",
-      "community": 8,
+      "community": 7,
       "norm_label": ".set()"
     },
     {
@@ -6770,7 +6824,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L75",
       "id": "filter_tools_functional_toolstatuscache_clear",
-      "community": 8,
+      "community": 7,
       "norm_label": ".clear()"
     },
     {
@@ -6779,7 +6833,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L96",
       "id": "filter_tools_functional_gettoolstatus",
-      "community": 8,
+      "community": 7,
       "norm_label": "gettoolstatus()"
     },
     {
@@ -6788,7 +6842,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L151",
       "id": "filter_tools_functional_getserveruuidbyname",
-      "community": 8,
+      "community": 7,
       "norm_label": "getserveruuidbyname()"
     },
     {
@@ -6797,7 +6851,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L168",
       "id": "filter_tools_functional_filteractivetools",
-      "community": 8,
+      "community": 7,
       "norm_label": "filteractivetools()"
     },
     {
@@ -6806,7 +6860,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L222",
       "id": "filter_tools_functional_istoolallowed",
-      "community": 8,
+      "community": 7,
       "norm_label": "istoolallowed()"
     },
     {
@@ -6815,7 +6869,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L265",
       "id": "filter_tools_functional_createfilterlisttoolsmiddleware",
-      "community": 8,
+      "community": 7,
       "norm_label": "createfilterlisttoolsmiddleware()"
     },
     {
@@ -6824,7 +6878,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L297",
       "id": "filter_tools_functional_createfiltercalltoolmiddleware",
-      "community": 8,
+      "community": 7,
       "norm_label": "createfiltercalltoolmiddleware()"
     },
     {
@@ -6833,7 +6887,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/filter-tools.functional.ts",
       "source_location": "L351",
       "id": "filter_tools_functional_clearfiltercache",
-      "community": 8,
+      "community": 7,
       "norm_label": "clearfiltercache()"
     },
     {
@@ -6842,7 +6896,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_metamcp_middleware_tool_overrides_functional_ts",
-      "community": 2,
+      "community": 7,
       "norm_label": "tool-overrides.functional.ts"
     },
     {
@@ -6851,7 +6905,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L37",
       "id": "tool_overrides_functional_mergeannotations",
-      "community": 2,
+      "community": 7,
       "norm_label": "mergeannotations()"
     },
     {
@@ -6860,7 +6914,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L60",
       "id": "tool_overrides_functional_tooloverridescache",
-      "community": 2,
+      "community": 1,
       "norm_label": "tooloverridescache"
     },
     {
@@ -6869,7 +6923,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L67",
       "id": "tool_overrides_functional_tooloverridescache_constructor",
-      "community": 2,
+      "community": 1,
       "norm_label": ".constructor()"
     },
     {
@@ -6878,7 +6932,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L71",
       "id": "tool_overrides_functional_tooloverridescache_getcachekey",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getcachekey()"
     },
     {
@@ -6887,7 +6941,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L79",
       "id": "tool_overrides_functional_tooloverridescache_getreversekey",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getreversekey()"
     },
     {
@@ -6896,7 +6950,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L83",
       "id": "tool_overrides_functional_tooloverridescache_get",
-      "community": 2,
+      "community": 1,
       "norm_label": ".get()"
     },
     {
@@ -6905,7 +6959,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L106",
       "id": "tool_overrides_functional_tooloverridescache_set",
-      "community": 2,
+      "community": 1,
       "norm_label": ".set()"
     },
     {
@@ -6914,7 +6968,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L134",
       "id": "tool_overrides_functional_tooloverridescache_getoriginalname",
-      "community": 2,
+      "community": 1,
       "norm_label": ".getoriginalname()"
     },
     {
@@ -6923,7 +6977,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L139",
       "id": "tool_overrides_functional_tooloverridescache_setoriginalname",
-      "community": 2,
+      "community": 1,
       "norm_label": ".setoriginalname()"
     },
     {
@@ -6932,7 +6986,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L148",
       "id": "tool_overrides_functional_tooloverridescache_clear",
-      "community": 3,
+      "community": 2,
       "norm_label": ".clear()"
     },
     {
@@ -6941,7 +6995,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L177",
       "id": "tool_overrides_functional_gettooloverrides",
-      "community": 2,
+      "community": 1,
       "norm_label": "gettooloverrides()"
     },
     {
@@ -6950,7 +7004,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L260",
       "id": "tool_overrides_functional_applytooloverrides",
-      "community": 2,
+      "community": 7,
       "norm_label": "applytooloverrides()"
     },
     {
@@ -6959,7 +7013,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L369",
       "id": "tool_overrides_functional_mapoverridenametooriginal",
-      "community": 2,
+      "community": 1,
       "norm_label": "mapoverridenametooriginal()"
     },
     {
@@ -6968,7 +7022,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L444",
       "id": "tool_overrides_functional_createtooloverrideslisttoolsmiddleware",
-      "community": 2,
+      "community": 7,
       "norm_label": "createtooloverrideslisttoolsmiddleware()"
     },
     {
@@ -6977,7 +7031,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L478",
       "id": "tool_overrides_functional_createtooloverridescalltoolmiddleware",
-      "community": 8,
+      "community": 7,
       "norm_label": "createtooloverridescalltoolmiddleware()"
     },
     {
@@ -6986,7 +7040,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/metamcp-middleware/tool-overrides.functional.ts",
       "source_location": "L510",
       "id": "tool_overrides_functional_clearoverridecache",
-      "community": 3,
+      "community": 2,
       "norm_label": "clearoverridecache()"
     },
     {
@@ -6995,7 +7049,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-middleware/functional-middleware.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_metamcp_middleware_functional_middleware_ts",
-      "community": 8,
+      "community": 7,
       "norm_label": "functional-middleware.ts"
     },
     {
@@ -7004,7 +7058,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-middleware/functional-middleware.ts",
       "source_location": "L48",
       "id": "functional_middleware_createfunctionalmiddleware",
-      "community": 8,
+      "community": 7,
       "norm_label": "createfunctionalmiddleware()"
     },
     {
@@ -7013,7 +7067,7 @@
       "source_file": "apps/backend/src/lib/metamcp/metamcp-middleware/functional-middleware.ts",
       "source_location": "L90",
       "id": "functional_middleware_compose",
-      "community": 8,
+      "community": 7,
       "norm_label": "compose()"
     },
     {
@@ -7022,7 +7076,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/__tests__/pg-notify.test.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_tests_pg_notify_test_ts",
-      "community": 145,
+      "community": 144,
       "norm_label": "pg-notify.test.ts"
     },
     {
@@ -7031,7 +7085,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/__tests__/tools-sync-cache.test.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_tests_tools_sync_cache_test_ts",
-      "community": 146,
+      "community": 145,
       "norm_label": "tools-sync-cache.test.ts"
     },
     {
@@ -7040,7 +7094,7 @@
       "source_file": "apps/backend/src/lib/metamcp/__tests__/session-headers-store.test.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_tests_session_headers_store_test_ts",
-      "community": 147,
+      "community": 146,
       "norm_label": "session-headers-store.test.ts"
     },
     {
@@ -7067,7 +7121,7 @@
       "source_file": "apps/backend/src/lib/metamcp/__tests__/tool-discovery-service.test.ts",
       "source_location": "L1",
       "id": "apps_backend_src_lib_metamcp_tests_tool_discovery_service_test_ts",
-      "community": 148,
+      "community": 147,
       "norm_label": "tool-discovery-service.test.ts"
     },
     {
@@ -7076,7 +7130,7 @@
       "source_file": "apps/backend/src/db/schema.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_schema_ts",
-      "community": 149,
+      "community": 148,
       "norm_label": "schema.ts"
     },
     {
@@ -7085,7 +7139,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/index.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_index_ts",
-      "community": 150,
+      "community": 149,
       "norm_label": "index.ts"
     },
     {
@@ -7094,7 +7148,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/config.repo.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_repositories_config_repo_ts",
-      "community": 151,
+      "community": 150,
       "norm_label": "config.repo.ts"
     },
     {
@@ -7103,7 +7157,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_repositories_endpoints_repo_ts",
-      "community": 15,
+      "community": 2,
       "norm_label": "endpoints.repo.ts"
     },
     {
@@ -7112,7 +7166,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L12",
       "id": "endpoints_repo_endpointsrepository",
-      "community": 15,
+      "community": 2,
       "norm_label": "endpointsrepository"
     },
     {
@@ -7121,7 +7175,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L13",
       "id": "endpoints_repo_endpointsrepository_create",
-      "community": 15,
+      "community": 2,
       "norm_label": ".create()"
     },
     {
@@ -7130,7 +7184,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L43",
       "id": "endpoints_repo_endpointsrepository_findall",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findall()"
     },
     {
@@ -7139,7 +7193,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L72",
       "id": "endpoints_repo_endpointsrepository_findallaccessibletouser",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findallaccessibletouser()"
     },
     {
@@ -7148,7 +7202,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L107",
       "id": "endpoints_repo_endpointsrepository_findallaccessibletouserwithnamespaces",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findallaccessibletouserwithnamespaces()"
     },
     {
@@ -7157,7 +7211,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L160",
       "id": "endpoints_repo_endpointsrepository_findpublicendpoints",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findpublicendpoints()"
     },
     {
@@ -7166,7 +7220,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L190",
       "id": "endpoints_repo_endpointsrepository_findbyuserid",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findbyuserid()"
     },
     {
@@ -7175,7 +7229,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L219",
       "id": "endpoints_repo_endpointsrepository_findallwithnamespaces",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findallwithnamespaces()"
     },
     {
@@ -7184,7 +7238,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L263",
       "id": "endpoints_repo_endpointsrepository_findbyuuid",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findbyuuid()"
     },
     {
@@ -7193,7 +7247,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L293",
       "id": "endpoints_repo_endpointsrepository_findbyuuidwithnamespace",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findbyuuidwithnamespace()"
     },
     {
@@ -7202,7 +7256,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L339",
       "id": "endpoints_repo_endpointsrepository_findbyname",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findbyname()"
     },
     {
@@ -7211,7 +7265,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L370",
       "id": "endpoints_repo_endpointsrepository_findbynameanduserid",
-      "community": 15,
+      "community": 2,
       "norm_label": ".findbynameanduserid()"
     },
     {
@@ -7220,7 +7274,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L411",
       "id": "endpoints_repo_endpointsrepository_deletebyuuid",
-      "community": 15,
+      "community": 2,
       "norm_label": ".deletebyuuid()"
     },
     {
@@ -7229,7 +7283,7 @@
       "source_file": "apps/backend/src/db/repositories/endpoints.repo.ts",
       "source_location": "L420",
       "id": "endpoints_repo_endpointsrepository_update",
-      "community": 15,
+      "community": 2,
       "norm_label": ".update()"
     },
     {
@@ -7238,7 +7292,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_repositories_oauth_repo_ts",
-      "community": 3,
+      "community": 2,
       "norm_label": "oauth.repo.ts"
     },
     {
@@ -7247,7 +7301,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L18",
       "id": "oauth_repo_oauthrepository",
-      "community": 3,
+      "community": 2,
       "norm_label": "oauthrepository"
     },
     {
@@ -7256,7 +7310,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L21",
       "id": "oauth_repo_oauthrepository_getclient",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getclient()"
     },
     {
@@ -7265,7 +7319,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L30",
       "id": "oauth_repo_oauthrepository_upsertclient",
-      "community": 3,
+      "community": 2,
       "norm_label": ".upsertclient()"
     },
     {
@@ -7274,7 +7328,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L45",
       "id": "oauth_repo_oauthrepository_getauthcode",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getauthcode()"
     },
     {
@@ -7283,7 +7337,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L54",
       "id": "oauth_repo_oauthrepository_setauthcode",
-      "community": 3,
+      "community": 2,
       "norm_label": ".setauthcode()"
     },
     {
@@ -7292,7 +7346,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L70",
       "id": "oauth_repo_oauthrepository_deleteauthcode",
-      "community": 3,
+      "community": 2,
       "norm_label": ".deleteauthcode()"
     },
     {
@@ -7301,7 +7355,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L78",
       "id": "oauth_repo_oauthrepository_getaccesstoken",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getaccesstoken()"
     },
     {
@@ -7310,7 +7364,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L87",
       "id": "oauth_repo_oauthrepository_setaccesstoken",
-      "community": 3,
+      "community": 2,
       "norm_label": ".setaccesstoken()"
     },
     {
@@ -7319,7 +7373,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L107",
       "id": "oauth_repo_oauthrepository_deleteaccesstoken",
-      "community": 3,
+      "community": 2,
       "norm_label": ".deleteaccesstoken()"
     },
     {
@@ -7328,7 +7382,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L115",
       "id": "oauth_repo_oauthrepository_getbyrefreshtoken",
-      "community": 3,
+      "community": 2,
       "norm_label": ".getbyrefreshtoken()"
     },
     {
@@ -7337,7 +7391,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/oauth.repo.ts",
       "source_location": "L126",
       "id": "oauth_repo_oauthrepository_cleanupexpired",
-      "community": 3,
+      "community": 2,
       "norm_label": ".cleanupexpired()"
     },
     {
@@ -7454,7 +7508,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/api-keys.repo.ts",
       "source_location": "L227",
       "id": "api_keys_repo_apikeysrepository_delete",
-      "community": 3,
+      "community": 2,
       "norm_label": ".delete()"
     },
     {
@@ -7463,7 +7517,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_repositories_tools_repo_ts",
-      "community": 3,
+      "community": 2,
       "norm_label": "tools.repo.ts"
     },
     {
@@ -7472,7 +7526,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L11",
       "id": "tools_repo_toolsrepository",
-      "community": 3,
+      "community": 2,
       "norm_label": "toolsrepository"
     },
     {
@@ -7481,7 +7535,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L12",
       "id": "tools_repo_toolsrepository_findbymcpserveruuid",
-      "community": 3,
+      "community": 2,
       "norm_label": ".findbymcpserveruuid()"
     },
     {
@@ -7490,7 +7544,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L20",
       "id": "tools_repo_toolsrepository_create",
-      "community": 3,
+      "community": 2,
       "norm_label": ".create()"
     },
     {
@@ -7499,7 +7553,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L26",
       "id": "tools_repo_toolsrepository_bulkupsert",
-      "community": 3,
+      "community": 2,
       "norm_label": ".bulkupsert()"
     },
     {
@@ -7508,7 +7562,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L59",
       "id": "tools_repo_toolsrepository_findbyuuid",
-      "community": 3,
+      "community": 2,
       "norm_label": ".findbyuuid()"
     },
     {
@@ -7517,7 +7571,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L69",
       "id": "tools_repo_toolsrepository_deletebyuuid",
-      "community": 3,
+      "community": 2,
       "norm_label": ".deletebyuuid()"
     },
     {
@@ -7526,7 +7580,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L84",
       "id": "tools_repo_toolsrepository_deleteobsoletetools",
-      "community": 3,
+      "community": 2,
       "norm_label": ".deleteobsoletetools()"
     },
     {
@@ -7535,7 +7589,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/tools.repo.ts",
       "source_location": "L113",
       "id": "tools_repo_toolsrepository_synctools",
-      "community": 3,
+      "community": 2,
       "norm_label": ".synctools()"
     },
     {
@@ -7724,7 +7778,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/index.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_repositories_index_ts",
-      "community": 152,
+      "community": 151,
       "norm_label": "index.ts"
     },
     {
@@ -7733,7 +7787,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_repositories_namespace_mappings_repo_ts",
-      "community": 7,
+      "community": 1,
       "norm_label": "namespace-mappings.repo.ts"
     },
     {
@@ -7742,7 +7796,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L14",
       "id": "namespace_mappings_repo_namespacemappingsrepository",
-      "community": 7,
+      "community": 1,
       "norm_label": "namespacemappingsrepository"
     },
     {
@@ -7751,7 +7805,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L15",
       "id": "namespace_mappings_repo_namespacemappingsrepository_updateserverstatus",
-      "community": 7,
+      "community": 1,
       "norm_label": ".updateserverstatus()"
     },
     {
@@ -7760,7 +7814,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L32",
       "id": "namespace_mappings_repo_namespacemappingsrepository_updatetoolstatus",
-      "community": 7,
+      "community": 1,
       "norm_label": ".updatetoolstatus()"
     },
     {
@@ -7769,7 +7823,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L50",
       "id": "namespace_mappings_repo_namespacemappingsrepository_updatetooloverrides",
-      "community": 7,
+      "community": 1,
       "norm_label": ".updatetooloverrides()"
     },
     {
@@ -7778,7 +7832,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L71",
       "id": "namespace_mappings_repo_namespacemappingsrepository_findservermapping",
-      "community": 7,
+      "community": 1,
       "norm_label": ".findservermapping()"
     },
     {
@@ -7787,7 +7841,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L88",
       "id": "namespace_mappings_repo_namespacemappingsrepository_findnamespacesbyserveruuid",
-      "community": 7,
+      "community": 1,
       "norm_label": ".findnamespacesbyserveruuid()"
     },
     {
@@ -7796,7 +7850,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L102",
       "id": "namespace_mappings_repo_namespacemappingsrepository_findtoolmappingsbynamespace",
-      "community": 7,
+      "community": 1,
       "norm_label": ".findtoolmappingsbynamespace()"
     },
     {
@@ -7805,7 +7859,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L111",
       "id": "namespace_mappings_repo_namespacemappingsrepository_findtoolmapping",
-      "community": 7,
+      "community": 1,
       "norm_label": ".findtoolmapping()"
     },
     {
@@ -7814,7 +7868,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L134",
       "id": "namespace_mappings_repo_namespacemappingsrepository_bulkupsertnamespacetoolmappings",
-      "community": 7,
+      "community": 1,
       "norm_label": ".bulkupsertnamespacetoolmappings()"
     },
     {
@@ -7823,7 +7877,7 @@
       "source_file": "apps/backend/src/db/repositories/namespace-mappings.repo.ts",
       "source_location": "L177",
       "id": "namespace_mappings_repo_namespacemappingsrepository_synctoolmappingsforserver",
-      "community": 7,
+      "community": 1,
       "norm_label": ".synctoolmappingsforserver()"
     },
     {
@@ -7832,7 +7886,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_repositories_mcp_servers_repo_ts",
-      "community": 4,
+      "community": 5,
       "norm_label": "mcp-servers.repo.ts"
     },
     {
@@ -7841,7 +7895,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L17",
       "id": "mcp_servers_repo_handledatabaseerror",
-      "community": 4,
+      "community": 5,
       "norm_label": "handledatabaseerror()"
     },
     {
@@ -7850,7 +7904,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L67",
       "id": "mcp_servers_repo_mcpserversrepository",
-      "community": 4,
+      "community": 5,
       "norm_label": "mcpserversrepository"
     },
     {
@@ -7859,7 +7913,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L68",
       "id": "mcp_servers_repo_mcpserversrepository_create",
-      "community": 4,
+      "community": 5,
       "norm_label": ".create()"
     },
     {
@@ -7868,7 +7922,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L81",
       "id": "mcp_servers_repo_mcpserversrepository_findall",
-      "community": 4,
+      "community": 5,
       "norm_label": ".findall()"
     },
     {
@@ -7877,7 +7931,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L89",
       "id": "mcp_servers_repo_mcpserversrepository_findallaccessibletouser",
-      "community": 4,
+      "community": 5,
       "norm_label": ".findallaccessibletouser()"
     },
     {
@@ -7886,7 +7940,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L103",
       "id": "mcp_servers_repo_mcpserversrepository_findpublicservers",
-      "community": 4,
+      "community": 5,
       "norm_label": ".findpublicservers()"
     },
     {
@@ -7895,7 +7949,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L112",
       "id": "mcp_servers_repo_mcpserversrepository_findbyuserid",
-      "community": 4,
+      "community": 5,
       "norm_label": ".findbyuserid()"
     },
     {
@@ -7904,7 +7958,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L120",
       "id": "mcp_servers_repo_mcpserversrepository_findbyuuid",
-      "community": 4,
+      "community": 5,
       "norm_label": ".findbyuuid()"
     },
     {
@@ -7913,7 +7967,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L130",
       "id": "mcp_servers_repo_mcpserversrepository_findbyname",
-      "community": 4,
+      "community": 5,
       "norm_label": ".findbyname()"
     },
     {
@@ -7922,7 +7976,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L141",
       "id": "mcp_servers_repo_mcpserversrepository_findbynameanduserid",
-      "community": 4,
+      "community": 5,
       "norm_label": ".findbynameanduserid()"
     },
     {
@@ -7931,7 +7985,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L161",
       "id": "mcp_servers_repo_mcpserversrepository_deletebyuuid",
-      "community": 4,
+      "community": 5,
       "norm_label": ".deletebyuuid()"
     },
     {
@@ -7940,7 +7994,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L170",
       "id": "mcp_servers_repo_mcpserversrepository_update",
-      "community": 7,
+      "community": 1,
       "norm_label": ".update()"
     },
     {
@@ -7949,7 +8003,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L188",
       "id": "mcp_servers_repo_mcpserversrepository_bulkcreate",
-      "community": 4,
+      "community": 5,
       "norm_label": ".bulkcreate()"
     },
     {
@@ -7958,7 +8012,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/repositories/mcp-servers.repo.ts",
       "source_location": "L237",
       "id": "mcp_servers_repo_mcpserversrepository_updateservererrorstatus",
-      "community": 2,
+      "community": 1,
       "norm_label": ".updateservererrorstatus()"
     },
     {
@@ -7967,7 +8021,7 @@
       "source_file": "apps/backend/src/db/repositories/__tests__/namespace-mappings-sync.test.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_repositories_tests_namespace_mappings_sync_test_ts",
-      "community": 153,
+      "community": 152,
       "norm_label": "namespace-mappings-sync.test.ts"
     },
     {
@@ -8174,7 +8228,7 @@
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/db/serializers/index.ts",
       "source_location": "L1",
       "id": "apps_backend_src_db_serializers_index_ts",
-      "community": 154,
+      "community": 153,
       "norm_label": "index.ts"
     },
     {
@@ -8405,7 +8459,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 155,
+      "community": 154,
       "norm_label": "docker compose deployment",
       "id": "readme_docker_compose"
     },
@@ -8548,7 +8602,7 @@
       "captured_at": null,
       "author": "James",
       "contributor": null,
-      "community": 156,
+      "community": 155,
       "norm_label": "recent updates - maintenance note",
       "id": "recent_updates"
     },
@@ -8782,7 +8836,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "cn custom deployment guide",
       "id": "doc_cn_custom_deployment"
     },
@@ -8795,7 +8849,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "cn middleware (future) concept",
       "id": "doc_cn_middleware_future"
     },
@@ -8808,7 +8862,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "cn inspector concept",
       "id": "doc_cn_inspector"
     },
@@ -8821,7 +8875,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "cn endpoints concept",
       "id": "doc_cn_endpoints"
     },
@@ -8834,7 +8888,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 157,
+      "community": 156,
       "norm_label": "cn middleware concept (active dev)",
       "id": "doc_cn_middleware"
     },
@@ -8847,7 +8901,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "cn namespaces concept",
       "id": "doc_cn_namespaces"
     },
@@ -8860,7 +8914,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "cn mcp servers concept",
       "id": "doc_cn_mcp_servers"
     },
@@ -8873,7 +8927,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en metamcp index / home",
       "id": "doc_en_index"
     },
@@ -8886,7 +8940,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en quick start guide",
       "id": "doc_en_quickstart"
     },
@@ -8912,7 +8966,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en architecture overview",
       "id": "doc_en_architecture"
     },
@@ -8938,7 +8992,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en oauth troubleshooting",
       "id": "doc_en_oauth_troubleshooting"
     },
@@ -8951,7 +9005,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en open webui integration",
       "id": "doc_en_open_web_ui"
     },
@@ -8964,7 +9018,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en claude desktop integration",
       "id": "doc_en_claude_desktop"
     },
@@ -8977,7 +9031,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en cursor integration",
       "id": "doc_en_cursor"
     },
@@ -8990,7 +9044,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en general stdio with oauth (mcp-remote)",
       "id": "doc_en_stdio_oauth"
     },
@@ -9003,7 +9057,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en general stdio with api key (mcp-proxy)",
       "id": "doc_en_stdio_apikey"
     },
@@ -9016,7 +9070,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 158,
+      "community": 157,
       "norm_label": "en integration troubleshooting (future)",
       "id": "doc_en_troubleshooting_future"
     },
@@ -9029,7 +9083,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "en custom deployment guide",
       "id": "doc_en_custom_deployment"
     },
@@ -9042,7 +9096,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "metamcp (mcp proxy/aggregator)",
       "id": "concept_metamcp"
     },
@@ -9055,7 +9109,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "namespace",
       "id": "concept_namespace"
     },
@@ -9068,7 +9122,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "endpoint",
       "id": "concept_endpoint"
     },
@@ -9081,7 +9135,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "mcp server",
       "id": "concept_mcp_server"
     },
@@ -9094,7 +9148,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "middleware",
       "id": "concept_middleware"
     },
@@ -9107,7 +9161,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "metamcp inspector",
       "id": "concept_inspector"
     },
@@ -9120,7 +9174,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "api key authentication",
       "id": "concept_api_key"
     },
@@ -9133,7 +9187,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "oauth authentication",
       "id": "concept_oauth"
     },
@@ -9159,7 +9213,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "sse transport",
       "id": "concept_transport_sse"
     },
@@ -9172,7 +9226,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "streamable http transport",
       "id": "concept_transport_streamable_http"
     },
@@ -9185,7 +9239,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "stdio transport",
       "id": "concept_transport_stdio"
     },
@@ -9198,7 +9252,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "openapi endpoint",
       "id": "concept_transport_openapi"
     },
@@ -9211,7 +9265,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tool namespacing (servername__toolname)",
       "id": "concept_tool_prefix"
     },
@@ -9224,7 +9278,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "idle session pre-allocation",
       "id": "concept_idle_session"
     },
@@ -9237,7 +9291,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "docker compose deployment",
       "id": "concept_docker_compose"
     },
@@ -9250,7 +9304,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "nginx reverse proxy",
       "id": "concept_nginx"
     },
@@ -9263,7 +9317,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "let's encrypt ssl",
       "id": "concept_lets_encrypt"
     },
@@ -9276,7 +9330,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "mcp-proxy (stdio bridge tool)",
       "id": "concept_mcp_proxy_tool"
     },
@@ -9289,7 +9343,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "mcp-remote (oauth stdio bridge tool)",
       "id": "concept_mcp_remote_tool"
     },
@@ -9315,7 +9369,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "filter inactive tools middleware",
       "id": "concept_filter_inactive_tools"
     },
@@ -9328,7 +9382,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "request logging middleware",
       "id": "concept_request_logging_middleware"
     },
@@ -9341,7 +9395,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "rate limiting middleware",
       "id": "concept_rate_limiting_middleware"
     },
@@ -9354,7 +9408,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "input validation middleware",
       "id": "concept_input_validation_middleware"
     },
@@ -9367,7 +9421,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "response caching middleware",
       "id": "concept_response_caching_middleware"
     },
@@ -9380,7 +9434,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "environment variable interpolation",
       "id": "concept_env_var_interpolation"
     },
@@ -9393,7 +9447,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "open webui integration",
       "id": "concept_open_webui"
     },
@@ -9406,7 +9460,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "cursor ide integration",
       "id": "concept_cursor_ide"
     },
@@ -9419,7 +9473,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "claude desktop integration",
       "id": "concept_claude_desktop"
     },
@@ -9458,7 +9512,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "better auth (auth library)",
       "id": "concept_better_auth"
     },
@@ -9471,7 +9525,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "mcpserverpool",
       "id": "concept_mcp_server_pool"
     },
@@ -9484,7 +9538,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "metamcpserverpool",
       "id": "concept_metamcp_server_pool"
     },
@@ -9510,7 +9564,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "rationale: tool prefixing for conflict avoidance",
       "id": "rationale_tool_prefix"
     },
@@ -9523,7 +9577,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "rationale: pre-allocated idle sessions for cold start reduction",
       "id": "rationale_idle_sessions"
     },
@@ -9536,7 +9590,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "rationale: middleware at namespace level (no per-server changes)",
       "id": "rationale_middleware_namespace_level"
     },
@@ -9549,7 +9603,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "rationale: env var interpolation for security/flexibility",
       "id": "rationale_env_var_interpolation"
     },
@@ -9562,7 +9616,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "rationale: proxy needed for stdio clients (claude desktop)",
       "id": "rationale_stdio_proxy"
     },
@@ -9575,7 +9629,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "middleware (future/full spec)",
       "id": "doc_middleware_future"
     },
@@ -9588,7 +9642,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "middleware (current)",
       "id": "doc_middleware"
     },
@@ -9601,7 +9655,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "metamcp inspector",
       "id": "doc_inspector"
     },
@@ -9614,7 +9668,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "metamcp endpoints",
       "id": "doc_endpoints"
     },
@@ -9627,7 +9681,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "namespaces",
       "id": "doc_namespaces"
     },
@@ -9640,7 +9694,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "mcp servers",
       "id": "doc_mcp_servers"
     },
@@ -9653,7 +9707,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "upstream oauth delegation design spec",
       "id": "doc_upstream_oauth"
     },
@@ -9679,7 +9733,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 159,
+      "community": 158,
       "norm_label": "eslint config package",
       "id": "pkg_eslint_config"
     },
@@ -9692,7 +9746,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "metamcp architecture diagram (svg/excalidraw)",
       "id": "img_metamcp_svg"
     },
@@ -9705,7 +9759,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "request logging middleware",
       "id": "concept_request_logging"
     },
@@ -9718,7 +9772,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "rate limiting middleware",
       "id": "concept_rate_limiting"
     },
@@ -9731,7 +9785,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "input validation middleware",
       "id": "concept_input_validation"
     },
@@ -9744,7 +9798,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "response caching middleware",
       "id": "concept_response_caching"
     },
@@ -9757,7 +9811,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "stdio server type",
       "id": "concept_stdio_server"
     },
@@ -9770,7 +9824,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "sse server type",
       "id": "concept_sse_server"
     },
@@ -9783,7 +9837,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "streamable http server type",
       "id": "concept_streamable_http_server"
     },
@@ -9796,7 +9850,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tool prefixing convention",
       "id": "concept_tool_prefixing"
     },
@@ -9809,7 +9863,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "upstream oauth delegation",
       "id": "concept_upstream_oauth_delegation"
     },
@@ -9822,7 +9876,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "auth_mode endpoint config field",
       "id": "concept_auth_mode"
     },
@@ -9835,7 +9889,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "oauth metadata mirror component",
       "id": "concept_oauth_metadata_mirror"
     },
@@ -9848,7 +9902,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "dynamic client registration proxy",
       "id": "concept_dynamic_client_registration_proxy"
     },
@@ -9861,7 +9915,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "upstream delegate auth middleware",
       "id": "concept_upstream_delegate_middleware"
     },
@@ -9874,7 +9928,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "upstream token store (db table)",
       "id": "concept_upstream_token_store"
     },
@@ -9887,7 +9941,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "upstream 401 propagation",
       "id": "concept_upstream_401_propagation"
     },
@@ -9900,7 +9954,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "per-endpoint .well-known routing",
       "id": "concept_per_endpoint_wellknown"
     },
@@ -9913,7 +9967,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "rationale: upstream auth is the protection",
       "id": "rationale_upstream_auth_is_protection"
     },
@@ -9926,7 +9980,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "rationale: dynamic client registration just relays",
       "id": "rationale_dynamic_client_registration_relay"
     },
@@ -9939,7 +9993,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "idle session management",
       "id": "concept_idle_session_management"
     },
@@ -9952,7 +10006,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "bulk import/export of mcp servers",
       "id": "concept_bulk_import_export"
     },
@@ -9978,7 +10032,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "azure ad / microsoft identity platform",
       "id": "external_azure_ad"
     },
@@ -9991,7 +10045,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "ms-365-mcp-server",
       "id": "external_ms365_mcp_server"
     },
@@ -10004,7 +10058,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 16,
       "norm_label": "openwebui mcp client",
       "id": "external_openwebui"
     },
@@ -10017,7 +10071,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 160,
+      "community": 159,
       "norm_label": "metamcp ui screenshot",
       "id": "metamcp_screenshot_ui"
     },
@@ -10030,7 +10084,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 161,
+      "community": 160,
       "norm_label": "metamcp favicon",
       "id": "docs_favicon"
     },
@@ -10108,7 +10162,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 162,
+      "community": 161,
       "norm_label": "metamcp screenshot (docs)",
       "id": "docs_metamcp_screenshot"
     },
@@ -10121,7 +10175,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 163,
+      "community": 162,
       "norm_label": "metamcp hero image (light)",
       "id": "docs_hero_light"
     },
@@ -10134,7 +10188,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 164,
+      "community": 163,
       "norm_label": "checks passed screenshot",
       "id": "docs_checks_passed"
     },
@@ -10147,7 +10201,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 165,
+      "community": 164,
       "norm_label": "metamcp hero image (dark)",
       "id": "docs_hero_dark"
     },
@@ -10160,7 +10214,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 166,
+      "community": 165,
       "norm_label": "open webui integration screenshot 4",
       "id": "docs_open_web_ui_4"
     },
@@ -10173,7 +10227,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 167,
+      "community": 166,
       "norm_label": "open webui integration screenshot 5",
       "id": "docs_open_web_ui_5"
     },
@@ -10186,7 +10240,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 168,
+      "community": 167,
       "norm_label": "open webui integration screenshot 6",
       "id": "docs_open_web_ui_6"
     },
@@ -10199,7 +10253,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 169,
+      "community": 168,
       "norm_label": "open webui integration screenshot 2",
       "id": "docs_open_web_ui_2"
     },
@@ -10212,7 +10266,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 170,
+      "community": 169,
       "norm_label": "open webui integration screenshot 3",
       "id": "docs_open_web_ui_3"
     },
@@ -10225,7 +10279,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 171,
+      "community": 170,
       "norm_label": "open webui integration screenshot 1",
       "id": "docs_open_web_ui_1"
     },
@@ -10238,7 +10292,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 172,
+      "community": 171,
       "norm_label": "metamcp logo (dark theme)",
       "id": "metamcp_logo_dark"
     },
@@ -10251,7 +10305,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 173,
+      "community": 172,
       "norm_label": "metamcp logo (light theme)",
       "id": "metamcp_logo_light"
     },
@@ -10264,7 +10318,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 174,
+      "community": 173,
       "norm_label": "turborepo logo (dark theme)",
       "id": "turborepo_logo_dark"
     },
@@ -10277,7 +10331,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 175,
+      "community": 174,
       "norm_label": "file text icon",
       "id": "file_text_icon"
     },
@@ -10290,7 +10344,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 176,
+      "community": 175,
       "norm_label": "vercel logo (triangle icon)",
       "id": "vercel_logo"
     },
@@ -10303,7 +10357,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 177,
+      "community": 176,
       "norm_label": "next.js logo",
       "id": "nextjs_logo"
     },
@@ -10316,7 +10370,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 178,
+      "community": 177,
       "norm_label": "turborepo logo (light theme)",
       "id": "turborepo_logo_light"
     },
@@ -10329,7 +10383,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 179,
+      "community": 178,
       "norm_label": "globe icon",
       "id": "globe_icon"
     },
@@ -10342,7 +10396,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 180,
+      "community": 179,
       "norm_label": "browser window icon",
       "id": "window_icon"
     }
@@ -15752,7 +15806,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/routers/public-metamcp/streamable-http.ts",
-      "source_location": "L27",
+      "source_location": "L30",
       "weight": 1.0,
       "_src": "apps_backend_src_routers_public_metamcp_streamable_http_ts",
       "_tgt": "streamable_http_cleanupsession",
@@ -15812,7 +15866,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/routers/public-metamcp/sse.ts",
-      "source_location": "L23",
+      "source_location": "L26",
       "weight": 1.0,
       "_src": "apps_backend_src_routers_public_metamcp_sse_ts",
       "_tgt": "sse_cleanupsession",
@@ -20731,6 +20785,66 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/session-headers-store.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "apps_backend_src_lib_metamcp_session_headers_store_ts",
+      "_tgt": "session_headers_store_issensitiveheadername",
+      "source": "apps_backend_src_lib_metamcp_session_headers_store_ts",
+      "target": "session_headers_store_issensitiveheadername",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/session-headers-store.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "apps_backend_src_lib_metamcp_session_headers_store_ts",
+      "_tgt": "session_headers_store_sanitizeheadervaluefordebuglog",
+      "source": "apps_backend_src_lib_metamcp_session_headers_store_ts",
+      "target": "session_headers_store_sanitizeheadervaluefordebuglog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/session-headers-store.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "apps_backend_src_lib_metamcp_session_headers_store_ts",
+      "_tgt": "session_headers_store_sanitizeheadersfordebuglog",
+      "source": "apps_backend_src_lib_metamcp_session_headers_store_ts",
+      "target": "session_headers_store_sanitizeheadersfordebuglog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/session-headers-store.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_src": "session_headers_store_sanitizeheadervaluefordebuglog",
+      "_tgt": "session_headers_store_issensitiveheadername",
+      "source": "session_headers_store_issensitiveheadername",
+      "target": "session_headers_store_sanitizeheadervaluefordebuglog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_src": "session_headers_store_sanitizeheadersfordebuglog",
+      "_tgt": "client_debugloghttpheaders",
+      "source": "session_headers_store_sanitizeheadersfordebuglog",
+      "target": "client_debugloghttpheaders"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "/Users/plp1lud/Documents/GitHub/metamcp/apps/backend/src/lib/metamcp/pg-notify.ts",
       "source_location": "L12",
       "weight": 1.0,
@@ -20852,7 +20966,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_src": "apps_backend_src_lib_metamcp_client_ts",
       "_tgt": "client_sleep",
@@ -20864,7 +20978,43 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L27",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "apps_backend_src_lib_metamcp_client_ts",
+      "_tgt": "client_getcaseinsensitiveheaderkey",
+      "source": "apps_backend_src_lib_metamcp_client_ts",
+      "target": "client_getcaseinsensitiveheaderkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_src": "apps_backend_src_lib_metamcp_client_ts",
+      "_tgt": "client_buildhttpheaders",
+      "source": "apps_backend_src_lib_metamcp_client_ts",
+      "target": "client_buildhttpheaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_src": "apps_backend_src_lib_metamcp_client_ts",
+      "_tgt": "client_debugloghttpheaders",
+      "source": "apps_backend_src_lib_metamcp_client_ts",
+      "target": "client_debugloghttpheaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L109",
       "weight": 1.0,
       "_src": "apps_backend_src_lib_metamcp_client_ts",
       "_tgt": "client_transformdockerurl",
@@ -20876,7 +21026,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L38",
+      "source_location": "L120",
       "weight": 1.0,
       "_src": "apps_backend_src_lib_metamcp_client_ts",
       "_tgt": "client_createmetamcpclient",
@@ -20888,7 +21038,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L165",
+      "source_location": "L241",
       "weight": 1.0,
       "_src": "apps_backend_src_lib_metamcp_client_ts",
       "_tgt": "client_connectmetamcpclient",
@@ -20900,7 +21050,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L285",
+      "source_location": "L364",
       "weight": 1.0,
       "_src": "client_connectmetamcpclient",
       "_tgt": "client_sleep",
@@ -20912,7 +21062,43 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L83",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_src": "client_buildhttpheaders",
+      "_tgt": "client_getcaseinsensitiveheaderkey",
+      "source": "client_getcaseinsensitiveheaderkey",
+      "target": "client_buildhttpheaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L167",
+      "weight": 1.0,
+      "_src": "client_createmetamcpclient",
+      "_tgt": "client_buildhttpheaders",
+      "source": "client_buildhttpheaders",
+      "target": "client_createmetamcpclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L170",
+      "weight": 1.0,
+      "_src": "client_createmetamcpclient",
+      "_tgt": "client_debugloghttpheaders",
+      "source": "client_debugloghttpheaders",
+      "target": "client_createmetamcpclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/lib/metamcp/client.ts",
+      "source_location": "L165",
       "weight": 1.0,
       "_src": "client_createmetamcpclient",
       "_tgt": "client_transformdockerurl",
@@ -20924,7 +21110,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/lib/metamcp/client.ts",
-      "source_location": "L200",
+      "source_location": "L276",
       "weight": 1.0,
       "_src": "client_connectmetamcpclient",
       "_tgt": "client_createmetamcpclient",
