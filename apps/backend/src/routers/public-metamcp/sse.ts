@@ -22,6 +22,37 @@ const sseRouter = express.Router();
 // Session lifetime manager for SSE sessions
 const sessionManager = new SessionLifetimeManagerImpl<Transport>("SSE");
 
+const captureForwardedHeaders = (
+  req: ApiKeyAuthenticatedRequest,
+  sessionId: string,
+  updateActiveServer: boolean,
+): Record<string, string> => {
+  const { namespaceUuid, endpointName } = req;
+  const allowlist: string[] = req.endpoint?.forwarded_headers ?? [];
+  const forwardedHeaders = sessionHeadersStore.filterHeaders(
+    req.headers as Record<string, string | string[] | undefined>,
+    allowlist,
+  );
+
+  sessionHeadersStore.set(sessionId, forwardedHeaders);
+  if (updateActiveServer) {
+    metaMcpServerPool
+      .getServerInstance(sessionId)
+      ?.setSessionContext({ forwardedHeaders, sessionId });
+  }
+
+  logger.debug("Public endpoint SSE forwarded headers", {
+    endpointName,
+    namespaceUuid,
+    sessionId,
+    allowlist,
+    forwardedHeaderNames: Object.keys(forwardedHeaders),
+    forwardedHeaders: sanitizeHeadersForDebugLog(forwardedHeaders),
+  });
+
+  return forwardedHeaders;
+};
+
 // Cleanup function for a specific session
 const cleanupSession = async (sessionId: string, transport?: Transport) => {
   logger.info(`Cleaning up SSE session ${sessionId}`);
@@ -77,23 +108,11 @@ sseRouter.get(
 
       const sessionId = webAppTransport.sessionId;
 
-      // Capture and store forwarded headers for this session
-      const allowlist: string[] = authReq.endpoint?.forwarded_headers ?? [];
-      const forwardedHeaders = sessionHeadersStore.filterHeaders(
-        req.headers as Record<string, string | string[] | undefined>,
-        allowlist,
-      );
-      logger.debug("Public endpoint SSE forwarded headers", {
-        endpointName,
-        namespaceUuid,
+      const forwardedHeaders = captureForwardedHeaders(
+        authReq,
         sessionId,
-        allowlist,
-        forwardedHeaderNames: Object.keys(forwardedHeaders),
-        forwardedHeaders: sanitizeHeadersForDebugLog(forwardedHeaders),
-      });
-      if (Object.keys(forwardedHeaders).length > 0) {
-        sessionHeadersStore.set(sessionId, forwardedHeaders);
-      }
+        false,
+      );
 
       // Get or create MetaMCP server instance from the pool
       const mcpServerInstance = await metaMcpServerPool.getServer(
@@ -133,8 +152,7 @@ sseRouter.post(
   authenticateApiKey,
   rateLimitMiddleware,
   async (req, res) => {
-    // const authReq = req as ApiKeyAuthenticatedRequest;
-    // const { namespaceUuid, endpointName } = authReq;
+    const authReq = req as ApiKeyAuthenticatedRequest;
 
     try {
       const sessionId = req.query.sessionId;
@@ -149,6 +167,7 @@ sseRouter.post(
         res.status(404).end("Session not found");
         return;
       }
+      captureForwardedHeaders(authReq, sessionId as string, true);
       await transport.handlePostMessage(req, res);
     } catch (error) {
       logger.error("Error in public endpoint /message route:", error);

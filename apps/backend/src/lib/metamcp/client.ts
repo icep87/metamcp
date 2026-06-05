@@ -20,6 +20,7 @@ export interface ConnectedClient {
   client: Client;
   cleanup: () => Promise<void>;
   onProcessCrash?: (exitCode: number | null, signal: string | null) => void;
+  updateForwardedHeaders?: (forwardedHeaders?: Record<string, string>) => void;
 }
 
 const getCaseInsensitiveHeaderKey = (
@@ -120,8 +121,15 @@ export const transformDockerUrl = (url: string): string => {
 export const createMetaMcpClient = (
   serverParams: ServerParameters,
   forwardedHeaders?: Record<string, string>,
-): { client: Client | undefined; transport: Transport | undefined } => {
+): {
+  client: Client | undefined;
+  transport: Transport | undefined;
+  updateForwardedHeaders?: (forwardedHeaders?: Record<string, string>) => void;
+} => {
   let transport: Transport | undefined;
+  let updateForwardedHeaders:
+    | ((forwardedHeaders?: Record<string, string>) => void)
+    | undefined;
 
   // Create the appropriate transport based on server type
   // Default to "STDIO" if type is undefined
@@ -163,56 +171,70 @@ export const createMetaMcpClient = (
   } else if (serverParams.type === "SSE" && serverParams.url) {
     // Transform the URL if TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL is set to "true"
     const transformedUrl = transformDockerUrl(serverParams.url);
-    const { authHeaderApplied, forwardedHeaderOutcomes, headers } =
-      buildHttpHeaders(serverParams, forwardedHeaders);
+    const headers: Record<string, string> = {};
+    updateForwardedHeaders = (nextForwardedHeaders) => {
+      const {
+        authHeaderApplied,
+        forwardedHeaderOutcomes,
+        headers: nextHeaders,
+      } = buildHttpHeaders(serverParams, nextForwardedHeaders);
 
-    const hasHeaders = Object.keys(headers).length > 0;
-    debugLogHttpHeaders(
-      serverParams,
-      "SSE",
-      forwardedHeaders,
-      headers,
-      authHeaderApplied,
-      forwardedHeaderOutcomes,
-    );
+      for (const key of Object.keys(headers)) {
+        delete headers[key];
+      }
+      Object.assign(headers, nextHeaders);
 
-    if (!hasHeaders) {
-      transport = new SSEClientTransport(new URL(transformedUrl));
-    } else {
-      transport = new SSEClientTransport(new URL(transformedUrl), {
-        requestInit: {
-          headers,
-        },
-        eventSourceInit: {
-          fetch: (url, init) => fetch(url, { ...init, headers }),
-        },
-      });
-    }
+      debugLogHttpHeaders(
+        serverParams,
+        "SSE",
+        nextForwardedHeaders,
+        headers,
+        authHeaderApplied,
+        forwardedHeaderOutcomes,
+      );
+    };
+    updateForwardedHeaders(forwardedHeaders);
+
+    transport = new SSEClientTransport(new URL(transformedUrl), {
+      requestInit: {
+        headers,
+      },
+      eventSourceInit: {
+        fetch: (url, init) => fetch(url, { ...init, headers }),
+      },
+    });
   } else if (serverParams.type === "STREAMABLE_HTTP" && serverParams.url) {
     // Transform the URL if TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL is set to "true"
     const transformedUrl = transformDockerUrl(serverParams.url);
-    const { authHeaderApplied, forwardedHeaderOutcomes, headers } =
-      buildHttpHeaders(serverParams, forwardedHeaders);
+    const headers: Record<string, string> = {};
+    updateForwardedHeaders = (nextForwardedHeaders) => {
+      const {
+        authHeaderApplied,
+        forwardedHeaderOutcomes,
+        headers: nextHeaders,
+      } = buildHttpHeaders(serverParams, nextForwardedHeaders);
 
-    const hasHeaders = Object.keys(headers).length > 0;
-    debugLogHttpHeaders(
-      serverParams,
-      "STREAMABLE_HTTP",
-      forwardedHeaders,
-      headers,
-      authHeaderApplied,
-      forwardedHeaderOutcomes,
-    );
+      for (const key of Object.keys(headers)) {
+        delete headers[key];
+      }
+      Object.assign(headers, nextHeaders);
 
-    if (!hasHeaders) {
-      transport = new StreamableHTTPClientTransport(new URL(transformedUrl));
-    } else {
-      transport = new StreamableHTTPClientTransport(new URL(transformedUrl), {
-        requestInit: {
-          headers,
-        },
-      });
-    }
+      debugLogHttpHeaders(
+        serverParams,
+        "STREAMABLE_HTTP",
+        nextForwardedHeaders,
+        headers,
+        authHeaderApplied,
+        forwardedHeaderOutcomes,
+      );
+    };
+    updateForwardedHeaders(forwardedHeaders);
+
+    transport = new StreamableHTTPClientTransport(new URL(transformedUrl), {
+      requestInit: {
+        headers,
+      },
+    });
   } else {
     metamcpLogStore.addLog(
       serverParams.name,
@@ -235,7 +257,7 @@ export const createMetaMcpClient = (
       },
     },
   );
-  return { client, transport };
+  return { client, transport, updateForwardedHeaders };
 };
 
 export const connectMetaMcpClient = async (
@@ -276,6 +298,7 @@ export const connectMetaMcpClient = async (
       const result = createMetaMcpClient(serverParams, forwardedHeaders);
       client = result.client;
       transport = result.transport;
+      const updateForwardedHeaders = result.updateForwardedHeaders;
 
       if (!client || !transport) {
         return undefined;
@@ -326,6 +349,7 @@ export const connectMetaMcpClient = async (
             onProcessCrash(exitCode, signal);
           }
         },
+        updateForwardedHeaders,
       };
     } catch (error) {
       metamcpLogStore.addLog(

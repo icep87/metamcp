@@ -90,35 +90,9 @@ export class McpServerPool {
 
     // Check if we already have an active session for this sessionId and server
     if (this.activeSessions[sessionId]?.[serverUuid]) {
-      return this.activeSessions[sessionId][serverUuid];
-    }
-
-    // If this session has forwarded headers and the server is HTTP-based,
-    // bypass the idle pool and always create a fresh connection so headers are included.
-    const hasForwardedHeaders =
-      forwardedHeaders && Object.keys(forwardedHeaders).length > 0;
-    const isHttpTransport =
-      params.type === "SSE" || params.type === "STREAMABLE_HTTP";
-
-    if (hasForwardedHeaders && isHttpTransport) {
-      if (!this.activeSessions[sessionId]) {
-        this.activeSessions[sessionId] = {};
-        this.sessionToServers[sessionId] = new Set();
-        this.sessionTimestamps[sessionId] = Date.now();
-      }
-
-      const newClient = await this.createNewConnection(
-        params,
-        namespaceUuid,
-        forwardedHeaders,
-      );
-      if (!newClient) {
-        return undefined;
-      }
-
-      this.activeSessions[sessionId][serverUuid] = newClient;
-      this.sessionToServers[sessionId].add(serverUuid);
-      return newClient;
+      const activeClient = this.activeSessions[sessionId][serverUuid];
+      activeClient.updateForwardedHeaders?.(forwardedHeaders);
+      return activeClient;
     }
 
     // Initialize session if it doesn't exist
@@ -133,6 +107,7 @@ export class McpServerPool {
     if (idleClient) {
       // Convert idle session to active session
       delete this.idleSessions[serverUuid];
+      idleClient.updateForwardedHeaders?.(forwardedHeaders);
       this.activeSessions[sessionId][serverUuid] = idleClient;
       this.sessionToServers[sessionId].add(serverUuid);
 

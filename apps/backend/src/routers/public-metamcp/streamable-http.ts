@@ -26,6 +26,37 @@ const sessionManager =
     "StreamableHTTP",
   );
 
+const captureForwardedHeaders = (
+  req: ApiKeyAuthenticatedRequest,
+  sessionId: string,
+  updateActiveServer: boolean,
+): Record<string, string> => {
+  const { namespaceUuid, endpointName } = req;
+  const allowlist: string[] = req.endpoint?.forwarded_headers ?? [];
+  const forwardedHeaders = sessionHeadersStore.filterHeaders(
+    req.headers as Record<string, string | string[] | undefined>,
+    allowlist,
+  );
+
+  sessionHeadersStore.set(sessionId, forwardedHeaders);
+  if (updateActiveServer) {
+    metaMcpServerPool
+      .getServerInstance(sessionId)
+      ?.setSessionContext({ forwardedHeaders, sessionId });
+  }
+
+  logger.debug("Public endpoint StreamableHTTP forwarded headers", {
+    endpointName,
+    namespaceUuid,
+    sessionId,
+    allowlist,
+    forwardedHeaderNames: Object.keys(forwardedHeaders),
+    forwardedHeaders: sanitizeHeadersForDebugLog(forwardedHeaders),
+  });
+
+  return forwardedHeaders;
+};
+
 // Cleanup function for a specific session
 const cleanupSession = async (
   sessionId: string,
@@ -84,8 +115,7 @@ streamableHttpRouter.get(
   authenticateApiKey,
   rateLimitMiddleware,
   async (req, res) => {
-    // const authReq = req as ApiKeyAuthenticatedRequest;
-    // const { namespaceUuid, endpointName } = authReq;
+    const authReq = req as ApiKeyAuthenticatedRequest;
     const sessionId = req.headers["mcp-session-id"] as string;
 
     // logger.info(
@@ -103,6 +133,7 @@ streamableHttpRouter.get(
         return;
       } else {
         logger.info(`Found session ${sessionId}, handling request`);
+        captureForwardedHeaders(authReq, sessionId, true);
         await transport.handleRequest(req, res);
       }
     } catch (error) {
@@ -139,23 +170,11 @@ streamableHttpRouter.post(
           `Generated new session ID: ${newSessionId} for endpoint: ${endpointName}`,
         );
 
-        // Capture and store forwarded headers for this session
-        const allowlist: string[] = authReq.endpoint?.forwarded_headers ?? [];
-        const forwardedHeaders = sessionHeadersStore.filterHeaders(
-          req.headers as Record<string, string | string[] | undefined>,
-          allowlist,
+        const forwardedHeaders = captureForwardedHeaders(
+          authReq,
+          newSessionId,
+          false,
         );
-        logger.debug("Public endpoint StreamableHTTP forwarded headers", {
-          endpointName,
-          namespaceUuid,
-          sessionId: newSessionId,
-          allowlist,
-          forwardedHeaderNames: Object.keys(forwardedHeaders),
-          forwardedHeaders: sanitizeHeadersForDebugLog(forwardedHeaders),
-        });
-        if (Object.keys(forwardedHeaders).length > 0) {
-          sessionHeadersStore.set(newSessionId, forwardedHeaders);
-        }
 
         // Get or create MetaMCP server instance from the pool
         const mcpServerInstance = await metaMcpServerPool.getServer(
@@ -247,6 +266,7 @@ streamableHttpRouter.post(
           });
         } else {
           logger.info(`Found session ${sessionId}, handling request`);
+          captureForwardedHeaders(authReq, sessionId, true);
           await transport.handleRequest(req, res);
         }
       } catch (error) {

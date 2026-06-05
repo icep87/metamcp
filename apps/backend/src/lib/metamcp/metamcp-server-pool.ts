@@ -9,6 +9,10 @@ import { createServer } from "./metamcp-proxy";
 export interface MetaMcpServerInstance {
   server: Server;
   cleanup: () => Promise<void>;
+  setSessionContext: (context: {
+    forwardedHeaders?: Record<string, string>;
+    sessionId: string;
+  }) => void;
 }
 
 export interface MetaMcpServerPoolStatus {
@@ -77,6 +81,7 @@ export class MetaMcpServerPool {
     if (idleServer) {
       // Convert idle server to active server
       delete this.idleServers[namespaceUuid];
+      idleServer.setSessionContext({ forwardedHeaders, sessionId });
       this.activeServers[sessionId] = idleServer;
       this.sessionToNamespace[sessionId] = namespaceUuid;
       this.sessionTimestamps[sessionId] = Date.now();
@@ -169,6 +174,7 @@ export class MetaMcpServerPool {
       const wrappedServer: MetaMcpServerInstance = {
         server: newServer.server,
         cleanup: newServer.cleanup,
+        setSessionContext: newServer.setSessionContext,
       };
 
       this.idleServers[namespaceUuid] = wrappedServer;
@@ -203,6 +209,7 @@ export class MetaMcpServerPool {
           const wrappedServer: MetaMcpServerInstance = {
             server: newServer.server,
             cleanup: newServer.cleanup,
+            setSessionContext: newServer.setSessionContext,
           };
           this.idleServers[namespaceUuid] = wrappedServer;
           logger.info(
@@ -614,6 +621,7 @@ export class MetaMcpServerPool {
     if (age === undefined) return false;
 
     const sessionLifetime = await configService.getSessionLifetime();
+    if (sessionLifetime === null) return false;
     return age > sessionLifetime;
   }
 }

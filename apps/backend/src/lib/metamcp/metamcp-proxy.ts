@@ -147,6 +147,22 @@ export const createServer = async (
     sessionId,
     forwardedHeaders,
   };
+  const setSessionContext = (context: {
+    forwardedHeaders?: Record<string, string>;
+    sessionId: string;
+  }): void => {
+    if (context.sessionId !== handlerContext.sessionId) {
+      downstreamNotificationManager.deregister(handlerContext.sessionId);
+      downstreamNotificationManager.register(
+        namespaceUuid,
+        context.sessionId,
+        server,
+      );
+    }
+
+    handlerContext.sessionId = context.sessionId;
+    handlerContext.forwardedHeaders = context.forwardedHeaders;
+  };
 
   // Original List Tools Handler
   const originalListToolsHandler: ListToolsHandler = async (
@@ -896,10 +912,10 @@ export const createServer = async (
   );
 
   const cleanup = async () => {
-    downstreamNotificationManager.deregister(sessionId);
+    downstreamNotificationManager.deregister(handlerContext.sessionId);
     // Cleanup is now handled by the pool
-    await mcpServerPool.cleanupSession(sessionId);
+    await mcpServerPool.cleanupSession(handlerContext.sessionId);
   };
 
-  return { server, cleanup };
+  return { server, cleanup, setSessionContext };
 };
