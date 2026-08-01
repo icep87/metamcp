@@ -19,6 +19,7 @@ import {
   ResourceTemplate,
   Tool,
 } from "@modelcontextprotocol/sdk/types.js";
+import { ServerParameters } from "@repo/zod-types";
 import { z } from "zod";
 
 import { namespaceMappingsRepository } from "@/db/repositories/namespace-mappings.repo";
@@ -108,6 +109,7 @@ export const createServer = async (
 ) => {
   const toolToClient: Record<string, ConnectedClient> = {};
   const toolToServerUuid: Record<string, string> = {};
+  const toolToServerParams: Record<string, ServerParameters> = {};
   const promptToClient: Record<string, ConnectedClient> = {};
   const resourceToClient: Record<string, ConnectedClient> = {};
 
@@ -164,6 +166,89 @@ export const createServer = async (
     handlerContext.forwardedHeaders = context.forwardedHeaders;
   };
 
+  const getErrorMessage = (error: unknown): string => {
+    if (error instanceof Error) {
+      const cause =
+        error && typeof error === "object" && "cause" in error
+          ? (error as { cause?: unknown }).cause
+          : undefined;
+      return `${error.message} ${cause ? getErrorMessage(cause) : ""}`.trim();
+    }
+
+    if (typeof error === "string") {
+      return error;
+    }
+
+    try {
+      return JSON.stringify(error);
+    } catch {
+      return String(error);
+    }
+  };
+
+  const isBackendSessionLostError = (error: unknown): boolean => {
+    const message = getErrorMessage(error).toLowerCase();
+    const hasSessionLostText =
+      message.includes("session not found or expired") ||
+      message.includes("session not found") ||
+      message.includes("session expired");
+
+    const has404Status = message.includes("http 404") || message.includes("404");
+    const hasJsonRpcServerError = message.includes('"code":-32000');
+
+    return hasSessionLostText || (has404Status && hasJsonRpcServerError);
+  };
+
+  const recoverSessionForServer = async (
+    targetSessionId: string,
+    serverUuid: string,
+    params: ServerParameters,
+  ): Promise<ConnectedClient | undefined> => {
+    await mcpServerPool.resetConnectionsForServer(serverUuid);
+    return await mcpServerPool.getSession(
+      targetSessionId,
+      serverUuid,
+      params,
+      namespaceUuid,
+      handlerContext.forwardedHeaders,
+    );
+  };
+
+  const requestWithSessionRecovery = async <T>(
+    targetSessionId: string,
+    session: ConnectedClient,
+    serverUuid: string,
+    params: ServerParameters,
+    requestLabel: string,
+    requestFn: (activeSession: ConnectedClient) => Promise<T>,
+  ): Promise<{ result: T; session: ConnectedClient }> => {
+    try {
+      const result = await requestFn(session);
+      return { result, session };
+    } catch (error) {
+      if (!isBackendSessionLostError(error)) {
+        throw error;
+      }
+
+      logger.warn(
+        `${requestLabel} failed due to lost upstream session for server ${params.name || serverUuid}. Resetting pooled connections and retrying once.`,
+      );
+
+      const recoveredSession = await recoverSessionForServer(
+        targetSessionId,
+        serverUuid,
+        params,
+      );
+
+      if (!recoveredSession) {
+        throw error;
+      }
+
+      const result = await requestFn(recoveredSession);
+      return { result, session: recoveredSession };
+    }
+  };
+
   // Original List Tools Handler
   const originalListToolsHandler: ListToolsHandler = async (
     request,
@@ -179,6 +264,7 @@ export const createServer = async (
       includeInactiveServers,
     );
     const allTools: Tool[] = [];
+    const failedSessions: Array<{ server: string; reason: string }> = [];
 
     // Track visited servers to detect circular references - reset on each call
     const visitedServers = new Set<string>();
@@ -209,6 +295,14 @@ export const createServer = async (
           context.forwardedHeaders,
         );
         if (!session) {
+          const capacity = mcpServerPool.getConnectionCapacityStatus();
+          const reason = capacity.atLimit
+            ? `connection limit reached (${capacity.total}/${capacity.max})`
+            : "failed to establish upstream session";
+          failedSessions.push({
+            server: params.name || mcpServerUuid,
+            reason,
+          });
           console.log(`[DEBUG-TOOLS] ❌ No session for: ${params.name}`);
           return;
         }
@@ -241,32 +335,48 @@ export const createServer = async (
           params.name || session.client.getServerVersion()?.name || "";
 
         try {
-          // Paginated tool discovery - load all pages automatically
-          const allServerTools: Tool[] = [];
-          let cursor: string | undefined = undefined;
-          let hasMore = true;
           const toolFetchStart = performance.now();
+          const fetchAllServerTools = async (
+            activeSession: ConnectedClient,
+          ): Promise<Tool[]> => {
+            // Paginated tool discovery - load all pages automatically
+            const allServerTools: Tool[] = [];
+            let cursor: string | undefined = undefined;
+            let hasMore = true;
 
-          while (hasMore) {
-            const result: z.infer<typeof ListToolsResultSchema> =
-              await session.client.request(
-                {
-                  method: "tools/list",
-                  params: {
-                    cursor: cursor,
-                    _meta: request.params?._meta,
+            while (hasMore) {
+              const result: z.infer<typeof ListToolsResultSchema> =
+                await activeSession.client.request(
+                  {
+                    method: "tools/list",
+                    params: {
+                      cursor: cursor,
+                      _meta: request.params?._meta,
+                    },
                   },
-                },
-                ListToolsResultSchema,
-              );
+                  ListToolsResultSchema,
+                );
 
-            if (result.tools && result.tools.length > 0) {
-              allServerTools.push(...result.tools);
+              if (result.tools && result.tools.length > 0) {
+                allServerTools.push(...result.tools);
+              }
+
+              cursor = result.nextCursor;
+              hasMore = !!result.nextCursor;
             }
 
-            cursor = result.nextCursor;
-            hasMore = !!result.nextCursor;
-          }
+            return allServerTools;
+          };
+
+          const { result: allServerTools, session: activeSession } =
+            await requestWithSessionRecovery(
+              context.sessionId,
+              session,
+              mcpServerUuid,
+              params,
+              "tools/list",
+              fetchAllServerTools,
+            );
 
           console.log(
             `[DEBUG-TOOLS] ⏱️  Fetched ${allServerTools.length} tools from ${serverName} in ${(performance.now() - toolFetchStart).toFixed(2)}ms`,
@@ -326,8 +436,9 @@ export const createServer = async (
           // Use original tools for client response (middleware will be applied later)
           const toolsWithSource = allServerTools.map((tool) => {
             const toolName = `${sanitizeName(serverName)}__${tool.name}`;
-            toolToClient[toolName] = session;
+            toolToClient[toolName] = activeSession;
             toolToServerUuid[toolName] = mcpServerUuid;
+            toolToServerParams[toolName] = params;
 
             return {
               ...tool,
@@ -344,6 +455,28 @@ export const createServer = async (
     );
 
     const totalTime = performance.now() - startTime;
+
+    if (failedSessions.length > 0) {
+      logger.warn(
+        `tools/list had ${failedSessions.length} upstream session failures in namespace ${namespaceUuid}: ${failedSessions
+          .map((entry) => `${entry.server} (${entry.reason})`)
+          .join(", ")}`,
+      );
+    }
+
+    if (allTools.length === 0 && failedSessions.length > 0) {
+      const capacity = mcpServerPool.getConnectionCapacityStatus();
+      if (capacity.atLimit) {
+        throw new Error(
+          `Unable to list tools: connection limit reached (${capacity.total}/${capacity.max}) and no upstream sessions could be established`,
+        );
+      }
+
+      throw new Error(
+        `Unable to list tools: no upstream sessions available for ${failedSessions.length} server(s)`,
+      );
+    }
+
     console.log(
       `[DEBUG-TOOLS] ✅ tools/list completed in ${totalTime.toFixed(2)}ms, returning ${allTools.length} tools`,
     );
@@ -425,6 +558,7 @@ export const createServer = async (
                     serverUuid = mcpServerUuid;
                     toolToClient[name] = session;
                     toolToServerUuid[name] = mcpServerUuid;
+                    toolToServerParams[name] = params;
                     break;
                   }
 
@@ -451,11 +585,30 @@ export const createServer = async (
     }
 
     if (!clientForTool) {
+      const capacity = mcpServerPool.getConnectionCapacityStatus();
+      if (capacity.atLimit) {
+        throw new Error(
+          `Unable to resolve tool "${name}": connection limit reached (${capacity.total}/${capacity.max})`,
+        );
+      }
       throw new Error(`Unknown tool: ${name}`);
     }
 
     if (!serverUuid) {
       throw new Error(`Server UUID not found for tool: ${name}`);
+    }
+
+    let paramsForServer = toolToServerParams[name];
+    if (!paramsForServer) {
+      const serverParams = await getMcpServers(
+        namespaceUuid,
+        includeInactiveServers,
+      );
+      const discovered = serverParams[serverUuid];
+      if (discovered) {
+        paramsForServer = discovered;
+        toolToServerParams[name] = discovered;
+      }
     }
 
     try {
@@ -473,22 +626,49 @@ export const createServer = async (
         timeout,
         maxTotalTimeout,
       };
-      // Use the correct schema for tool calls
-      const result = await clientForTool.client.request(
-        {
-          method: "tools/call",
-          params: {
-            name: originalToolName,
-            arguments: args || {},
-            _meta: request.params._meta,
+      const executeToolCall = async (
+        activeSession: ConnectedClient,
+      ): Promise<CallToolResult> => {
+        const result = await activeSession.client.request(
+          {
+            method: "tools/call",
+            params: {
+              name: originalToolName,
+              arguments: args || {},
+              _meta: request.params._meta,
+            },
           },
-        },
-        CompatibilityCallToolResultSchema,
-        mcpRequestOptions,
-      );
+          CompatibilityCallToolResultSchema,
+          mcpRequestOptions,
+        );
+
+        return result as CallToolResult;
+      };
+
+      let activeClientForTool = clientForTool;
+      let result: CallToolResult;
+
+      if (paramsForServer) {
+        const recovered = await requestWithSessionRecovery(
+          handlerContext.sessionId,
+          clientForTool,
+          serverUuid,
+          paramsForServer,
+          `tools/call (${name})`,
+          executeToolCall,
+        );
+
+        result = recovered.result;
+        activeClientForTool = recovered.session;
+      } else {
+        result = await executeToolCall(clientForTool);
+      }
+
+      // Keep routing cache hot if we had to recover the session.
+      toolToClient[name] = activeClientForTool;
 
       // Cast the result to CallToolResult type
-      return result as CallToolResult;
+      return result;
     } catch (error) {
       logger.error(
         `Error calling tool "${name}" through ${

@@ -13,6 +13,12 @@ export interface McpServerPoolStatus {
   idleServerUuids: string[];
 }
 
+export interface ConnectionCapacityStatus {
+  total: number;
+  max: number;
+  atLimit: boolean;
+}
+
 export class McpServerPool {
   // Singleton instance
   private static instance: McpServerPool | null = null;
@@ -420,6 +426,19 @@ export class McpServerPool {
   }
 
   /**
+   * Expose current connection capacity so callers can surface actionable errors.
+   */
+  getConnectionCapacityStatus(): ConnectionCapacityStatus {
+    const total = this.getTotalConnectionCount();
+
+    return {
+      total,
+      max: this.maxTotalConnections,
+      atLimit: total >= this.maxTotalConnections,
+    };
+  }
+
+  /**
    * Get active session connections for a specific session (for debugging/monitoring)
    */
   getSessionConnections(
@@ -595,6 +614,22 @@ export class McpServerPool {
 
     // Clean up any existing sessions for this server
     await this.cleanupServerSessions(serverUuid);
+  }
+
+  /**
+   * Forcefully clear pooled connections for a server.
+   * Useful when upstream invalidates remote session IDs (e.g. idle expiry).
+   */
+  async resetConnectionsForServer(serverUuid: string): Promise<void> {
+    logger.info(`Resetting pooled connections for server ${serverUuid}`);
+
+    await this.cleanupServerSessions(serverUuid);
+
+    // Best-effort warm idle replacement to reduce latency for the next request.
+    const params = this.serverParamsCache[serverUuid];
+    if (params) {
+      this.createIdleSessionAsync(serverUuid, params);
+    }
   }
 
   /**

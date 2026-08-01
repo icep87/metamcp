@@ -108,4 +108,16 @@ describe("McpServerPool forwarded headers", () => {
     expect(sameSession).toBe(session);
     expect(session?.updateForwardedHeaders).toHaveBeenCalledWith(secondHeaders);
   });
+
+  it("reports connection capacity state", async () => {
+    const initial = pool.getConnectionCapacityStatus();
+    expect(initial.total).toBe(0);
+    expect(initial.max).toBe(100);
+    expect(initial.atLimit).toBe(false);
+
+    await pool.ensureIdleSessionForNewServer("server-1", params, "namespace-1");
+    const afterCreate = pool.getConnectionCapacityStatus();
+    expect(afterCreate.total).toBe(1);
+    expect(afterCreate.atLimit).toBe(false);
+  });
 });
