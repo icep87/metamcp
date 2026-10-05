@@ -16,7 +16,7 @@ metadataRouter.get(
   "/.well-known/oauth-protected-resource",
   async (req, res) => {
     try {
-      const baseUrl = getBaseUrl(req);
+      const baseUrl = getBaseUrl(req).replace(/\/+$/, "");
 
       // For MCP implementation, we point to our better-auth OAuth server
       // The authorization server is hosted at the same base URL
@@ -96,15 +96,13 @@ metadataRouter.get(
   "/.well-known/oauth-authorization-server",
   async (req, res) => {
     try {
-      const baseUrl = getBaseUrl(req);
-
-      // Ensure the issuer URL has a trailing slash for OAuth validation
-      // This is required by RFC 8414 and RFC 9728 for exact matching
-      const issuerUrl = baseUrl.endsWith("/") ? baseUrl : baseUrl + "/";
+      const baseUrl = getBaseUrl(req).replace(/\/+$/, "");
 
       const metadata = {
-        // Issuer identifier (required by RFC 8414)
-        issuer: issuerUrl,
+        // Issuer identifier (required by RFC 8414). Must be identical to the
+        // value advertised in the protected resource's `authorization_servers`
+        // (RFC 8414 §3.3), so no trailing slash is added here.
+        issuer: baseUrl,
 
         // MCP-compatible OAuth endpoints (proxied through frontend)
         authorization_endpoint: `${baseUrl}/oauth/authorize`,
