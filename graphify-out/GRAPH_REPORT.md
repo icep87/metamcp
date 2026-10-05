@@ -1,11 +1,11 @@
-# Graph Report - metamcp  (2026-06-05)
+# Graph Report - metamcp  (2026-10-05)
 
 ## Corpus Check
-- 223 files · ~353,150 words
+- 223 files · ~353,772 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1067 nodes · 1336 edges · 63 communities detected
+- 1069 nodes · 1341 edges · 63 communities detected
 - Extraction: 78% EXTRACTED · 22% INFERRED · 0% AMBIGUOUS · INFERRED: 299 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -76,7 +76,7 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `t()` - 41 edges
-2. `McpServerPool` - 33 edges
+2. `McpServerPool` - 35 edges
 3. `MetaMcpServerPool` - 24 edges
 4. `SessionLifetimeManagerImpl` - 14 edges
 5. `EndpointsRepository` - 14 edges
@@ -91,12 +91,12 @@
   docs/cn/concepts/namespaces.mdx → metamcp.svg
 - `MCP Server` --conceptually_related_to--> `MetaMCP Architecture Diagram (SVG/Excalidraw)`  [INFERRED]
   docs/cn/concepts/mcp-servers.mdx → metamcp.svg
-- `copyToClipboard()` --calls--> `t()`  [INFERRED]
-  /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/api-keys/page.tsx → apps/frontend/components/edit-endpoint.tsx
 - `handleServerStatusChange()` --calls--> `t()`  [INFERRED]
   /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/namespaces/[uuid]/page.tsx → apps/frontend/components/edit-endpoint.tsx
-- `handleEditServer()` --calls--> `t()`  [INFERRED]
-  /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/components/edit-mcp-server.tsx → apps/frontend/components/edit-endpoint.tsx
+- `handleSignupToggle()` --calls--> `t()`  [INFERRED]
+  /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/settings/page.tsx → apps/frontend/components/edit-endpoint.tsx
+- `handleSsoSignupToggle()` --calls--> `t()`  [INFERRED]
+  /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/settings/page.tsx → apps/frontend/components/edit-endpoint.tsx
 
 ## Hyperedges (group relationships)
 - **MetaMCP Core Concepts** — readme_mcp_server_config, readme_namespace, readme_endpoint, readme_middleware, readme_inspector, readme_tool_overrides [EXTRACTED 1.00]
@@ -117,12 +117,12 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.03
-Nodes (43): handleClose(), handleEditEndpoint(), t(), copyFullApiUrl(), copyFullApiUrlWithApiKey(), copyFullOpenApiSchemaUrl(), copyFullOpenApiSchemaUrlWithApiKey(), copyFullShttpUrl() (+35 more)
+Cohesion: 0.02
+Nodes (51): handleClose(), handleEditEndpoint(), t(), handleClose(), handleEditServer(), handleClose(), handleEditNamespace(), copyFullApiUrl() (+43 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.04
-Nodes (11): shutdown(), start(), McpServerPool, cleanupSession(), OAuthRepository, PgNotify, cleanupSession(), cleanupSession() (+3 more)
+Nodes (7): EndpointsRepository, McpServerPool, cleanupSession(), OAuthRepository, cleanupSession(), cleanupSession(), clearOverrideCache()
 
 ### Community 2 - "Community 2"
 Cohesion: 0.05
@@ -134,11 +134,11 @@ Nodes (20): authenticateApiKey(), checkApiKeyAccess(), checkOAuthAccess(), extra
 
 ### Community 4 - "Community 4"
 Cohesion: 0.06
-Nodes (24): buildHttpHeaders(), connectMetaMcpClient(), createMetaMcpClient(), getCaseInsensitiveHeaderKey(), sleep(), transformDockerUrl(), getMcpServers(), lookupEndpoint() (+16 more)
+Nodes (12): getMcpServers(), shutdown(), start(), OAuthSessionsRepository, PgNotify, initializeIdleServers(), initializeOnStartup(), ToolDiscoveryService (+4 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.05
-Nodes (15): handleClose(), handleEditServer(), handleClose(), handleEditNamespace(), copyToClipboard(), handleCreateSuccess(), onSubmit(), resetForm() (+7 more)
+Cohesion: 0.07
+Nodes (20): buildHttpHeaders(), connectMetaMcpClient(), createMetaMcpClient(), getCaseInsensitiveHeaderKey(), sleep(), transformDockerUrl(), MetaMcpLogStore, lookupEndpoint() (+12 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.06
@@ -146,15 +146,15 @@ Nodes (39): Development Environment Setup, MetaMCP Contributing Guide, OIDC Prov
 
 ### Community 7 - "Community 7"
 Cohesion: 0.11
-Nodes (24): bootstrapApiKeys(), bootstrapEndpoints(), bootstrapNamespaces(), bootstrapUsers(), ensureUser(), generateApiKey(), getConfigValue(), getOwnerEmail() (+16 more)
+Nodes (23): bootstrapApiKeys(), bootstrapEndpoints(), bootstrapNamespaces(), bootstrapUsers(), ensureUser(), generateApiKey(), getConfigValue(), getOwnerEmail() (+15 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.08
-Nodes (16): clearFilterCache(), createFilterCallToolMiddleware(), createFilterListToolsMiddleware(), getToolStatus(), isToolAllowed(), ToolStatusCache, compose(), createMiddlewareEnabledHandlers() (+8 more)
+Cohesion: 0.09
+Nodes (8): debugLogHttpHeaders(), MetaMcpServerPool, isSensitiveHeaderName(), sanitizeHeadersForDebugLog(), sanitizeHeaderValueForDebugLog(), captureForwardedHeaders(), captureForwardedHeaders(), executeToolWithMiddleware()
 
 ### Community 9 - "Community 9"
 Cohesion: 0.09
-Nodes (8): debugLogHttpHeaders(), MetaMcpServerPool, isSensitiveHeaderName(), sanitizeHeadersForDebugLog(), sanitizeHeaderValueForDebugLog(), captureForwardedHeaders(), captureForwardedHeaders(), executeToolWithMiddleware()
+Nodes (16): clearFilterCache(), createFilterCallToolMiddleware(), createFilterListToolsMiddleware(), getToolStatus(), isToolAllowed(), ToolStatusCache, compose(), createMiddlewareEnabledHandlers() (+8 more)
 
 ### Community 10 - "Community 10"
 Cohesion: 0.13
@@ -165,20 +165,20 @@ Cohesion: 0.12
 Nodes (11): createApiKeysRouter(), createConfigRouter(), createEndpointsRouter(), createFrontendRouter(), Input(), createLogsRouter(), createMcpServersRouter(), createNamespacesRouter() (+3 more)
 
 ### Community 12 - "Community 12"
+Cohesion: 0.13
+Nodes (9): rateLimiter(), rateLimitMiddleware(), slidingWindowRateLimiter(), tokenBucketRateLimiter(), RateLimitError, RateLimiting, SlidingWindowRateLimiter, SlidingWindowRateLimiting (+1 more)
+
+### Community 13 - "Community 13"
 Cohesion: 0.11
 Nodes (8): formatDate(), getConnectionStatusInfo(), handleConnectionRefresh(), handleConnectionToggle(), handleEditSuccess(), handleServerStatusChange(), toLocaleDateString(), formatDate()
 
-### Community 13 - "Community 13"
-Cohesion: 0.12
-Nodes (9): rateLimiter(), rateLimitMiddleware(), slidingWindowRateLimiter(), tokenBucketRateLimiter(), RateLimitError, RateLimiting, SlidingWindowRateLimiter, SlidingWindowRateLimiting (+1 more)
-
 ### Community 14 - "Community 14"
 Cohesion: 0.12
-Nodes (3): ProcessManagedStdioTransport, deserializeMessage(), ReadBuffer
+Nodes (6): getBaseUrl(), hashClientSecret(), rateLimitAuth(), RateLimiter, rateLimitToken(), verifyClientSecret()
 
 ### Community 15 - "Community 15"
-Cohesion: 0.13
-Nodes (1): EndpointsRepository
+Cohesion: 0.12
+Nodes (3): ProcessManagedStdioTransport, deserializeMessage(), ReadBuffer
 
 ### Community 16 - "Community 16"
 Cohesion: 0.16
@@ -201,8 +201,8 @@ Cohesion: 0.22
 Nodes (2): SidebarMenuButton(), useSidebar()
 
 ### Community 22 - "Community 22"
-Cohesion: 0.36
-Nodes (2): hashTools(), ToolsSyncCache
+Cohesion: 0.28
+Nodes (1): ToolsRepository
 
 ### Community 24 - "Community 24"
 Cohesion: 0.29
@@ -371,15 +371,13 @@ Nodes (1): Browser Window Icon
 ## Knowledge Gaps
 - **78 isolated node(s):** `MetaMCP Inspector`, `Tool Overrides & Annotations`, `MCP Rate Limiting`, `Registration Controls`, `Docker Compose Deployment` (+73 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Community 15`** (15 nodes): `endpoints.repo.ts`, `EndpointsRepository`, `.create()`, `.deleteByUuid()`, `.findAll()`, `.findAllAccessibleToUser()`, `.findAllAccessibleToUserWithNamespaces()`, `.findAllWithNamespaces()`, `.findByName()`, `.findByNameAndUserId()`, `.findByUserId()`, `.findByUuid()`, `.findByUuidWithNamespace()`, `.findPublicEndpoints()`, `.update()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 17`** (13 nodes): `namespaces.repo.ts`, `NamespacesRepository`, `.create()`, `.deleteByUuid()`, `.findAll()`, `.findAllAccessibleToUser()`, `.findByNameAndUserId()`, `.findByUserId()`, `.findByUuid()`, `.findByUuidWithServers()`, `.findPublicNamespaces()`, `.findToolsByNamespaceUuid()`, `.update()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 19`** (12 nodes): `ApiKeysRepository`, `.create()`, `.findAccessibleToUser()`, `.findAll()`, `.findByUserId()`, `.findByUuid()`, `.findByUuidWithAccess()`, `.findPublicApiKeys()`, `.generateApiKey()`, `.update()`, `.validateApiKey()`, `api-keys.repo.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 21`** (10 nodes): `sidebar.tsx`, `cn()`, `handleKeyDown()`, `SidebarFooter()`, `SidebarHeader()`, `SidebarMenu()`, `SidebarMenuButton()`, `SidebarMenuItem()`, `SidebarSeparator()`, `useSidebar()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 22`** (9 nodes): `tools-sync-cache.ts`, `hashTools()`, `ToolsSyncCache`, `.clear()`, `.getStats()`, `.hasChanged()`, `.hashTools()`, `.shouldSync()`, `.update()`
+- **Thin community `Community 22`** (9 nodes): `tools.repo.ts`, `ToolsRepository`, `.bulkUpsert()`, `.create()`, `.deleteByUuid()`, `.deleteObsoleteTools()`, `.findByMcpServerUuid()`, `.findByUuid()`, `.syncTools()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 29`** (7 nodes): `logger.ts`, `getValidLogLevel()`, `Logger`, `.close()`, `.constructor()`, `.customLog()`, `.formatDate()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -455,17 +453,17 @@ Nodes (1): Browser Window Icon
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `t()` connect `Community 0` to `Community 24`, `Community 12`, `Community 5`?**
-  _High betweenness centrality (0.109) - this node is a cross-community bridge._
+- **Why does `t()` connect `Community 0` to `Community 24`, `Community 13`?**
+  _High betweenness centrality (0.107) - this node is a cross-community bridge._
 - **Why does `unsubscribeFromResource()` connect `Community 0` to `Community 1`?**
-  _High betweenness centrality (0.086) - this node is a cross-community bridge._
+  _High betweenness centrality (0.085) - this node is a cross-community bridge._
+- **Why does `McpServerPool` connect `Community 1` to `Community 3`, `Community 4`, `Community 12`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Are the 39 inferred relationships involving `t()` (e.g. with `getMenuItems()` and `handleSignupToggle()`) actually correct?**
   _`t()` has 39 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `MetaMCP Inspector`, `Tool Overrides & Annotations`, `MCP Rate Limiting` to the rest of the system?**
   _78 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.03 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.02 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.04 - nodes in this community are weakly interconnected._
-- **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
