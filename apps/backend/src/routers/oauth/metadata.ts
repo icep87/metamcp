@@ -13,7 +13,10 @@ const metadataRouter = express.Router();
  * https://modelcontextprotocol.io/specification/draft/basic/authorization
  */
 metadataRouter.get(
-  "/.well-known/oauth-protected-resource",
+  [
+    "/.well-known/oauth-protected-resource",
+    "/.well-known/oauth-protected-resource/metamcp/*resourcePath",
+  ],
   async (req, res) => {
     try {
       const baseUrl = getBaseUrl(req).replace(/\/+$/, "");
@@ -22,9 +25,11 @@ metadataRouter.get(
       // The authorization server is hosted at the same base URL
       const authServerUrl = baseUrl;
 
-      // Ensure the resource URL has a trailing slash for OAuth validation
-      // This is required by RFC 9728 for exact resource matching
-      const resourceUrl = baseUrl.endsWith("/") ? baseUrl : baseUrl + "/";
+      // Preserve the encoded resource path for RFC 9728 exact matching.
+      const resourcePath = req.path.slice(
+        "/.well-known/oauth-protected-resource".length,
+      );
+      const resourceUrl = `${baseUrl}${resourcePath}`;
 
       const metadata = {
         // Resource identifier - the protected resource's canonical URI

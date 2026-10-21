@@ -457,13 +457,16 @@ function sendOAuthChallengeResponse(
   res: express.Response,
   endpoint: DatabaseEndpoint,
 ): express.Response {
-  const baseUrl = getBaseUrl(req);
+  const baseUrl = getBaseUrl(req).replace(/\/+$/, "");
+  // originalUrl includes the router mount; exclude session IDs and API keys.
+  const resourcePath = req.originalUrl.split("?")[0];
+  const resourceMetadataUrl = `${baseUrl}/.well-known/oauth-protected-resource${resourcePath}`;
 
   // Set WWW-Authenticate header for OAuth flow
   const bearerChallenge = [
     `Bearer realm="MetaMCP"`,
     `scope="admin"`,
-    `resource_metadata="${baseUrl}/.well-known/oauth-protected-resource"`,
+    `resource_metadata="${resourceMetadataUrl}"`,
   ].join(", ");
 
   res.set("WWW-Authenticate", bearerChallenge);
@@ -485,7 +488,7 @@ function sendOAuthChallengeResponse(
   return res.status(401).json({
     error: "authentication_required",
     error_description: errorDescription,
-    resource_metadata: `${baseUrl}/.well-known/oauth-protected-resource`,
+    resource_metadata: resourceMetadataUrl,
     supported_methods: authMethods,
     timestamp: new Date().toISOString(),
   });

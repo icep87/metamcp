@@ -1,11 +1,11 @@
-# Graph Report - metamcp  (2026-10-05)
+# Graph Report - metamcp  (2026-10-21)
 
 ## Corpus Check
-- 223 files · ~353,772 words
+- 224 files · ~354,261 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1069 nodes · 1341 edges · 63 communities detected
+- 1072 nodes · 1343 edges · 63 communities detected
 - Extraction: 78% EXTRACTED · 22% INFERRED · 0% AMBIGUOUS · INFERRED: 299 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -45,9 +45,8 @@
 - [[_COMMUNITY_Community 41|Community 41]]
 - [[_COMMUNITY_Community 45|Community 45]]
 - [[_COMMUNITY_Community 46|Community 46]]
-- [[_COMMUNITY_Community 52|Community 52]]
-- [[_COMMUNITY_Community 82|Community 82]]
-- [[_COMMUNITY_Community 156|Community 156]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 83|Community 83]]
 - [[_COMMUNITY_Community 157|Community 157]]
 - [[_COMMUNITY_Community 158|Community 158]]
 - [[_COMMUNITY_Community 159|Community 159]]
@@ -73,6 +72,7 @@
 - [[_COMMUNITY_Community 179|Community 179]]
 - [[_COMMUNITY_Community 180|Community 180]]
 - [[_COMMUNITY_Community 181|Community 181]]
+- [[_COMMUNITY_Community 182|Community 182]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `t()` - 41 edges
@@ -93,9 +93,9 @@
   docs/cn/concepts/mcp-servers.mdx → metamcp.svg
 - `handleServerStatusChange()` --calls--> `t()`  [INFERRED]
   /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/namespaces/[uuid]/page.tsx → apps/frontend/components/edit-endpoint.tsx
+- `handlePing()` --calls--> `t()`  [INFERRED]
+  /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/mcp-inspector/components/inspector/inspector-ping.tsx → apps/frontend/components/edit-endpoint.tsx
 - `handleSignupToggle()` --calls--> `t()`  [INFERRED]
-  /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/settings/page.tsx → apps/frontend/components/edit-endpoint.tsx
-- `handleSsoSignupToggle()` --calls--> `t()`  [INFERRED]
   /Users/plp1lud/Documents/GitHub/metamcp/apps/frontend/app/[locale]/(sidebar)/settings/page.tsx → apps/frontend/components/edit-endpoint.tsx
 
 ## Hyperedges (group relationships)
@@ -117,44 +117,44 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.02
+Cohesion: 0.03
 Nodes (51): handleClose(), handleEditEndpoint(), t(), handleClose(), handleEditServer(), handleClose(), handleEditNamespace(), copyFullApiUrl() (+43 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.04
-Nodes (7): EndpointsRepository, McpServerPool, cleanupSession(), OAuthRepository, cleanupSession(), cleanupSession(), clearOverrideCache()
+Nodes (83): API Key Authentication, auth_mode Endpoint Config Field, Better Auth (auth library), Bulk Import/Export of MCP Servers, Claude Desktop Integration, Cursor IDE Integration, Docker Compose Deployment, Dynamic Client Registration Proxy (+75 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.05
-Nodes (69): API Key Authentication, Better Auth (auth library), Bulk Import/Export of MCP Servers, Claude Desktop Integration, Cursor IDE Integration, Docker Compose Deployment, Endpoint, Environment Variable Interpolation (+61 more)
+Cohesion: 0.04
+Nodes (14): debugLogHttpHeaders(), cleanupSession(), MetaMcpServerPool, OAuthRepository, isSensitiveHeaderName(), sanitizeHeadersForDebugLog(), sanitizeHeaderValueForDebugLog(), captureForwardedHeaders() (+6 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.05
-Nodes (20): authenticateApiKey(), checkApiKeyAccess(), checkOAuthAccess(), extractAuthToken(), getBaseUrl(), sendApiKeyRequiredResponse(), sendOAuthChallengeResponse(), validateOAuthToken() (+12 more)
+Cohesion: 0.07
+Nodes (29): betterAuthMcpMiddleware(), bootstrapApiKeys(), bootstrapEndpoints(), bootstrapNamespaces(), bootstrapUsers(), ensureUser(), generateApiKey(), getConfigValue() (+21 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.06
-Nodes (12): getMcpServers(), shutdown(), start(), OAuthSessionsRepository, PgNotify, initializeIdleServers(), initializeOnStartup(), ToolDiscoveryService (+4 more)
+Nodes (8): buildHttpHeaders(), connectMetaMcpClient(), createMetaMcpClient(), getCaseInsensitiveHeaderKey(), sleep(), transformDockerUrl(), McpServerPool, ServerErrorTracker
 
 ### Community 5 - "Community 5"
 Cohesion: 0.07
-Nodes (20): buildHttpHeaders(), connectMetaMcpClient(), createMetaMcpClient(), getCaseInsensitiveHeaderKey(), sleep(), transformDockerUrl(), MetaMcpLogStore, lookupEndpoint() (+12 more)
+Nodes (19): clearFilterCache(), createFilterCallToolMiddleware(), createFilterListToolsMiddleware(), getToolStatus(), isToolAllowed(), ToolStatusCache, compose(), createMiddlewareEnabledHandlers() (+11 more)
 
 ### Community 6 - "Community 6"
+Cohesion: 0.08
+Nodes (14): authenticateApiKey(), checkApiKeyAccess(), checkOAuthAccess(), extractAuthToken(), getBaseUrl(), sendApiKeyRequiredResponse(), sendOAuthChallengeResponse(), validateOAuthToken() (+6 more)
+
+### Community 7 - "Community 7"
 Cohesion: 0.06
 Nodes (39): Development Environment Setup, MetaMCP Contributing Guide, OIDC Provider Setup (Contributing), Architecture Overview (CN Docs), Quickstart Guide (CN Docs), Idle Session Invalidation Flow, McpServerPool, MetaMcpServerPool (+31 more)
 
-### Community 7 - "Community 7"
-Cohesion: 0.11
-Nodes (23): bootstrapApiKeys(), bootstrapEndpoints(), bootstrapNamespaces(), bootstrapUsers(), ensureUser(), generateApiKey(), getConfigValue(), getOwnerEmail() (+15 more)
-
 ### Community 8 - "Community 8"
-Cohesion: 0.09
-Nodes (8): debugLogHttpHeaders(), MetaMcpServerPool, isSensitiveHeaderName(), sanitizeHeadersForDebugLog(), sanitizeHeaderValueForDebugLog(), captureForwardedHeaders(), captureForwardedHeaders(), executeToolWithMiddleware()
+Cohesion: 0.08
+Nodes (6): shutdown(), start(), PgNotify, ToolDiscoveryService, hashTools(), ToolsSyncCache
 
 ### Community 9 - "Community 9"
-Cohesion: 0.09
-Nodes (16): clearFilterCache(), createFilterCallToolMiddleware(), createFilterListToolsMiddleware(), getToolStatus(), isToolAllowed(), ToolStatusCache, compose(), createMiddlewareEnabledHandlers() (+8 more)
+Cohesion: 0.11
+Nodes (15): getMcpServers(), OAuthSessionsRepository, checkServerErrorStatus(), cleanupSession(), createStdioKey(), createTransport(), extractServerUuidFromStdioCommand(), getHttpHeaders() (+7 more)
 
 ### Community 10 - "Community 10"
 Cohesion: 0.13
@@ -181,8 +181,8 @@ Cohesion: 0.12
 Nodes (3): ProcessManagedStdioTransport, deserializeMessage(), ReadBuffer
 
 ### Community 16 - "Community 16"
-Cohesion: 0.16
-Nodes (14): auth_mode Endpoint Config Field, Dynamic Client Registration Proxy, OAuth Metadata Mirror Component, Per-Endpoint .well-known Routing, Upstream 401 Propagation, Upstream Delegate Auth Middleware, Upstream OAuth Delegation, Upstream Token Store (DB Table) (+6 more)
+Cohesion: 0.13
+Nodes (1): EndpointsRepository
 
 ### Community 17 - "Community 17"
 Cohesion: 0.17
@@ -201,8 +201,8 @@ Cohesion: 0.22
 Nodes (2): SidebarMenuButton(), useSidebar()
 
 ### Community 22 - "Community 22"
-Cohesion: 0.28
-Nodes (1): ToolsRepository
+Cohesion: 0.22
+Nodes (1): handlePing()
 
 ### Community 24 - "Community 24"
 Cohesion: 0.29
@@ -256,128 +256,130 @@ Nodes (1): McpServersSerializer
 Cohesion: 0.5
 Nodes (1): ToolsSerializer
 
-### Community 52 - "Community 52"
+### Community 53 - "Community 53"
 Cohesion: 0.67
 Nodes (1): OAuthSessionsSerializer
 
-### Community 82 - "Community 82"
+### Community 83 - "Community 83"
 Cohesion: 1.0
 Nodes (2): Mintlify docs.json Settings, Mintlify Global Settings
 
-### Community 156 - "Community 156"
+### Community 157 - "Community 157"
 Cohesion: 1.0
 Nodes (1): Docker Compose Deployment
 
-### Community 157 - "Community 157"
+### Community 158 - "Community 158"
 Cohesion: 1.0
 Nodes (1): Recent Updates - Maintenance Note
 
-### Community 158 - "Community 158"
+### Community 159 - "Community 159"
 Cohesion: 1.0
 Nodes (1): CN Middleware Concept (Active Dev)
 
-### Community 159 - "Community 159"
+### Community 160 - "Community 160"
 Cohesion: 1.0
 Nodes (1): EN Integration Troubleshooting (Future)
 
-### Community 160 - "Community 160"
+### Community 161 - "Community 161"
 Cohesion: 1.0
 Nodes (1): ESLint Config Package
 
-### Community 161 - "Community 161"
+### Community 162 - "Community 162"
 Cohesion: 1.0
 Nodes (1): MetaMCP UI Screenshot
 
-### Community 162 - "Community 162"
+### Community 163 - "Community 163"
 Cohesion: 1.0
 Nodes (1): MetaMCP Favicon
 
-### Community 163 - "Community 163"
+### Community 164 - "Community 164"
 Cohesion: 1.0
 Nodes (1): MetaMCP Screenshot (docs)
 
-### Community 164 - "Community 164"
+### Community 165 - "Community 165"
 Cohesion: 1.0
 Nodes (1): MetaMCP Hero Image (Light)
 
-### Community 165 - "Community 165"
+### Community 166 - "Community 166"
 Cohesion: 1.0
 Nodes (1): Checks Passed Screenshot
 
-### Community 166 - "Community 166"
+### Community 167 - "Community 167"
 Cohesion: 1.0
 Nodes (1): MetaMCP Hero Image (Dark)
 
-### Community 167 - "Community 167"
+### Community 168 - "Community 168"
 Cohesion: 1.0
 Nodes (1): Open WebUI Integration Screenshot 4
 
-### Community 168 - "Community 168"
+### Community 169 - "Community 169"
 Cohesion: 1.0
 Nodes (1): Open WebUI Integration Screenshot 5
 
-### Community 169 - "Community 169"
+### Community 170 - "Community 170"
 Cohesion: 1.0
 Nodes (1): Open WebUI Integration Screenshot 6
 
-### Community 170 - "Community 170"
+### Community 171 - "Community 171"
 Cohesion: 1.0
 Nodes (1): Open WebUI Integration Screenshot 2
 
-### Community 171 - "Community 171"
+### Community 172 - "Community 172"
 Cohesion: 1.0
 Nodes (1): Open WebUI Integration Screenshot 3
 
-### Community 172 - "Community 172"
+### Community 173 - "Community 173"
 Cohesion: 1.0
 Nodes (1): Open WebUI Integration Screenshot 1
 
-### Community 173 - "Community 173"
+### Community 174 - "Community 174"
 Cohesion: 1.0
 Nodes (1): MetaMCP Logo (Dark Theme)
 
-### Community 174 - "Community 174"
+### Community 175 - "Community 175"
 Cohesion: 1.0
 Nodes (1): MetaMCP Logo (Light Theme)
 
-### Community 175 - "Community 175"
+### Community 176 - "Community 176"
 Cohesion: 1.0
 Nodes (1): Turborepo Logo (Dark Theme)
 
-### Community 176 - "Community 176"
+### Community 177 - "Community 177"
 Cohesion: 1.0
 Nodes (1): File Text Icon
 
-### Community 177 - "Community 177"
+### Community 178 - "Community 178"
 Cohesion: 1.0
 Nodes (1): Vercel Logo (Triangle Icon)
 
-### Community 178 - "Community 178"
+### Community 179 - "Community 179"
 Cohesion: 1.0
 Nodes (1): Next.js Logo
 
-### Community 179 - "Community 179"
+### Community 180 - "Community 180"
 Cohesion: 1.0
 Nodes (1): Turborepo Logo (Light Theme)
 
-### Community 180 - "Community 180"
+### Community 181 - "Community 181"
 Cohesion: 1.0
 Nodes (1): Globe Icon
 
-### Community 181 - "Community 181"
+### Community 182 - "Community 182"
 Cohesion: 1.0
 Nodes (1): Browser Window Icon
 
 ## Knowledge Gaps
 - **78 isolated node(s):** `MetaMCP Inspector`, `Tool Overrides & Annotations`, `MCP Rate Limiting`, `Registration Controls`, `Docker Compose Deployment` (+73 more)
   These have ≤1 connection - possible missing edges or undocumented components.
+- **Thin community `Community 16`** (15 nodes): `endpoints.repo.ts`, `EndpointsRepository`, `.create()`, `.deleteByUuid()`, `.findAll()`, `.findAllAccessibleToUser()`, `.findAllAccessibleToUserWithNamespaces()`, `.findAllWithNamespaces()`, `.findByName()`, `.findByNameAndUserId()`, `.findByUserId()`, `.findByUuid()`, `.findByUuidWithNamespace()`, `.findPublicEndpoints()`, `.update()`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 17`** (13 nodes): `namespaces.repo.ts`, `NamespacesRepository`, `.create()`, `.deleteByUuid()`, `.findAll()`, `.findAllAccessibleToUser()`, `.findByNameAndUserId()`, `.findByUserId()`, `.findByUuid()`, `.findByUuidWithServers()`, `.findPublicNamespaces()`, `.findToolsByNamespaceUuid()`, `.update()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 19`** (12 nodes): `ApiKeysRepository`, `.create()`, `.findAccessibleToUser()`, `.findAll()`, `.findByUserId()`, `.findByUuid()`, `.findByUuidWithAccess()`, `.findPublicApiKeys()`, `.generateApiKey()`, `.update()`, `.validateApiKey()`, `api-keys.repo.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 21`** (10 nodes): `sidebar.tsx`, `cn()`, `handleKeyDown()`, `SidebarFooter()`, `SidebarHeader()`, `SidebarMenu()`, `SidebarMenuButton()`, `SidebarMenuItem()`, `SidebarSeparator()`, `useSidebar()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 22`** (9 nodes): `tools.repo.ts`, `ToolsRepository`, `.bulkUpsert()`, `.create()`, `.deleteByUuid()`, `.deleteObsoleteTools()`, `.findByMcpServerUuid()`, `.findByUuid()`, `.syncTools()`
+- **Thin community `Community 22`** (9 nodes): `inspector-ping.tsx`, `clearHistory()`, `formatDuration()`, `getAverageResponseTime()`, `getLatestPings()`, `getStatusColor()`, `getStatusIcon()`, `getSuccessRate()`, `handlePing()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 29`** (7 nodes): `logger.ts`, `getValidLogLevel()`, `Logger`, `.close()`, `.constructor()`, `.customLog()`, `.formatDate()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -393,77 +395,77 @@ Nodes (1): Browser Window Icon
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 46`** (4 nodes): `tools.serializer.ts`, `ToolsSerializer`, `.serializeTool()`, `.serializeToolList()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 52`** (3 nodes): `oauth-sessions.serializer.ts`, `OAuthSessionsSerializer`, `.serializeOAuthSession()`
+- **Thin community `Community 53`** (3 nodes): `oauth-sessions.serializer.ts`, `OAuthSessionsSerializer`, `.serializeOAuthSession()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 82`** (2 nodes): `Mintlify docs.json Settings`, `Mintlify Global Settings`
+- **Thin community `Community 83`** (2 nodes): `Mintlify docs.json Settings`, `Mintlify Global Settings`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 156`** (1 nodes): `Docker Compose Deployment`
+- **Thin community `Community 157`** (1 nodes): `Docker Compose Deployment`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 157`** (1 nodes): `Recent Updates - Maintenance Note`
+- **Thin community `Community 158`** (1 nodes): `Recent Updates - Maintenance Note`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 158`** (1 nodes): `CN Middleware Concept (Active Dev)`
+- **Thin community `Community 159`** (1 nodes): `CN Middleware Concept (Active Dev)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 159`** (1 nodes): `EN Integration Troubleshooting (Future)`
+- **Thin community `Community 160`** (1 nodes): `EN Integration Troubleshooting (Future)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 160`** (1 nodes): `ESLint Config Package`
+- **Thin community `Community 161`** (1 nodes): `ESLint Config Package`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 161`** (1 nodes): `MetaMCP UI Screenshot`
+- **Thin community `Community 162`** (1 nodes): `MetaMCP UI Screenshot`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 162`** (1 nodes): `MetaMCP Favicon`
+- **Thin community `Community 163`** (1 nodes): `MetaMCP Favicon`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 163`** (1 nodes): `MetaMCP Screenshot (docs)`
+- **Thin community `Community 164`** (1 nodes): `MetaMCP Screenshot (docs)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 164`** (1 nodes): `MetaMCP Hero Image (Light)`
+- **Thin community `Community 165`** (1 nodes): `MetaMCP Hero Image (Light)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 165`** (1 nodes): `Checks Passed Screenshot`
+- **Thin community `Community 166`** (1 nodes): `Checks Passed Screenshot`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 166`** (1 nodes): `MetaMCP Hero Image (Dark)`
+- **Thin community `Community 167`** (1 nodes): `MetaMCP Hero Image (Dark)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 167`** (1 nodes): `Open WebUI Integration Screenshot 4`
+- **Thin community `Community 168`** (1 nodes): `Open WebUI Integration Screenshot 4`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 168`** (1 nodes): `Open WebUI Integration Screenshot 5`
+- **Thin community `Community 169`** (1 nodes): `Open WebUI Integration Screenshot 5`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 169`** (1 nodes): `Open WebUI Integration Screenshot 6`
+- **Thin community `Community 170`** (1 nodes): `Open WebUI Integration Screenshot 6`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 170`** (1 nodes): `Open WebUI Integration Screenshot 2`
+- **Thin community `Community 171`** (1 nodes): `Open WebUI Integration Screenshot 2`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 171`** (1 nodes): `Open WebUI Integration Screenshot 3`
+- **Thin community `Community 172`** (1 nodes): `Open WebUI Integration Screenshot 3`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 172`** (1 nodes): `Open WebUI Integration Screenshot 1`
+- **Thin community `Community 173`** (1 nodes): `Open WebUI Integration Screenshot 1`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 173`** (1 nodes): `MetaMCP Logo (Dark Theme)`
+- **Thin community `Community 174`** (1 nodes): `MetaMCP Logo (Dark Theme)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 174`** (1 nodes): `MetaMCP Logo (Light Theme)`
+- **Thin community `Community 175`** (1 nodes): `MetaMCP Logo (Light Theme)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 175`** (1 nodes): `Turborepo Logo (Dark Theme)`
+- **Thin community `Community 176`** (1 nodes): `Turborepo Logo (Dark Theme)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 176`** (1 nodes): `File Text Icon`
+- **Thin community `Community 177`** (1 nodes): `File Text Icon`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 177`** (1 nodes): `Vercel Logo (Triangle Icon)`
+- **Thin community `Community 178`** (1 nodes): `Vercel Logo (Triangle Icon)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 178`** (1 nodes): `Next.js Logo`
+- **Thin community `Community 179`** (1 nodes): `Next.js Logo`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 179`** (1 nodes): `Turborepo Logo (Light Theme)`
+- **Thin community `Community 180`** (1 nodes): `Turborepo Logo (Light Theme)`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 180`** (1 nodes): `Globe Icon`
+- **Thin community `Community 181`** (1 nodes): `Globe Icon`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 181`** (1 nodes): `Browser Window Icon`
+- **Thin community `Community 182`** (1 nodes): `Browser Window Icon`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `t()` connect `Community 0` to `Community 24`, `Community 13`?**
+- **Why does `t()` connect `Community 0` to `Community 24`, `Community 13`, `Community 22`?**
   _High betweenness centrality (0.107) - this node is a cross-community bridge._
-- **Why does `unsubscribeFromResource()` connect `Community 0` to `Community 1`?**
-  _High betweenness centrality (0.085) - this node is a cross-community bridge._
-- **Why does `McpServerPool` connect `Community 1` to `Community 3`, `Community 4`, `Community 12`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `unsubscribeFromResource()` connect `Community 0` to `Community 2`?**
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
+- **Why does `McpServersRepository` connect `Community 3` to `Community 9`, `Community 4`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Are the 39 inferred relationships involving `t()` (e.g. with `getMenuItems()` and `handleSignupToggle()`) actually correct?**
   _`t()` has 39 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `MetaMCP Inspector`, `Tool Overrides & Annotations`, `MCP Rate Limiting` to the rest of the system?**
   _78 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.02 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.03 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.04 - nodes in this community are weakly interconnected._
